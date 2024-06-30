@@ -1,0 +1,8 @@
+import { YFragment as _YFragment } from "@y-block/fragment";
+import { Component } from "@atomico/react";
+export const YFragment: Component<typeof _YFragment>;
+declare namespace JSX {
+   interface IntrinsicElements{
+      "y-fragment": Component<typeof _YFragment>;
+   }
+}

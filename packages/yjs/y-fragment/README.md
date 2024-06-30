@@ -2,9 +2,9 @@
 
 ### Properties
 
-| Property | Type   | Description                        |
-| -------- | ------ | ---------------------------------- |
-| myProp   | string | defines the title of the component |
+| Property | Type             | Description |
+| -------- |------------------|------------|
+| fragment   | Y.XmlFragment  |            |
 
 ### Slots
 
@@ -15,5 +15,5 @@
 ### Example
 
 ```html
-<y-fragment my-prop="my value"></y-fragment>
+<y-fragment fragment="doc.getFragment())"></y-fragment>
 ```
