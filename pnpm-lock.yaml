@@ -222,8 +222,50 @@ importers:
         specifier: ^8.0.0
         version: 8.1.11(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
+  packages/yjs/components:
+    dependencies:
+      '@atomico/hooks':
+        specifier: ^4.1.1
+        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.31(typescript@5.5.2)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
+      '@atomico/react':
+        specifier: '*'
+        version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
+      '@atomico/vue':
+        specifier: '*'
+        version: 0.3.1(atomico@1.79.2)(vue@3.4.31(typescript@5.5.2))
+      atomico:
+        specifier: ^1.77.1
+        version: 1.79.2
+
+  packages/yjs/y-array:
+    dependencies:
+      '@atomico/hooks':
+        specifier: ^4.4.1
+        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.31(typescript@5.5.2)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
+      '@atomico/react':
+        specifier: '*'
+        version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
+      '@atomico/vue':
+        specifier: '*'
+        version: 0.3.1(atomico@1.79.2)(vue@3.4.31(typescript@5.5.2))
+      atomico:
+        specifier: '*'
+        version: 1.79.2
+      yjs:
+        specifier: ^13.6.18
+        version: 13.6.18
+
   packages/yjs/y-fragment:
     dependencies:
+      '@atomico/react':
+        specifier: '*'
+        version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
+      '@atomico/vue':
+        specifier: '*'
+        version: 0.3.1(atomico@1.79.2)(vue@3.4.31(typescript@5.5.2))
+      atomico:
+        specifier: '*'
+        version: 1.79.2
       yjs:
         specifier: ^13.6.18
         version: 13.6.18
