@@ -1,0 +1,135 @@
+primitive:
+    size:
+        5xs: 0.125rem # 2
+        4xs: 0.25rem # 4
+        3xs: 0.375rem # 4
+        xxs: 0.5rem # 8
+        xs: 0.625rem # 10
+        s: 0.75rem # 12
+        m: 0.875rem # 14
+        l: 1rem # 16
+        xl: 1.25rem # 20
+        xxl: 1.875rem # 30
+        3xl: 2.5rem # 40
+        # configurable
+    color:
+        primary: "#C9C2D2"
+        secondary: "#C9D0DB"
+        tertiary: "#E2D4C5"
+        neutral: "#F0F0F0"
+        container: "#FFFFFF"
+        surface: "#F8F8F8"
+        invert: "#FFFFFF"
+        status:
+            success:
+                =: "#18D47C"
+                container: "#a8ffbf"
+            warning:
+                =: "#F9AA33"
+                container: "#ffb971"
+            info:
+                =: "#0080FF"
+                container: "#9dc4ff"
+            danger:
+                =: "#FF5B5B"
+                container: "#ff9595"
+        contrast:
+            100: "rgba(0,0,0)"
+            75: "rgba(0,0,0,.75)"
+            50: "rgba(0,0,0,.5)"
+            30: "rgba(0,0,0,.3)"
+            15: "rgba(0,0,0,.15)"
+            10: "rgba(0,0,0,.1)"
+            5: "rgba(0,0,0,.05)"
+action:
+    font:
+        size:
+            =: $$size-m
+            (small):
+                =: $$size-s
+        weight: 500
+        color: $primitive-contrast-100
+    size:
+        =: $$size-3xl
+        icon: $$size-s
+        (small):
+            =: $$size-xxl
+    space:
+        =: $$size-xxs
+    radius:
+        =: $$size-xs
+        circle: 100vw
+        (small):
+            =: $$size-xxs
+    transition:
+        =: .25s ease all
+        medium: .5s ease all
+        slow: .75s ease all
+    border:
+        =: $action-border-size $action-border-style $action-border-color
+        size: 1px
+        style: solid
+        color: $$color-contrast-30
+    outline:
+        =: $action-outline-size $action-outline-style $action-outline-color
+        size: 2px
+        style: solid
+        offset: 1px
+        color: $$color-contrast-15
+    (disabled):
+        opacity: .75
+button:
+    color:
+        text: unset
+badge:
+    font:
+        size:
+            =: $size-s
+            (small):
+                =: $size-xs
+        weight: 700
+        color: $primitive-contrast-100
+    space:
+        =: $size-xxs
+        icon: $size-5xs
+    size:
+        =: $size-xl
+        icon:
+            =: $size-xs
+            container: $size-l
+        (small):
+            =: $size-l
+            icon:
+                =: $size-xxs
+                container: $size-s
+    radius:
+        =: $size-3xs
+        circle: 100vw
+checkbox:
+    size:
+        switch: $size-xl
+    radius:
+        =: $size-3xs
+    stroke:
+        size: 2
+card:
+    space:
+        =: $$size-xs
+    radius:
+        =: $$size-xl
+        (small):
+            =: $$size-xs
+    border:
+        =: $card-border-size $card-border-style $card-border-color
+        size: 1px
+        style: solid
+        color: $color-contrast-5
+        split:
+            =: $card-border-size $card-border-style $card-border-split-color
+            color: $color-contrast-15
+    transition: .25s ease all
+    shadow:
+        1: "0px 5px 10px $color-contrast-10"
+        2: "0px 10px 20px $color-contrast-10"
+        3: "0px 15px 30px $color-contrast-10"
+        4: "0px 20px 40px $color-contrast-10"

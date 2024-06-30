@@ -1,0 +1,10 @@
+export declare const Sizes: string[];
+export declare const ColorsBackground: string[];
+export declare const ShadowDeep: number[];
+export declare const PrimitiveTokens: import("atomico").Sheet;
+export declare const ActionTokens: import("atomico").Sheet;
+export declare const ButtonTokens: import("atomico").Sheet;
+export declare const CheckboxTokens: import("atomico").Sheet;
+export declare const CardTokens: import("atomico").Sheet;
+export declare const BadgeTokens: import("atomico").Sheet;
+export declare const tokens: import("atomico").Sheet;

@@ -1,0 +1,35 @@
+{
+        "name": "@y-block/fragment",
+        "version": "1.0.0",
+        "type": "module",
+        "publishConfig": {
+                "access": "public"
+        },
+        "peerDependencies": {
+                "atomico": "*"
+        },
+        "scripts": {
+                "build:types": "tsc",
+                "build:compile": "library src/**/*",
+                "build:exports": "exports lib/**/* types/**/* --wrappers",
+                "dev:exports": "exports src/**/* --watch",
+                "build": "pnpm run build:types && pnpm run build:compile && pnpm run build:exports",
+                "prepublishOnly": "pnpm run build"
+        },
+        "dependencies": {
+                "yjs": "^13.6.18"
+        },
+        "types": "types/index.d.ts",
+        "exports": {
+                "./README.md": {
+                        "default": "./types/README.md"
+                }
+        },
+        "typesVersions": {
+                "*": {
+                        "element": [
+                                "types/element.d.ts"
+                        ]
+                }
+        }
+}

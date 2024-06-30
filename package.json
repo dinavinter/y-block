@@ -1,0 +1,46 @@
+{
+  "name": "ylm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "packageManager": "pnpm@9.4.0",
+
+  "workspaces": [
+    "packages/storybook",
+    "packages/components/*",
+    "packages/yjs/*"
+  ],
+  "scripts": {
+    "dev": "pnpm  --filter @formas/* --parallel --stream --if-present run /^dev:.*/  ",
+    "build": "pnpm build:* centralize publish -s",
+    "build:local": "pnpm  --filter @formas/*  --if-present run /^build:.*/ && pnpm --if-present centralize",
+    "dev:storybook": "pnpm --filter st dev",
+    "build:storybook": "pnpm --filter st build ",
+    "create:component": "scaff component-monorepo packages/components && pnpm i",
+    "create:yjs:component": "scaff component-monorepo packages/yjs && pnpm i"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "prettier": {
+    "tabWidth": 4,
+    "singleQuote": false,
+    "endOfLine": "lf"
+  },
+  "dependencies": {
+    "@atomico/exports": "^1.13.2",
+    "@atomico/hooks": "^4.4.1",
+    "@atomico/postcss-tokens": "^3.5.0",
+    "@atomico/run": "^0.14.2",
+    "@atomico/scaffold": "^2.9.5",
+    "@atomico/storybook": "^2.6.0",
+    "@atomico/tsconfig": "^1.1.2",
+    "@atomico/use-disabled": "^2.0.0",
+    "@atomico/vite": "^2.21.1",
+    "atomico": "^1.77.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  }
+}
