@@ -78,7 +78,7 @@
         }
     },
     "dependencies": {
-        "@y-block/array": "^1.0.0",
-        "@y-block/fragment": "^1.0.0"
+        "@y-block/array": "workspace:*",
+        "@y-block/fragment": "workspace:*"
     }
 }

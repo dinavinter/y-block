@@ -233,6 +233,12 @@ importers:
       '@atomico/vue':
         specifier: '*'
         version: 0.3.1(atomico@1.79.2)(vue@3.4.31(typescript@5.5.2))
+      '@y-block/array':
+        specifier: workspace:*
+        version: link:../y-array
+      '@y-block/fragment':
+        specifier: workspace:*
+        version: link:../y-fragment
       atomico:
         specifier: ^1.77.1
         version: 1.79.2

@@ -4,7 +4,10 @@
 name: Node.js Package
 on:
   release:
-    types: [created]
+    types: [created, edited]
+  workflow_dispatch:
+    
+ 
 
 jobs:
   build:
@@ -17,7 +20,6 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 9
           run_install: false
 
       - name: Install Node.js
@@ -39,9 +41,26 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
       - name: Install dependencies
         run: pnpm install
-        
-      - run: pnpm publish:y-block
+
+#      - name: create and publish versions
+#        uses: changesets/action@v1
+#        with:
+#          version: pnpm ci:version
+#          commit: "chore: update versions"
+#          title: "chore: update versions"
+#          publish: pnpm ci:publish
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - run: pnpm publish:y-block --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+    
