@@ -1,6 +1,6 @@
 {
   "name": "@y-block/fragment",
-  "version": "1.0.0",
+  "version": "1.0.1-beta.0",
   "type": "module",
   "publishConfig": {
     "access": "public",
@@ -14,8 +14,9 @@
   },
   "scripts": {
     "build:types": "tsc",
-    "build:compile": "library src/**/*",
-    "build:exports": "exports lib/**/* types/**/* --wrappers",
+    "build:compile": "library \"src/**/*\"",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers --main define",
+
     "dev:exports": "exports src/**/* --watch"
   },
   "dependencies": {
