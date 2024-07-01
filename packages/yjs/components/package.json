@@ -56,7 +56,11 @@
             "default": "../components/package.json"
         },
         "./package": {
-            "default": "../y-fragment/package.json"
+            "default": "../y-map/package.json"
+        },
+        "./@y-block/map": {
+            "types": "./wrapper/@y-block/map.d.ts",
+            "default": "./wrapper/@y-block/map.js"
         }
     },
     "typesVersions": {
@@ -75,11 +79,15 @@
             ],
             "vue": [
                 "wrapper/vue.d.ts"
+            ],
+            "@y-block/map": [
+                "wrapper/@y-block/map.d.ts"
             ]
         }
     },
     "dependencies": {
-        "@y-block/array": "workspace:*",
-        "@y-block/fragment": "workspace:*"
+        "@y-block/array": "^1.0.1-beta.0",
+        "@y-block/fragment": "^1.0.1-beta.0",
+        "@y-block/map": "^1.0.0"
     }
 }

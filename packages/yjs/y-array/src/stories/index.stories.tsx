@@ -1,10 +1,10 @@
-import { YArray } from "../index";
+import { YArray } from "@y-block/array";
 import { define } from "@atomico/storybook";
 import * as Y from 'yjs';
 import {useInternals} from "@atomico/hooks";
 
 export default {
-    title: "@y-block/y-array",
+    title: "@y-block/array",
     ...define( YArray)
 };
 
@@ -20,8 +20,7 @@ export const WithObjects = (props) => <y-array array={yarray([
 </y-array>;
     
     
-
-
+ 
 export const Lazy = (props) => {
     const lazyArray = new Y.Doc().getArray("array");
     lazyArray.push([{text: "Lazy loading.." , idx: 1}])

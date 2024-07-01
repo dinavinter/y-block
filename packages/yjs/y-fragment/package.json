@@ -15,8 +15,7 @@
   "scripts": {
     "build:types": "tsc",
     "build:compile": "library \"src/**/*\"",
-    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers --main define",
-
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
     "dev:exports": "exports src/**/* --watch"
   },
   "dependencies": {

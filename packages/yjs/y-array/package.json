@@ -2,6 +2,9 @@
         "name": "@y-block/array",
         "version": "1.0.1-beta.0",
         "type": "module",
+        "main": "lib/index.js",
+        "module": "lib/index.js",
+        "types": "types/index.d.ts",
         "publishConfig": {
                 "access": "public",
                 "registry": "https://registry.npmjs.org/",
@@ -15,7 +18,7 @@
         "scripts": {
                 "build:types": "tsc",
                 "build:compile": "library \"src/**/*\"",
-                "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers --main define",
+                "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
                 "dev:exports": "exports src/**/* --watch"
         },
         "dependencies": {
@@ -30,7 +33,6 @@
                         "optional": true
                 }
         },
-        "types": "types/index.d.ts",
         "exports": {
                 "./element": {
                         "types": "./types/element.d.ts",

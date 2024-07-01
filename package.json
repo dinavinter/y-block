@@ -17,7 +17,7 @@
     "build": "pnpm --filter @y-block/* --if-present run /^build:.*/ ",
     "centralize": "pnpm --filter @y-block/* --if-present centralize",
     "publish": "pnpm --filter @y-block/*  publish --access public --tag beta",
-    "build:local": "pnpm  --filter @formas/*  --if-present run /^build:.*/ && pnpm --if-present centralize",
+    "build:local": "pnpm  --filter @y-block/*  --if-present run /^build:.*/ && pnpm centralize",
     "dev:storybook": "pnpm --filter st dev",
     "build:storybook": "pnpm --filter st build ",
     "create:component": "scaff component-monorepo packages/components && pnpm i",

@@ -7,7 +7,7 @@ import type {AtomicoThis, JSXElement} from "atomico/types/dom";
 export const YArray = c(function ({array}) {
     const [items, setItems] = useState([])
     const refSlotTemplate = useRef();
-    const Templates = useProxySlot<AtomicoThis >(refSlotTemplate) as (AtomicoThis & (new() =>any) )[];
+    const Templates = useProxySlot<AtomicoThis >(refSlotTemplate, el=> el instanceof HTMLElement) as (AtomicoThis & (new() =>any) )[];
     
      
     useEffect(() => {
@@ -22,6 +22,7 @@ export const YArray = c(function ({array}) {
     }, [array])
 
     function getSharedProps(Template: HTMLElement, item: any) {
+        console.log("YArray:getSharedProps", {Template, item})
         return Template.getAttributeNames()
             .filter((name) => name.startsWith(":") )
             .reduce((acc, name) => { 
