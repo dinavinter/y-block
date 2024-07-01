@@ -1,6 +1,6 @@
 {
     "name": "@y-block/components",
-    "version": "1.0.1-beta.0",
+    "version": "1.0.1-beta.1",
     "type": "module",
     "publishConfig": {
         "access": "public",
@@ -86,8 +86,8 @@
         }
     },
     "dependencies": {
-        "@y-block/array": "^1.0.1-beta.0",
-        "@y-block/fragment": "^1.0.1-beta.0",
-        "@y-block/map": "^1.0.0"
+        "@y-block/array": "^1.0.1-beta.1",
+        "@y-block/fragment": "^1.0.1-beta.1",
+        "@y-block/map": "^1.0.1-beta.1"
     }
 }
