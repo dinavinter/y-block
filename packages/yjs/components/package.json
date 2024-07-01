@@ -13,7 +13,7 @@
         "@atomico/hooks": "^4.1.1",
         "atomico": "^1.77.1",
         "@atomico/react": "*",
-        "@atomico/vue": "*" 
+        "@atomico/vue": "*"
     },
     "peerDependenciesMeta": {
         "@atomico/react": {
@@ -30,15 +30,55 @@
         ".": {
             "types": "./wrapper/index.d.ts",
             "default": "./wrapper/index.js"
+        },
+        "./@y-block/array": {
+            "types": "./wrapper/@y-block/array.d.ts",
+            "default": "./wrapper/@y-block/array.js"
+        },
+        "./@y-block/fragment": {
+            "types": "./wrapper/@y-block/fragment.d.ts",
+            "default": "./wrapper/@y-block/fragment.js"
+        },
+        "./react": {
+            "types": "./wrapper/react.d.ts",
+            "default": "./wrapper/react.js"
+        },
+        "./preact": {
+            "types": "./wrapper/preact.d.ts",
+            "default": "./wrapper/preact.js"
+        },
+        "./vue": {
+            "types": "./wrapper/vue.d.ts",
+            "default": "./wrapper/vue.js"
+        },
+        "./package.json": {
+            "default": "../components/package.json"
+        },
+        "./package": {
+            "default": "../y-fragment/package.json"
         }
-       
     },
     "typesVersions": {
         "*": {
-          
+            "@y-block/array": [
+                "wrapper/@y-block/array.d.ts"
+            ],
+            "@y-block/fragment": [
+                "wrapper/@y-block/fragment.d.ts"
+            ],
+            "react": [
+                "wrapper/react.d.ts"
+            ],
+            "preact": [
+                "wrapper/preact.d.ts"
+            ],
+            "vue": [
+                "wrapper/vue.d.ts"
+            ]
         }
     },
     "dependencies": {
-       
+        "@y-block/array": "^1.0.0",
+        "@y-block/fragment": "^1.0.0"
     }
 }

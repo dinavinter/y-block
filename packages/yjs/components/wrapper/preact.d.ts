@@ -1,4 +1,2 @@
-export * from "@formas/icon/preact";
-export * from "@formas/card/preact";
-export * from "@formas/tokens/preact";
-export * from "@formas/container/preact";
+export * from "@y-block/array/preact";
+export * from "@y-block/fragment/preact";

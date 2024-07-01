@@ -14,11 +14,9 @@
   },
   "scripts": {
     "build:types": "tsc",
-    "build:compile": "library \"src/**/*\" --all-external",
-    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
-    "dev:exports": "exports src/**/* --watch",
-    "build": "pnpm run build:types && pnpm run build:compile && pnpm run build:exports",
-    "prepublishOnly": "pnpm run build"
+    "build:compile": "library src/**/*",
+    "build:exports": "exports lib/**/* types/**/* --wrappers",
+    "dev:exports": "exports src/**/* --watch"
   },
   "dependencies": {
     "yjs": "^13.6.18"

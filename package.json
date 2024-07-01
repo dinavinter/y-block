@@ -13,7 +13,10 @@
   ],
   "scripts": {
     "dev": "pnpm  --filter @formas/* --parallel --stream --if-present run /^dev:.*/  ",
-    "build": "pnpm build:* centralize publish -s",
+    "publish:y-block": "pnpm run build && pnpm run centralize && pnpm run publish",
+    "build": "pnpm --filter @y-block/* --if-present run /^build:.*/ ",
+    "centralize": "pnpm --filter @y-block/* --if-present centralize",
+    "publish": "pnpm --filter @y-block/*  publish --access public --tag beta",
     "build:local": "pnpm  --filter @formas/*  --if-present run /^build:.*/ && pnpm --if-present centralize",
     "dev:storybook": "pnpm --filter st dev",
     "build:storybook": "pnpm --filter st build ",

@@ -1,4 +1,2 @@
-export * from "@formas/icon/react";
-export * from "@formas/card/react";
-export * from "@formas/tokens/react";
-export * from "@formas/container/react";
+export * from "@y-block/array/react";
+export * from "@y-block/fragment/react";

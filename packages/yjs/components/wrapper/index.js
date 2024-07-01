@@ -1,4 +1,2 @@
-export * from "@formas/icon";
-export * from "@formas/card";
-export * from "@formas/tokens";
-export * from "@formas/container";
+export * from "@y-block/array";
+export * from "@y-block/fragment";
