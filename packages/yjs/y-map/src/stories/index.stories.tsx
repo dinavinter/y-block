@@ -1,4 +1,4 @@
-import {YMap} from "../index";
+import {YMap} from "@y-block/map";
 import {define} from "@atomico/storybook";
 import * as Y from 'yjs';
 import {h} from "atomico";

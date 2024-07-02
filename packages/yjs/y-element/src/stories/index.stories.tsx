@@ -1,8 +1,8 @@
- import { YElement } from "../index";
+ import { YElement } from "@y-block/element";
 import { define } from "@atomico/storybook";
 import * as Y from 'yjs';
 import { h } from "atomico";
-
+import "@y-block/fragment";
 export default {
     title: "@y-block/element",
     ...define(YElement)
@@ -37,7 +37,6 @@ export const LazyElement = (props) => {
         "text":  "Lazy loading..",
         "idx":1
     })
-
     setInterval(() => {
         const idx = lazyElement.getAttribute("idx") + 1;
         lazyElement.setAttribute("idx", idx);

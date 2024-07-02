@@ -1,4 +1,4 @@
-import {YFragment} from "../index";
+import {YFragment} from "@y-block/fragment";
 import {define} from "@atomico/storybook";
 import * as Y from "yjs";
 import {h} from "atomico";

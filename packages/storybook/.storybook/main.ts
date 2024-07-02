@@ -7,6 +7,7 @@ const config = {
         "../components/**/*.mdx",
         "../../components/**/*.stories.@(js|jsx|ts|tsx)",
         "../../yjs/**/*.stories.@(js|jsx|ts|tsx)",
+        "../yjs/**/*.mdx"
     ],
     addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
     staticDirs: ["../public"],

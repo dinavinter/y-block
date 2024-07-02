@@ -10,6 +10,9 @@
                 "@atomico/react": "*",
                 "@atomico/vue": "*"
         },
+        "devDependencies": {
+           "@y-block/array": "workspace:*"
+        },
         "scripts": {
                 "build:types": "tsc",
                 "build:compile": "library \"src/**/*\"",

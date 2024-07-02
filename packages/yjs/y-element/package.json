@@ -1,75 +1,90 @@
 {
-        "name": "@y-block/element",
-        "version": "1.0.1-beta.1",
-        "type": "module",
-        "publishConfig": {
-                "access": "public",
-                "tag": "beta"
-        },
-        "peerDependencies": {
-                "atomico": "*",
-                "@atomico/react": "*",
-                "@atomico/vue": "*"
-        },
-        "scripts": {
-                "build:types": "tsc",
-                "build:compile": "library \"src/**/*\"",
-                "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
-                "dev:exports": "exports \"src/**/*\" --watch",
-                "build": "npm run build:types && npm run build:compile && npm run build:exports",
-                "prepublishOnly": "npm run build"
-        },
-        "dependencies": {
-                "yjs": "^13.6.18"
-        },
-        "peerDependenciesMeta": {
-                "@atomico/react": {
-                        "optional": true
-                },
-                "@atomico/vue": {
-                        "optional": true
-                }
-        },
-        "types": "lib/index.js",
-        "exports": {
-                "./element2": {
-                        "types": "./lib/element2.js",
-                        "default": "./lib/element2.js"
-                },
-                ".": {
-                        "types": "./lib/index.js",
-                        "default": "./lib/index.js"
-                },
-                "./react": {
-                        "types": "./wrapper/react.d.ts",
-                        "default": "./wrapper/react.js"
-                },
-                "./preact": {
-                        "types": "./wrapper/preact.d.ts",
-                        "default": "./wrapper/preact.js"
-                },
-                "./vue": {
-                        "types": "./wrapper/vue.d.ts",
-                        "default": "./wrapper/vue.js"
-                },
-                "./README.md": {
-                        "default": "./types/README.md"
-                }
-        },
-        "typesVersions": {
-                "*": {
-                        "element2": [
-                                "lib/element2.js"
-                        ],
-                        "react": [
-                                "wrapper/react.d.ts"
-                        ],
-                        "preact": [
-                                "wrapper/preact.d.ts"
-                        ],
-                        "vue": [
-                                "wrapper/vue.d.ts"
-                        ]
-                }
-        }
+  "name": "@y-block/element",
+  "version": "1.0.1-beta.1",
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "tag": "beta"
+  },
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "types/index.d.ts",
+
+
+  "peerDependencies": {
+    "atomico": "*",
+    "@atomico/react": "*",
+    "@atomico/vue": "*"
+  },
+  "scripts": {
+    "build:types": "tsc",
+    "build:compile": "library \"src/**/*\"",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "dev:exports": "exports \"src/**/*\" --watch",
+    "build": "npm run build:types && npm run build:compile && npm run build:exports",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@y-block/array": "workspace:*",
+    "@y-block/fragment": "workspace:*"
+  },
+  "dependencies": {
+    "yjs": "^13.6.18"
+  },
+  "peerDependenciesMeta": {
+    "@atomico/react": {
+      "optional": true
+    },
+    "@atomico/vue": {
+      "optional": true
+    }
+  },
+  "types": "types/index.d.ts",
+  "exports": {
+    "./element": {
+      "types": "./types/element.d.ts",
+      "default": "./lib/element.js"
+    },
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./react": {
+      "types": "./wrapper/react.d.ts",
+      "default": "./wrapper/react.js"
+    },
+    "./preact": {
+      "types": "./wrapper/preact.d.ts",
+      "default": "./wrapper/preact.js"
+    },
+    "./vue": {
+      "types": "./wrapper/vue.d.ts",
+      "default": "./wrapper/vue.js"
+    },
+    "./README.md": {
+      "default": "./types/README.md"
+    },
+    "./element2": {
+      "default": "./lib/element2.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "element2": [
+        "lib/element2.js"
+      ],
+      "react": [
+        "wrapper/react.d.ts"
+      ],
+      "preact": [
+        "wrapper/preact.d.ts"
+      ],
+      "vue": [
+        "wrapper/vue.d.ts"
+      ],
+      "element": [
+        "types/element.d.ts"
+      ]
+    }
+  }
 }
