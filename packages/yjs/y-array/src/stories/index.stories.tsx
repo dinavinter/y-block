@@ -21,7 +21,7 @@ export const WithObjects = (props) => <y-array array={yarray([
     
     
  
-export const Lazy = (props) => {
+export const Lazy = (props) => { 
     const lazyArray = new Y.Doc().getArray("array");
     lazyArray.push([{text: "Lazy loading.." , idx: 1}])
     setInterval(() =>{

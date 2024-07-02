@@ -84,5 +84,10 @@
                 "wrapper/@y-block/map.d.ts"
             ]
         }
+    },
+    "dependencies": {
+        "@y-block/map": "^1.0.1-beta.2",
+        "@y-block/array": "^1.0.1-beta.2",
+        "@y-block/fragment": "^1.0.1-beta.2"
     }
 }
