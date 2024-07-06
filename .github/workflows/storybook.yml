@@ -1,0 +1,66 @@
+name: Deploy Storybook to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to trigger the build on
+  workflow_dispatch:
+
+jobs:
+  build:
+    environment:
+      name: github-pages
+      url: ${{ steps.build-publish.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v4
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+ 
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+        
+      - name: Build packages
+        run: pnpm build 
+   
+
+      - name: Deploy to GitHub Pages
+        id: build-publish
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./packages/storybook/storybook-static  # Adjust this path if needed
+          checkout: false
+          path: ./packages/storybook/storybook-static  # Adjust this path if needed
+          install_command: pnpm install --no-frozen-lockfile
+          build_command: pnpm build:storybook

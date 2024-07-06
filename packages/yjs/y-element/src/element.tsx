@@ -1,6 +1,6 @@
 import * as Y from 'yjs';
-import { c, css, useCallback,useEffect, useRef, useState } from "atomico";
-import { useProxySlot } from "@atomico/hooks";
+import { c, css,useEffect, useRef, useState } from "atomico";
+import { useProxySlot } from "@atomico/hooks/use-slot";
 import type { AtomicoThis } from "atomico/types/dom";
 export type ValueTypes = Object | number | null | Array<any> | string | Uint8Array | Y.AbstractType<any>;
 export type Attributes ={ [p: string]: ValueTypes }

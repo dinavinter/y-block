@@ -3,8 +3,8 @@ import atomico from "@atomico/vite";
  const config = {
     stories: [
         "../src/**/*.mdx",
-        "../components/**/*.mdx",
-        "../../components/**/*.stories.@(js|jsx|ts|tsx)",
+        // "../components/**/*.mdx",
+        // "../../components/**/*.stories.@(js|jsx|ts|tsx)",
         "../../yjs/**/*.stories.@(js|jsx|ts|tsx)",
         "../yjs/**/*.mdx"
     ],

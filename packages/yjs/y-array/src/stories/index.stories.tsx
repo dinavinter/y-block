@@ -1,7 +1,6 @@
 import { YArray } from "@y-block/array";
 import { define } from "@atomico/storybook";
 import * as Y from 'yjs';
-import {useInternals} from "@atomico/hooks";
 import {c,css} from "atomico";
 
 export default {

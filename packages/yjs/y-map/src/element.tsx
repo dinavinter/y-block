@@ -1,7 +1,6 @@
-import { c, css } from "atomico";
+import { c, css ,useEffect, useRef, useState} from "atomico";
 import * as Y from 'yjs';
-import { useEffect, useRef, useState } from "atomico";
-import { useProxySlot } from "@atomico/hooks";
+import { useProxySlot } from "@atomico/hooks/use-slot";
 import type { AtomicoThis } from "atomico/types/dom";
 
 export const YMap = c(function ({ map }) {

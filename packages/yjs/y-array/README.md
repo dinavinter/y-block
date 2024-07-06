@@ -68,6 +68,13 @@ The Lazy story demonstrates how to dynamically update the array over time.  This
 </y-array>
 ```
 
+#### Package Size:   
+                1.74 kB | gzip: 0.84 kB
+
+| File         | Size   | Gzip         |
+lib/index.js    0.10 kB │ gzip: 0.10 kB
+lib/element.js  1.64 kB │ gzip: 0.74 kB
+
 [//]: # ()
 [//]: # (#### Custom Template Example)
 

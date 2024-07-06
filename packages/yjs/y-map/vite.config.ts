@@ -1,6 +1,23 @@
 import atomico from "@atomico/vite";
-import { defineConfig } from "vite";
+import {defineConfig} from "vite";
+import {resolve} from "path";
 
 export default defineConfig({
-        plugins: atomico({ cssLiterals: { minify: true, postcss: true } }),
+    
+    build: {
+        cssCodeSplit: true, 
+        reportCompressedSize: true,
+        emptyOutDir: true  
+    }, 
+    optimizeDeps: {
+        entries: [resolve(__dirname, "lib/index.js")]
+    }, 
+    plugins: atomico({
+        vitest: false, 
+        tsconfig: resolve(__dirname, "tsconfig.json"),
+        cssLiterals: {
+            minify: true,
+            postcss: true
+        }
+    })
 });

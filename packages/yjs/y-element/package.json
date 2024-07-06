@@ -46,6 +46,12 @@
       "types": "./types/index.d.ts",
       "default": "./lib/index.js"
     },
+    "./tsconfig.json": {
+      "default": "./src/stories/tsconfig.json"
+    },
+    "./element2": {
+      "default": "./lib/element2.js"
+    },
     "./react": {
       "types": "./wrapper/react.d.ts",
       "default": "./wrapper/react.js"
@@ -60,36 +66,12 @@
     },
     "./README.md": {
       "default": "./types/README.md"
-    },
-    "./element2": {
-      "default": "./lib/element2.js"
-    },
-    "./tsconfig.json": {
-      "default": "./src/stories/tsconfig.json"
-    },
-    "./element2 2": {
-      "default": "./lib/element2 2.js"
-    },
-    "./index 2": {
-      "default": "./lib/index 2.js"
-    },
-    "./index 2/react": {
-      "types": "./wrapper/index 2/react.d.ts",
-      "default": "./wrapper/index 2/react.js"
-    },
-    "./index 2/preact": {
-      "types": "./wrapper/index 2/preact.d.ts",
-      "default": "./wrapper/index 2/preact.js"
-    },
-    "./index 2/vue": {
-      "types": "./wrapper/index 2/vue.d.ts",
-      "default": "./wrapper/index 2/vue.js"
     }
   },
   "typesVersions": {
     "*": {
-      "element2": [
-        "lib/element2.js"
+      "element": [
+        "types/element.d.ts"
       ],
       "react": [
         "wrapper/react.d.ts"
@@ -99,18 +81,6 @@
       ],
       "vue": [
         "wrapper/vue.d.ts"
-      ],
-      "element": [
-        "types/element.d.ts"
-      ],
-      "index 2/react": [
-        "wrapper/index 2/react.d.ts"
-      ],
-      "index 2/preact": [
-        "wrapper/index 2/preact.d.ts"
-      ],
-      "index 2/vue": [
-        "wrapper/index 2/vue.d.ts"
       ]
     }
   }

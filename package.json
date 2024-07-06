@@ -14,7 +14,9 @@
   "scripts": {
     "dev": "pnpm --filter @y-block/* --parallel --stream --if-present run /^dev:.*/  ",
     "publish:y-block": "pnpm run build && pnpm run centralize && pnpm run publish --no-git-checks",
-    "build": "pnpm  --if-present run /^build:.*/ ",
+    "build": "pnpm --filter @y-block/* --parallel --stream --if-present run /^build:.*/ ",
+    "build:formas": "pnpm --filter @formas/* --parallel --stream --if-present run /^build:.*/ ",
+
     "centralize": "pnpm --filter @y-block/* --if-present centralize",
     "publish": "pnpm --filter @y-block/*  publish --access public --tag beta",
     "build:local": "pnpm  --filter @y-block/*  --if-present run /^build:.*/ && pnpm centralize",

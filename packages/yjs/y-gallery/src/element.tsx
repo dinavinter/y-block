@@ -1,7 +1,7 @@
 import {c, css, useRef} from "atomico";
 import * as Y from 'yjs';
 import  '@y-block/array'
-import {useProxySlot} from "@atomico/hooks";
+import {useProxySlot} from "@atomico/hooks/use-slot";
 import type {AtomicoThis} from "atomico/types/dom";
 function gallery({items}) {
     const refSlotTemplate = useRef();
