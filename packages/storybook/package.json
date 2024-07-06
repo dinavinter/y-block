@@ -11,9 +11,9 @@
     },
     "dependencies": {
         "atomico": "^1.79.2"
-       
     },
     "devDependencies": {
+        "@atomico/postcss-tokens": "^3.5.0",
         "@atomico/storybook": "^2.6.3",
         "@chromatic-com/storybook": "^1.2.20",
         "@storybook/addon-essentials": "^8.0.0",
@@ -24,13 +24,17 @@
         "@storybook/theming": "^8.1.11",
         "@storybook/web-components": "^8.0.0",
         "@storybook/web-components-vite": "^8.0.0",
-        "storybook": "^8.0.0"
+        "@tailwindcss/aspect-ratio": "^0.4.2",
+        "autoprefixer": "^10.4.17",
+        "postcss": "^8.4.27",
+        "storybook": "^8.0.0",
+        "tailwindcss": "^3.4.4"
     },
     "postcss": {
         "plugins": {
-            "@atomico/postcss-tokens": {
-                "prefix": "formas"
-            }
+            "@atomico/postcss-tokens": {},
+            "tailwindcss": {},
+            "autoprefixer": {}
         }
     }
 }

@@ -1,5 +1,5 @@
 import * as Y from 'yjs';
-export type ValueTypes = Object | number | null | Array<any> | string | Uint8Array | AbstractType<any>;
+export type ValueTypes = Object | number | null | Array<any> | string | Uint8Array | Y.AbstractType<any>;
 export type Attributes = {
     [p: string]: ValueTypes;
 };

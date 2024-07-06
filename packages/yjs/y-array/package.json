@@ -59,6 +59,24 @@
                 },
                 "./tsconfig.json": {
                         "default": "./src/stories/tsconfig.json"
+                },
+                "./element 2": {
+                        "default": "./lib/element 2.js"
+                },
+                "./index 2": {
+                        "default": "./lib/index 2.js"
+                },
+                "./index 2/react": {
+                        "types": "./wrapper/index 2/react.d.ts",
+                        "default": "./wrapper/index 2/react.js"
+                },
+                "./index 2/preact": {
+                        "types": "./wrapper/index 2/preact.d.ts",
+                        "default": "./wrapper/index 2/preact.js"
+                },
+                "./index 2/vue": {
+                        "types": "./wrapper/index 2/vue.d.ts",
+                        "default": "./wrapper/index 2/vue.js"
                 }
         },
         "typesVersions": {
@@ -74,6 +92,15 @@
                         ],
                         "vue": [
                                 "wrapper/vue.d.ts"
+                        ],
+                        "index 2/react": [
+                                "wrapper/index 2/react.d.ts"
+                        ],
+                        "index 2/preact": [
+                                "wrapper/index 2/preact.d.ts"
+                        ],
+                        "index 2/vue": [
+                                "wrapper/index 2/vue.d.ts"
                         ]
                 }
         }

@@ -61,6 +61,14 @@
         "./@y-block/map": {
             "types": "./wrapper/@y-block/map.d.ts",
             "default": "./wrapper/@y-block/map.js"
+        },
+        "./@y-block/gallery": {
+            "types": "./wrapper/@y-block/gallery.d.ts",
+            "default": "./wrapper/@y-block/gallery.js"
+        },
+        "./@y-block/element": {
+            "types": "./wrapper/@y-block/element.d.ts",
+            "default": "./wrapper/@y-block/element.js"
         }
     },
     "typesVersions": {
@@ -82,6 +90,12 @@
             ],
             "@y-block/map": [
                 "wrapper/@y-block/map.d.ts"
+            ],
+            "@y-block/gallery": [
+                "wrapper/@y-block/gallery.d.ts"
+            ],
+            "@y-block/element": [
+                "wrapper/@y-block/element.d.ts"
             ]
         }
     },

@@ -12,9 +12,9 @@
     "packages/yjs/*"
   ],
   "scripts": {
-    "dev": "pnpm  --filter @formas/* --parallel --stream --if-present run /^dev:.*/  ",
+    "dev": "pnpm --filter @y-block/* --parallel --stream --if-present run /^dev:.*/  ",
     "publish:y-block": "pnpm run build && pnpm run centralize && pnpm run publish --no-git-checks",
-    "build": "pnpm --filter @y-block/* --if-present run /^build:.*/ ",
+    "build": "pnpm  --if-present run /^build:.*/ ",
     "centralize": "pnpm --filter @y-block/* --if-present centralize",
     "publish": "pnpm --filter @y-block/*  publish --access public --tag beta",
     "build:local": "pnpm  --filter @y-block/*  --if-present run /^build:.*/ && pnpm centralize",
@@ -44,6 +44,8 @@
     "@atomico/vite": "^2.21.1",
     "atomico": "^1.77.1",
     "typescript": "^5.2.2",
-    "vite": "^5.1.6"
+    "vite": "^5.1.6",
+    "@storybook/types":"^8.1.11"
+  
   }
 }

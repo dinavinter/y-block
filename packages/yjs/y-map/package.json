@@ -53,6 +53,9 @@
                 },
                 "./README.md": {
                         "default": "./types/README.md"
+                },
+                "./tsconfig.json": {
+                        "default": "./src/stories/tsconfig.json"
                 }
         },
         "typesVersions": {

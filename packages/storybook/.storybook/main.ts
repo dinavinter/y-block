@@ -1,7 +1,6 @@
 import { mergeConfig } from "vite";
 import atomico from "@atomico/vite";
-
-const config = {
+ const config = {
     stories: [
         "../src/**/*.mdx",
         "../components/**/*.mdx",
@@ -27,6 +26,7 @@ const config = {
                 atomico({
                     cssLiterals: {
                         postcss: true,
+                        
                     },
                 }),
             ],

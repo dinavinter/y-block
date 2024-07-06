@@ -1,6 +1,6 @@
 {
   "name": "@y-block/element",
-  "version": "1.0.1-beta.1",
+  "version": "1.0.1-beta.2",
   "type": "module",
   "publishConfig": {
     "access": "public",
@@ -9,8 +9,6 @@
   "main": "lib/index.js",
   "module": "lib/index.js",
   "types": "types/index.d.ts",
-
-
   "peerDependencies": {
     "atomico": "*",
     "@atomico/react": "*",
@@ -39,11 +37,10 @@
       "optional": true
     }
   },
-  "types": "types/index.d.ts",
   "exports": {
     "./element": {
-      "types": "./types/element.d.ts",
-      "default": "./lib/element.js"
+      "types": "./src/element.tsx",
+      "default": "./src/element.tsx"
     },
     ".": {
       "types": "./types/index.d.ts",
@@ -66,6 +63,27 @@
     },
     "./element2": {
       "default": "./lib/element2.js"
+    },
+    "./tsconfig.json": {
+      "default": "./src/stories/tsconfig.json"
+    },
+    "./element2 2": {
+      "default": "./lib/element2 2.js"
+    },
+    "./index 2": {
+      "default": "./lib/index 2.js"
+    },
+    "./index 2/react": {
+      "types": "./wrapper/index 2/react.d.ts",
+      "default": "./wrapper/index 2/react.js"
+    },
+    "./index 2/preact": {
+      "types": "./wrapper/index 2/preact.d.ts",
+      "default": "./wrapper/index 2/preact.js"
+    },
+    "./index 2/vue": {
+      "types": "./wrapper/index 2/vue.d.ts",
+      "default": "./wrapper/index 2/vue.js"
     }
   },
   "typesVersions": {
@@ -84,6 +102,15 @@
       ],
       "element": [
         "types/element.d.ts"
+      ],
+      "index 2/react": [
+        "wrapper/index 2/react.d.ts"
+      ],
+      "index 2/preact": [
+        "wrapper/index 2/preact.d.ts"
+      ],
+      "index 2/vue": [
+        "wrapper/index 2/vue.d.ts"
       ]
     }
   }
