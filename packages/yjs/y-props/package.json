@@ -1,5 +1,5 @@
 {
-  "name": "@y-block/array",
+  "name": "@y-block/props",
   "version": "1.0.1-beta.2",
   "type": "module",
   "main": "lib/index.js",
@@ -11,9 +11,9 @@
     "tag": "beta"
   },
   "peerDependencies": {
+    "atomico": "*",
     "@atomico/react": "*",
-    "@atomico/vue": "*",
-    "atomico": "*"
+    "@atomico/vue": "*"
   },
   "scripts": {
     "build:types": "tsc",
@@ -21,11 +21,23 @@
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
     "dev:exports": "exports src/**/* --watch"
   },
-  "dependencies": {
-    "yjs": "^13.6.18"
-  },
   "devDependencies": {
-    "@y-block/props": "workspace:*"
+    "@y-block/array": "workspace:*",
+    "@y-block/map": "workspace:*",
+    "yjs": "^13.6.18",
+    "tailwindcss": "^3.4.4",
+    "@atomico/postcss-tokens": "^3.5.0",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.27",
+    "@storybook/types": "8.1.11",
+    "@tailwindcss/aspect-ratio": "^0.4.2"
+  },
+  "postcss": {
+    "plugins": {
+      "@atomico/postcss-tokens": {},
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   },
   "peerDependenciesMeta": {
     "@atomico/react": {
@@ -61,24 +73,6 @@
     },
     "./tsconfig.json": {
       "default": "./src/stories/tsconfig.json"
-    },
-    "./element 2": {
-      "default": "./lib/element 2.js"
-    },
-    "./index 2": {
-      "default": "./lib/index 2.js"
-    },
-    "./index 2/react": {
-      "types": "./wrapper/index 2/react.d.ts",
-      "default": "./wrapper/index 2/react.js"
-    },
-    "./index 2/preact": {
-      "types": "./wrapper/index 2/preact.d.ts",
-      "default": "./wrapper/index 2/preact.js"
-    },
-    "./index 2/vue": {
-      "types": "./wrapper/index 2/vue.d.ts",
-      "default": "./wrapper/index 2/vue.js"
     }
   },
   "typesVersions": {
@@ -94,15 +88,6 @@
       ],
       "vue": [
         "wrapper/vue.d.ts"
-      ],
-      "index 2/react": [
-        "wrapper/index 2/react.d.ts"
-      ],
-      "index 2/preact": [
-        "wrapper/index 2/preact.d.ts"
-      ],
-      "index 2/vue": [
-        "wrapper/index 2/vue.d.ts"
       ]
     }
   }

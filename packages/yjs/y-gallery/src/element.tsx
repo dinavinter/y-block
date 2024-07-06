@@ -40,7 +40,7 @@ gallery.styles = css`
  
 
 
-    customElements.define("product-card", c(function({name, price, imageSrc, imageAlt, href, color}) {
+customElements.define("product-card", c(function({name, price, imageSrc, imageAlt, href, color}) {
     
     return <host   shadowDom>
             <div class={"group relative"}>

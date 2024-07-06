@@ -1,4 +1,4 @@
-import { c, css } from "atomico";
+import {c, css, html} from "atomico";
 import * as Y from 'yjs';
 import { useEffect, useRef, useState } from "atomico";
 import {useProxySlot} from "@atomico/hooks/use-slot";
@@ -20,7 +20,8 @@ export const YArray = c(function ({array}) {
         })
         
     }, [array])
-
+    
+ 
     function getSharedProps(Template: HTMLElement, item: any) {
         console.log("YArray:getSharedProps", {Template, item})
         return Template.getAttributeNames()
@@ -28,7 +29,7 @@ export const YArray = c(function ({array}) {
             .reduce((acc, name) => { 
                 const key =  name.replace(":", "");
                 const value = Template.getAttribute(name); 
-                acc[key] = typeof value ==="undefined"  || value === "item"  
+                acc[key] = typeof value ==="undefined"  || value === "item" || value ==="true" 
                     ? item : item instanceof Object && item[value] ;
                 return acc;
             }, {})
@@ -59,3 +60,32 @@ export const YArray = c(function ({array}) {
          
     ` 
 } )
+//
+// const reflectProperties= c(function ({ props}) {
+//     const refSlotTemplate = useRef();
+//     const Templates = useProxySlot<AtomicoThis >(refSlotTemplate, el=> el instanceof HTMLElement) as (AtomicoThis & (new() =>any) )[];
+//
+//     return <host shadowDom>
+//         <template><slot  ref={refSlotTemplate}  /></template>
+//         {Templates.map((Template, index) => 
+//             <Template cloneNode {...props}></Template>
+//         )}
+//     </host>
+//   
+// },{
+//     props: {
+//         bind: {
+//             attr: ":props", 
+//             type: String,
+//             value: "true",
+//             reflect: true, 
+//            
+//         },
+//         props: {
+//             type: Object,
+//             reflect: false 
+//         }
+//     }
+// })
+//
+// customElements.define("y-props", reflectProperties)
