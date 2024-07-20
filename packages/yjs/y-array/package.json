@@ -1,6 +1,6 @@
 {
   "name": "@y-block/array",
-  "version": "1.0.1-beta.2",
+  "version": "1.0.1-beta.3",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -19,7 +19,9 @@
     "build:types": "tsc",
     "build:compile": "library \"src/**/*\"",
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
-    "dev:exports": "exports src/**/* --watch"
+    "dev:exports": "exports src/**/* --watch",
+    "dev": "vite dev",
+    "start": "vite"
   },
   "dependencies": {
     "yjs": "^13.6.18"

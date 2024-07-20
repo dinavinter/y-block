@@ -1,6 +1,6 @@
 {
   "name": "@y-block/element",
-  "version": "1.0.1-beta.2",
+  "version": "1.0.1-beta.3",
   "type": "module",
   "publishConfig": {
     "access": "public",
@@ -8,7 +8,7 @@
   },
   "main": "lib/index.js",
   "module": "lib/index.js",
-  "types": "types/index.d.ts",
+  "types": "src/index.tsx",
   "peerDependencies": {
     "atomico": "*",
     "@atomico/react": "*",
@@ -43,8 +43,8 @@
       "default": "./src/element.tsx"
     },
     ".": {
-      "types": "./types/index.d.ts",
-      "default": "./lib/index.js"
+      "types": "./src/index.tsx",
+      "default": "./src/index.tsx"
     },
     "./tsconfig.json": {
       "default": "./src/stories/tsconfig.json"
@@ -71,7 +71,7 @@
   "typesVersions": {
     "*": {
       "element": [
-        "types/element.d.ts"
+        "src/element.tsx"
       ],
       "react": [
         "wrapper/react.d.ts"

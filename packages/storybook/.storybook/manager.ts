@@ -3,7 +3,7 @@ import { create } from "@storybook/theming/create";
 
 const theme = create({
     base: "light",
-    brandTitle: "Formas",
+    brandTitle: "YJS Elements",
     brandUrl: "/",
     brandImage: "/logo-formas.svg",
     brandTarget: "_self",
