@@ -14,7 +14,7 @@
     "atomico": "*",
     "@atomico/react": "*",
     "@atomico/vue": "*",
-    "@y-block/primitives": "1.0.2-beta.3"
+    "@y-block/primitives": "workspace:*"
   },
   "dependencies": {
     "yjs": "^13.6.18"
