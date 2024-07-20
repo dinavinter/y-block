@@ -1,6 +1,6 @@
 {
   "name": "@y-block/dom",
-  "version": "1.0.1-beta.3",
+  "version": "1.0.2-beta.1",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",

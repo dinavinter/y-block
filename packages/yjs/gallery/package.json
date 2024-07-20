@@ -1,6 +1,6 @@
 {
   "name": "@y-block/gallery",
-  "version": "1.0.1-beta.3",
+  "version": "1.0.2-beta.1",
   "type": "module",
   "main": "src/index.tsx",
   "module": "src/index.tsx",
@@ -24,7 +24,7 @@
     "start": "vite",
     "build:types": "tsc",
     "build:compile": "library \"src/**/*\" ",
-    "build:exports": "exports lib/**/* types/**/*  --wrappers",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
     "dev:exports": "exports src/**/* --watch"
   },
   "devDependencies": {

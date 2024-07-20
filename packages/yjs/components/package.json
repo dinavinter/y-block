@@ -1,6 +1,6 @@
 {
     "name": "@y-block/components",
-    "version": "1.0.1-beta.3",
+    "version": "1.0.2-beta.1",
     "type": "module",
     "publishConfig": {
         "access": "public",
@@ -114,8 +114,8 @@
         }
     },
     "dependencies": {
-        "@y-block/dom": "^1.0.1-beta.3",
-        "@y-block/gallery": "^1.0.1-beta.3",
-        "@y-block/primitives": "^1.0.1-beta.3"
+        "@y-block/dom": "workspace:*",
+        "@y-block/gallery": "workspace:*",
+        "@y-block/primitives": "workspace:*"
     }
 }
