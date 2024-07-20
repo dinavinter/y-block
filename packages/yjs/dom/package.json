@@ -1,6 +1,6 @@
 {
   "name": "@y-block/dom",
-  "version": "1.0.2-beta.2",
+  "version": "1.0.2-beta.3",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -36,12 +36,12 @@
   },
   "exports": {
     "./element": {
-      "types": "./types/element.d.ts",
-      "default": "./lib/element.js"
+      "types": "./src/element.tsx",
+      "default": "./src/element.tsx"
     },
     ".": {
-      "types": "./types/index.d.ts",
-      "default": "./lib/index.js"
+      "types": "./src/index.tsx",
+      "default": "./src/index.tsx"
     },
     "./react": {
       "types": "./wrapper/react.d.ts",
@@ -80,8 +80,8 @@
       "default": "./src/props.readme.md"
     },
     "./fragment": {
-      "types": "./types/fragment.d.ts",
-      "default": "./lib/fragment.js"
+      "types": "./src/fragment.tsx",
+      "default": "./src/fragment.tsx"
     },
     "./element/react": {
       "types": "./wrapper/element/react.d.ts",
@@ -117,7 +117,7 @@
   "typesVersions": {
     "*": {
       "element": [
-        "types/element.d.ts"
+        "src/element.tsx"
       ],
       "react": [
         "wrapper/react.d.ts"
@@ -165,7 +165,7 @@
         "src/props.tsx"
       ],
       "fragment": [
-        "types/fragment.d.ts"
+        "src/fragment.tsx"
       ],
       "element/react": [
         "wrapper/element/react.d.ts"

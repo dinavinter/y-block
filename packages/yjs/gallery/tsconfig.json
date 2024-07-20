@@ -1,6 +1,6 @@
 {
         "extends": "@atomico/tsconfig/base.json",
-        "include": ["src/**/*", "demo/**/*"],
+        "include": ["src/**/*"],
         "exclude": ["src/stories"],
         "compilerOptions": {
                 "outDir": "types",

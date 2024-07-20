@@ -1,6 +1,6 @@
 {
   "name": "@y-block/gallery",
-  "version": "1.0.2-beta.2",
+  "version": "1.0.2-beta.3",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -14,7 +14,7 @@
     "atomico": "*",
     "@atomico/react": "*",
     "@atomico/vue": "*",
-    "@y-block/primitives": "workspace:*"
+    "@y-block/primitives": "1.0.2-beta.3"
   },
   "dependencies": {
     "yjs": "^13.6.18"

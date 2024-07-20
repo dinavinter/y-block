@@ -1,9 +1,9 @@
 {
   "name": "@y-block/primitives",
-  "version": "1.0.2-beta.2",
+  "version": "1.0.2-beta.3",
   "type": "module",
-  "main": "src/index.tsx",
-  "module": "src/index.tsx",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "types": "types/index.d.ts",
   "publishConfig": {
     "access": "public",
@@ -40,8 +40,8 @@
       "default": "./lib/element.js"
     },
     ".": {
-      "types": "./types/index.d.ts",
-      "default": "./lib/index.js"
+      "types": "./src/index.tsx",
+      "default": "./src/index.tsx"
     },
     "./react": {
       "types": "./wrapper/react.d.ts",
@@ -59,16 +59,16 @@
       "default": "./types/README.md"
     },
     "./array": {
-      "types": "./types/array.d.ts",
-      "default": "./lib/array.js"
+      "types": "./src/array.tsx",
+      "default": "./src/array.tsx"
     },
     "./map": {
-      "types": "./types/map.d.ts",
-      "default": "./lib/map.js"
+      "types": "./src/map.tsx",
+      "default": "./src/map.tsx"
     },
     "./props": {
-      "types": "./types/props.d.ts",
-      "default": "./lib/props.js"
+      "types": "./src/props.tsx",
+      "default": "./src/props.tsx"
     },
     "./array.readme.md": {
       "default": "./src/array.readme.md"
@@ -80,6 +80,7 @@
       "default": "./src/props.readme.md"
     },
     "./chunks/5957b7fe8354973ccd32ed7508ce9cc9": {
+      "types": "./lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js",
       "default": "./lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js"
     },
     "./array/react": {
@@ -117,6 +118,18 @@
     "./props/vue": {
       "types": "./wrapper/props/vue.d.ts",
       "default": "./wrapper/props/vue.js"
+    },
+    "./array.define": {
+      "types": "./src/array.define.ts",
+      "default": "./src/array.define.ts"
+    },
+    "./map.define": {
+      "types": "./src/map.define.ts",
+      "default": "./src/map.define.ts"
+    },
+    "./props.define": {
+      "types": "./src/props.define.ts",
+      "default": "./src/props.define.ts"
     }
   },
   "typesVersions": {
@@ -161,13 +174,13 @@
         "wrapper/index 4/vue.d.ts"
       ],
       "array": [
-        "types/array.d.ts"
+        "src/array.tsx"
       ],
       "map": [
-        "types/map.d.ts"
+        "src/map.tsx"
       ],
       "props": [
-        "types/props.d.ts"
+        "src/props.tsx"
       ],
       "array.stories": [
         "types/array.stories.d.ts"
@@ -204,6 +217,18 @@
       ],
       "props/vue": [
         "wrapper/props/vue.d.ts"
+      ],
+      "chunks/5957b7fe8354973ccd32ed7508ce9cc9": [
+        "lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js"
+      ],
+      "array.define": [
+        "src/array.define.ts"
+      ],
+      "map.define": [
+        "src/map.define.ts"
+      ],
+      "props.define": [
+        "src/props.define.ts"
       ]
     }
   }

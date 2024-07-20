@@ -15,7 +15,10 @@ export default defineConfig({
                 manifest: true,
                 reportCompressedSize: true,
                 emptyOutDir: true,
-                
+                lib: {
+                        entry: ["src/index.tsx" , 'src/element.tsx'],
+                        formats: ["es"]
+                },
         },  
      
 
