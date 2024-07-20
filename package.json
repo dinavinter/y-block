@@ -13,7 +13,10 @@
   "scripts": {
     "dev": "pnpm --filter @y-block/* --parallel --stream --if-present run /^dev:.*/  ",
     "publish:y-block": "pnpm run build && pnpm run centralize && pnpm run publish --no-git-checks",
-    "build": "pnpm --filter @y-block/* --parallel --stream --if-present run /^build:.*/ ",
+    "build": "pnpm compile && pnpm types && pnpm exports",
+    "compile": "pnpm --filter @y-block/* --parallel --stream --if-present run /^build:compile/ ",
+    "types": "pnpm --filter @y-block/* --parallel --stream --if-present run /^build:types/ ",
+    "exports": "pnpm --filter @y-block/* --parallel --stream --if-present run /^build:exports/ ",
     "build:formas": "pnpm --filter @formas/* --parallel --stream --if-present run /^build:.*/ ",
     "centralize": "pnpm --filter @y-block/* --if-present centralize",
     "publish": "pnpm --filter @y-block/*  publish --access public --tag beta",
