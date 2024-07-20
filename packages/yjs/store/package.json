@@ -1,5 +1,5 @@
 {
-  "name": "@y-block/dom",
+  "name": "@y-block/store",
   "version": "1.0.2-beta.3",
   "type": "module",
   "main": "lib/index.js",
@@ -12,6 +12,7 @@
   },
   "peerDependencies": {
     "@atomico/react": "*",
+    "@atomico/store": "*",
     "@atomico/vue": "*",
     "atomico": "*"
   },
@@ -40,8 +41,8 @@
       "default": "./src/element.tsx"
     },
     ".": {
-      "types": "./src/index.tsx",
-      "default": "./src/index.tsx"
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
     },
     "./react": {
       "types": "./wrapper/react.d.ts",
@@ -112,12 +113,20 @@
     },
     "./fragment.readme.md": {
       "default": "./src/fragment.readme.md"
+    },
+    "./doc.define": {
+      "types": "./types/doc.define.d.ts",
+      "default": "./lib/doc.define.js"
+    },
+    "./doc": {
+      "types": "./types/doc.d.ts",
+      "default": "./lib/doc.js"
     }
   },
   "typesVersions": {
     "*": {
       "element": [
-        "src/element.tsx"
+        "types/element.d.ts"
       ],
       "react": [
         "wrapper/react.d.ts"
@@ -165,7 +174,7 @@
         "src/props.tsx"
       ],
       "fragment": [
-        "src/fragment.tsx"
+        "types/fragment.d.ts"
       ],
       "element/react": [
         "wrapper/element/react.d.ts"
@@ -190,7 +199,19 @@
       ],
       "fragment.stories": [
         "types/fragment.stories.d.ts"
+      ],
+      "doc": [
+        "types/doc.d.ts"
+      ],
+      "doc.define": [
+        "types/doc.define.d.ts"
+      ],
+      "doc.stories": [
+        "types/doc.stories.d.ts"
       ]
     }
+  },
+  "devDependencies": {
+    "y-websocket": "^2.0.4"
   }
 }
