@@ -4,7 +4,7 @@ import * as Y from "yjs";
 import '../../demo/product-card'
 
 export default {
-    title: "@y-block/components/gallery",
+    title: "@y-block/layout/gallery",
     ...define( Gallery)
 };
 
