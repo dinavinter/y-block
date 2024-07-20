@@ -1,6 +1,6 @@
 {
   "name": "@y-block/gallery",
-  "version": "1.0.1-beta.2",
+  "version": "1.0.1-beta.3",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -21,6 +21,9 @@
     "yjs": "^13.6.18"
   },
   "scripts": {
+    "dev": "vite dev  --open",
+    "start": "vite",
+
     "build:types": "tsc",
     "build:compile": "library \"src/**/*\"",
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
@@ -32,7 +35,8 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.27",
     "@storybook/types": "8.1.11",
-    "@tailwindcss/aspect-ratio": "^0.4.2"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@y-block/props": "workspace:*"
   },
   "postcss": {
     "plugins": {

@@ -1,15 +1,15 @@
 import { YArray } from "@y-block/array";
 import { define } from "@atomico/storybook";
 import * as Y from 'yjs';
-import {c,css} from "atomico";
-
+import {c, css, html} from "atomico";
+import '@y-block/props'
 export default {
     title: "@y-block/array",
     ...define( YArray)
 };
 
 export const Story = (props) =><y-array array={yarray(["from y-array!", "item 2"])}>
-    <input $:placeholder="item" />
+    <input $:placeholder />
 </y-array>;
   
 export const WithObjects = (props) => <y-array array={yarray([
@@ -39,11 +39,11 @@ export const Lazy = (props) => {
 }
 
 
- 
- 
-export const Gallery = (props) => {
+
+export const WithProps = (props) => {
+    //setup array
     const array = new Y.Doc().getArray("array");
-    array.push([ {
+    array.push([{
         id: 1,
         name: 'Basic Tee',
         href: '#',
@@ -78,7 +78,39 @@ export const Gallery = (props) => {
             price: '$70',
             color: 'Gray',
         }])
-    // array.push([{ name: "Product 2", price: 200, img: "https://via.placeholder.com/300" }])
+
+    //component
+    return  <y-array array={array} style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+        gap: "20px"
+    }} >
+        <y-props>
+            <product-card-example   />
+        </y-props>
+    </y-array>
+}
+
+ 
+export const WithExplicitBinding = (props) => {
+    const array = new Y.Doc().getArray("array");
+    array.push([ {
+        id: 1,
+        name: 'Basic Tee',
+        href: '#',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+        imageAlt: "Front of men's Basic Tee in black.",
+        price: '$35',
+        color: 'Black',
+    },   {
+        id: 2,
+        name: 'Fashion Hat',
+        href: '#',
+        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+        imageAlt: "Fashion Hat.",
+        price: '$25',
+        color: 'Brown',
+    } ])
  
     return  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 ">
     <y-array array={array} style={{
@@ -138,6 +170,8 @@ customElements.define("product-card-example", c(function({name, price, imageSrc,
     }
 }));
 
+
+        
 
 function yarray(elements) {
     const array = new Y.Doc().getArray("array");
