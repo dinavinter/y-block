@@ -1,10 +1,10 @@
 {
   "name": "@y-block/dom",
-  "version": "1.0.2-beta.1",
+  "version": "1.0.2-beta.2",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
-  "types": "src/index.tsx",
+  "types": "types/index.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
@@ -36,12 +36,12 @@
   },
   "exports": {
     "./element": {
-      "types": "./src/element.tsx",
-      "default": "./src/element.tsx"
+      "types": "./types/element.d.ts",
+      "default": "./lib/element.js"
     },
     ".": {
-      "types": "./src/index.tsx",
-      "default": "./src/index.tsx"
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
     },
     "./react": {
       "types": "./wrapper/react.d.ts",
@@ -80,8 +80,8 @@
       "default": "./src/props.readme.md"
     },
     "./fragment": {
-      "types": "./src/fragment.tsx",
-      "default": "./src/fragment.tsx"
+      "types": "./types/fragment.d.ts",
+      "default": "./lib/fragment.js"
     },
     "./element/react": {
       "types": "./wrapper/element/react.d.ts",
@@ -117,7 +117,7 @@
   "typesVersions": {
     "*": {
       "element": [
-        "src/element.tsx"
+        "types/element.d.ts"
       ],
       "react": [
         "wrapper/react.d.ts"
@@ -165,7 +165,7 @@
         "src/props.tsx"
       ],
       "fragment": [
-        "src/fragment.tsx"
+        "types/fragment.d.ts"
       ],
       "element/react": [
         "wrapper/element/react.d.ts"

@@ -1,10 +1,10 @@
 {
   "name": "@y-block/gallery",
-  "version": "1.0.2-beta.1",
+  "version": "1.0.2-beta.2",
   "type": "module",
-  "main": "src/index.tsx",
-  "module": "src/index.tsx",
-  "types": "types/src/index.d.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "types/index.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
@@ -110,6 +110,12 @@
       ],
       "product-card": [
         "types/demo/product-card.d.ts"
+      ],
+      "fake-store/catalog": [
+        "types/demo/fake-store/catalog.d.ts"
+      ],
+      "fake-store": [
+        "types/demo/fake-store/index.d.ts"
       ]
     }
   },
