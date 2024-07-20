@@ -1,25 +1,31 @@
-import {c, useRef} from "atomico";
-import {useProxySlot} from "@atomico/hooks/use-slot";
+import {c, useRef, useEffect} from "atomico";
+import {useSlot} from "@atomico/hooks/use-slot";
 import type {AtomicoThis} from "atomico/types/dom";
 
-export const Props= c(function ({ props}) {
+
+
+export const YProps = c(function ({props}) {
     const refSlotTemplate = useRef();
-    const Templates = useProxySlot<AtomicoThis >(refSlotTemplate, el=> el instanceof HTMLElement) as (AtomicoThis & (new() =>any) )[];
+    const Templates = useSlot<AtomicoThis>(refSlotTemplate, el => el instanceof Element);
+
+    useEffect(() => {
+        console.debug("YProps:reflecting properties", {props, Templates})
+        Templates.forEach((Template) => {
+            Object.assign(Template, props)
+        })
+    }, [props, Templates])
 
     return <host shadowDom>
-        <template><slot  ref={refSlotTemplate}  /></template>
-        {Templates.map((Template, index) =>
-            <Template  {...props}></Template>
-        )}
+        <slot ref={refSlotTemplate}/>
     </host>
 
-},{
+}, {
     props: {
         bind: {
             attr: ":props",
             type: String,
-            value: "true",
-            reflect: true, 
+            value: "item",
+            reflect: true,
         },
         props: {
             type: Object,
@@ -27,4 +33,3 @@ export const Props= c(function ({ props}) {
         }
     }
 })
-

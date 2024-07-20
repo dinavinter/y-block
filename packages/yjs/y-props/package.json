@@ -1,6 +1,6 @@
 {
   "name": "@y-block/props",
-  "version": "1.0.1-beta.2",
+  "version": "1.0.1-beta.3",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -19,7 +19,8 @@
     "build:types": "tsc",
     "build:compile": "library \"src/**/*\"",
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
-    "dev:exports": "exports src/**/* --watch"
+    "dev:exports": "exports src/**/* --watch",
+    "publish": "pnpm  publish --access public --tag beta --no-git-checks"
   },
   "devDependencies": {
     "@y-block/array": "workspace:*",

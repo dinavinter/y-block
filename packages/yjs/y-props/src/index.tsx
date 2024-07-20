@@ -1,4 +1,4 @@
-import { Props } from "./element";
-export { Props } from "./element";
+import {YProps } from "./element";
+export {YProps } from "./element";
 
-customElements.define("y-props", Props);
+customElements.define("y-props", YProps);
