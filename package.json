@@ -37,7 +37,6 @@
     "endOfLine": "lf"
   },
   "dependencies": {
-    "@y-block/primitives": "workspace:*",
     "@atomico/exports": "^1.13.2",
     "@atomico/hooks": "^4.4.1",
     "@atomico/postcss-tokens": "^3.5.0",
@@ -48,8 +47,12 @@
     "@atomico/use-disabled": "^2.0.0",
     "@atomico/vite": "^2.21.1",
     "@storybook/types": "^8.1.11",
+    "@y-block/primitives": "workspace:*",
     "atomico": "^1.77.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
+  },
+  "devDependencies": {
+    "@storybook/docs-tools": "^8.2.5"
   }
 }
