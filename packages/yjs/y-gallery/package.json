@@ -16,8 +16,7 @@
     "@atomico/vue": "*"
   },
   "dependencies": {
-    "@y-block/array": "workspace:*",
-    "@y-block/map": "workspace:*",
+    "@y-block/primitives": "workspace:*",
     "yjs": "^13.6.18"
   },
   "scripts": {
@@ -36,7 +35,8 @@
     "postcss": "^8.4.27",
     "@storybook/types": "8.1.11",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@y-block/props": "workspace:*"
+    "@y-block/primitives": "workspace:*"
+
   },
   "postcss": {
     "plugins": {
@@ -71,6 +71,21 @@
     },
     "./README.md": {
       "default": "./types/README.md"
+    },
+    "./stories/product-card": {
+      "default": "./lib/stories/product-card.js"
+    },
+    "./stories/product-card/react": {
+      "types": "./wrapper/stories/product-card/react.d.ts",
+      "default": "./wrapper/stories/product-card/react.js"
+    },
+    "./stories/product-card/preact": {
+      "types": "./wrapper/stories/product-card/preact.d.ts",
+      "default": "./wrapper/stories/product-card/preact.js"
+    },
+    "./stories/product-card/vue": {
+      "types": "./wrapper/stories/product-card/vue.d.ts",
+      "default": "./wrapper/stories/product-card/vue.js"
     }
   },
   "typesVersions": {
@@ -86,6 +101,15 @@
       ],
       "vue": [
         "wrapper/vue.d.ts"
+      ],
+      "stories/product-card/react": [
+        "wrapper/stories/product-card/react.d.ts"
+      ],
+      "stories/product-card/preact": [
+        "wrapper/stories/product-card/preact.d.ts"
+      ],
+      "stories/product-card/vue": [
+        "wrapper/stories/product-card/vue.d.ts"
       ]
     }
   },
