@@ -1,10 +1,10 @@
- import { YElement } from "@y-block/element";
+import { YElement } from "@y-block/dom/element";
 import { define } from "@atomico/storybook";
 import * as Y from 'yjs';
 import { h } from "atomico";
 import "@y-block/fragment";
 export default {
-    title: "@y-block/element",
+    title: "@y-block/dom/element",
     ...define(YElement)
 };
 const doc =new Y.Doc();
@@ -13,7 +13,7 @@ export const BasicElement = (props) => <y-element element={element(doc.getXmlEle
     <input $:value="key2"></input>
 </y-element>;
 
-export const ComplexElement = (props) => { 
+export const ComplexElement = (props) => {
     return <y-element element={element(doc.getXmlElement("container"), { title: "container" },
         element(new Y.XmlElement("nested"),{
             a: "child 0",
@@ -23,7 +23,7 @@ export const ComplexElement = (props) => {
             a: "child 1",
             b: "##"
         })
-        )}> 
+    )}>
         <input $:value={"title"} />
         <y-element $:element="element" slot={"each"} style={{padding:"6px", marginBlock:"6px"}} >
             <input $:placeholder="a" style={{margin:"3px", padding:"6px"}}></input>
@@ -50,7 +50,7 @@ export const LazyElement = (props) => {
         <input $:value="text"></input>
         <input $:value="idx" type={"number"}></input>
         <y-element $:element="element" slot={"each"} style={{padding:"6px", marginBlock:"6px" }} >
-            <input $:value="idx" type={"number"}></input> 
+            <input $:value="idx" type={"number"}></input>
         </y-element>
     </y-element>
 }
@@ -64,7 +64,7 @@ function element(yelement:Y.XmlElement, attributes,  ...children){
     return yelement
 
 }
- 
+
 function inDoc(elm:Y.XmlElement){
     new Y.Doc().getXmlFragment().push([elm]);
     return elm;

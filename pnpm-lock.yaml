@@ -255,7 +255,7 @@ importers:
         specifier: ^1.77.1
         version: 1.79.2
 
-  packages/yjs/y-array:
+  packages/yjs/dom:
     dependencies:
       '@atomico/react':
         specifier: '*'
@@ -269,34 +269,8 @@ importers:
       yjs:
         specifier: ^13.6.18
         version: 13.6.18
-    devDependencies:
-      '@y-block/props':
-        specifier: workspace:*
-        version: link:../y-props
 
-  packages/yjs/y-element:
-    dependencies:
-      '@atomico/react':
-        specifier: '*'
-        version: 2.7.9(atomico@1.79.2)
-      '@atomico/vue':
-        specifier: '*'
-        version: 0.3.1(atomico@1.79.2)(vue@3.4.33)
-      atomico:
-        specifier: '*'
-        version: 1.79.2
-      yjs:
-        specifier: ^13.6.18
-        version: 13.6.18
-    devDependencies:
-      '@y-block/array':
-        specifier: workspace:*
-        version: link:../y-array
-      '@y-block/fragment':
-        specifier: workspace:*
-        version: link:../y-fragment
-
-  packages/yjs/y-fragment:
+  packages/yjs/primitives:
     dependencies:
       '@atomico/react':
         specifier: '*'
@@ -319,12 +293,9 @@ importers:
       '@atomico/vue':
         specifier: '*'
         version: 0.3.1(atomico@1.79.2)(vue@3.4.33)
-      '@y-block/array':
+      '@y-block/primitives':
         specifier: workspace:*
-        version: link:../y-array
-      '@y-block/map':
-        specifier: workspace:*
-        version: link:../y-map
+        version: link:../primitives
       atomico:
         specifier: '*'
         version: 1.79.2
@@ -341,9 +312,6 @@ importers:
       '@tailwindcss/aspect-ratio':
         specifier: ^0.4.2
         version: 0.4.2(tailwindcss@3.4.6)
-      '@y-block/props':
-        specifier: workspace:*
-        version: link:../y-props
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.19(postcss@8.4.39)
@@ -353,65 +321,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.6
-
-  packages/yjs/y-map:
-    dependencies:
-      '@atomico/react':
-        specifier: '*'
-        version: 2.7.9(atomico@1.79.2)
-      '@atomico/vue':
-        specifier: '*'
-        version: 0.3.1(atomico@1.79.2)(vue@3.4.33)
-      atomico:
-        specifier: '*'
-        version: 1.79.2
-      yjs:
-        specifier: ^13.6.18
-        version: 13.6.18
-    devDependencies:
-      '@y-block/array':
-        specifier: workspace:*
-        version: link:../y-array
-
-  packages/yjs/y-props:
-    dependencies:
-      '@atomico/react':
-        specifier: '*'
-        version: 2.7.9(atomico@1.79.2)
-      '@atomico/vue':
-        specifier: '*'
-        version: 0.3.1(atomico@1.79.2)(vue@3.4.33)
-      atomico:
-        specifier: '*'
-        version: 1.79.2
-    devDependencies:
-      '@atomico/postcss-tokens':
-        specifier: ^3.5.0
-        version: 3.5.0(postcss@8.4.39)
-      '@storybook/types':
-        specifier: 8.1.11
-        version: 8.1.11
-      '@tailwindcss/aspect-ratio':
-        specifier: ^0.4.2
-        version: 0.4.2(tailwindcss@3.4.6)
-      '@y-block/array':
-        specifier: workspace:*
-        version: link:../y-array
-      '@y-block/map':
-        specifier: workspace:*
-        version: link:../y-map
-      autoprefixer:
-        specifier: ^10.4.17
-        version: 10.4.19(postcss@8.4.39)
-      postcss:
-        specifier: ^8.4.27
-        version: 8.4.39
-      tailwindcss:
-        specifier: ^3.4.4
-        version: 3.4.6
-      yjs:
-        specifier: ^13.6.18
-        version: 13.6.18
 
 packages:
 
@@ -5209,6 +5118,7 @@ packages:
 
   /isomorphic.js@0.2.5:
     resolution: {integrity: sha512-PIeMbHqMt4DnUP3MA/Flc0HElYjMXArsw1qwJZcm9sqR8mq3l8NYizFMty0pWwE/tzIGH3EKK5+jes5mAr85yw==}
+    dev: false
 
   /jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
@@ -5312,6 +5222,7 @@ packages:
     hasBin: true
     dependencies:
       isomorphic.js: 0.2.5
+    dev: false
 
   /lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
@@ -6952,6 +6863,7 @@ packages:
     engines: {node: '>=16.0.0', npm: '>=8.0.0'}
     dependencies:
       lib0: 0.2.94
+    dev: false
 
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}

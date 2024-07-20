@@ -1,0 +1,135 @@
+{
+  "name": "@y-block/dom",
+  "version": "1.0.1-beta.3",
+  "type": "module",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "src/index.tsx",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "beta"
+  },
+  "peerDependencies": {
+    "@atomico/react": "*",
+    "@atomico/vue": "*",
+    "atomico": "*"
+  },
+  "scripts": {
+    "build:types": "tsc",
+    "build:compile": "library src/**/* ",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "dev:exports": "exports src/**/* --watch",
+    "dev": "vite dev",
+    "start": "vite"
+  },
+  "dependencies": {
+    "yjs": "^13.6.18"
+  },
+  "peerDependenciesMeta": {
+    "@atomico/react": {
+      "optional": true
+    },
+    "@atomico/vue": {
+      "optional": true
+    }
+  },
+  "exports": {
+    "./element": {
+      "types": "./types/element.d.ts",
+      "default": "./lib/element.js"
+    },
+    ".": {
+      "types": "./src/index.tsx",
+      "default": "./src/index.tsx"
+    },
+    "./react": {
+      "types": "./wrapper/react.d.ts",
+      "default": "./wrapper/react.js"
+    },
+    "./preact": {
+      "types": "./wrapper/preact.d.ts",
+      "default": "./wrapper/preact.js"
+    },
+    "./vue": {
+      "types": "./wrapper/vue.d.ts",
+      "default": "./wrapper/vue.js"
+    },
+    "./README.md": {
+      "default": "./types/README.md"
+    },
+    "./array": {
+      "types": "./src/array.tsx",
+      "default": "./src/array.tsx"
+    },
+    "./map": {
+      "types": "./src/map.tsx",
+      "default": "./src/map.tsx"
+    },
+    "./props": {
+      "types": "./src/props.tsx",
+      "default": "./src/props.tsx"
+    },
+    "./array.readme.md": {
+      "default": "./src/array.readme.md"
+    },
+    "./map.readme.md": {
+      "default": "./src/map.readme.md"
+    },
+    "./props.readme.md": {
+      "default": "./src/props.readme.md"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "element": [
+        "types/element.d.ts"
+      ],
+      "react": [
+        "wrapper/react.d.ts"
+      ],
+      "preact": [
+        "wrapper/preact.d.ts"
+      ],
+      "vue": [
+        "wrapper/vue.d.ts"
+      ],
+      "index 2/react": [
+        "wrapper/index 2/react.d.ts"
+      ],
+      "index 2/preact": [
+        "wrapper/index 2/preact.d.ts"
+      ],
+      "index 2/vue": [
+        "wrapper/index 2/vue.d.ts"
+      ],
+      "index 3/react": [
+        "wrapper/index 3/react.d.ts"
+      ],
+      "index 3/preact": [
+        "wrapper/index 3/preact.d.ts"
+      ],
+      "index 3/vue": [
+        "wrapper/index 3/vue.d.ts"
+      ],
+      "index 4/react": [
+        "wrapper/index 4/react.d.ts"
+      ],
+      "index 4/preact": [
+        "wrapper/index 4/preact.d.ts"
+      ],
+      "index 4/vue": [
+        "wrapper/index 4/vue.d.ts"
+      ],
+      "array": [
+        "src/array.tsx"
+      ],
+      "map": [
+        "src/map.tsx"
+      ],
+      "props": [
+        "src/props.tsx"
+      ]
+    }
+  }
+}

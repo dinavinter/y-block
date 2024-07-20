@@ -1,4 +1,4 @@
-import {YFragment} from "@y-block/fragment";
+import {YFragment} from "./fragment";
 import {define} from "@atomico/storybook";
 import * as Y from "yjs";
 import {h} from "atomico";
@@ -8,8 +8,8 @@ export default {
     ...define(YFragment),
     args: {
         fragment: yfragment(["h1", {style: "color: red;"}, "Hello YFragment"])
-    } 
-    
+    }
+
 };
 
 
@@ -59,7 +59,7 @@ function yxml(element, attrs, children) {
             element.setAttribute(key, value);
         });
     }
-    if (!typeof children !== "undefined") {
+    if (typeof children !== "undefined") {
         if (typeof children === "string") {
             console.log("children string", {tag: element.nodeName, element: element.toJSON(), attrs, children});
             element.push([new Y.XmlText(children)]);

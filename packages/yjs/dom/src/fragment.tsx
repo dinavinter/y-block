@@ -1,6 +1,6 @@
 import { c, css, useEffect,useRef } from "atomico";
 import  * as Y from "yjs";
- 
+
 export const YFragment =c(function ({fragment})  {
     const refDom = useRef();
 
@@ -18,9 +18,9 @@ export const YFragment =c(function ({fragment})  {
                 console.log("YTemplateDomViewer:observeDeep", {events, fragment: fragment.toJSON()})
                 initDom();
             })
-        } 
+        }
     }, [fragment])
-    
+
     return (
         <host shadowDom>
             <div ref={refDom}>
@@ -35,12 +35,14 @@ export const YFragment =c(function ({fragment})  {
         }
     },
     styles:css`
-        :host{
-            display:block;
-        }
+		:host{
+			display:block;
+		}
     `
 })
- 
 
- 
 
+
+
+
+customElements && customElements.define && customElements.define("y-fragment", YFragment);

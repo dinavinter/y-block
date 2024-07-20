@@ -4,8 +4,13 @@
         "exclude": ["src/stories"],
         "compilerOptions": {
                 "outDir": "types",
+                "skipLibCheck": true,
+                
                 "paths": {
-                    "@y-block/fragment": ["./src/index.tsx"],
+                        "~/*": [
+                                "./src/*"
+                        ]
                 }
-        }
+        },
+        
 }

@@ -15,20 +15,20 @@ export const YElement = c(function ({ element }) {
 
     useEffect(() => {
         if (!element) return;
-         console.debug("YElement:useEffect", element.nodeName,{ element: element.toJSON() },ChildTemplates);
+        console.debug("YElement:useEffect", element.nodeName,{ element: element.toJSON() },ChildTemplates);
         setAttributes(element.getAttributes());
         setChildren(element.toArray());
-         
+
         element.observe(event => {
             console.log("YElement:observe", element.nodeName,{ event, element: element.toJSON() });
             setAttributes(element.getAttributes());
             setChildren(element.toArray());
         });
-        
+
     }, [element]);
 
-   function getSharedProps(Template: HTMLElement, attributes: Attributes) {
-         
+    function getSharedProps(Template: HTMLElement, attributes: Attributes) {
+
         console.log("YElement:getSharedProps",{ Template, attributes });
         return Template.getAttributeNames()
             .filter((name) => name.startsWith(":"))
@@ -39,8 +39,8 @@ export const YElement = c(function ({ element }) {
                 return acc;
             }, {});
     }
-    
- 
+
+
 
     return <host shadowDom>
         <template><slot ref={refSlotTemplate} /></template>
@@ -49,10 +49,10 @@ export const YElement = c(function ({ element }) {
         {Templates.map((Template) =>
             <Template cloneNode {...getSharedProps(Template, {
                 ...attributes,
-                 "*": element
+                "*": element
             })} />
         )}
-        
+
         {children.map((child, index) =>
             ChildTemplates.map((Template) =>
                 <Template cloneNode {...getSharedProps(Template, {
@@ -77,3 +77,7 @@ export const YElement = c(function ({ element }) {
         }
     `
 });
+
+
+
+customElements && customElements.define && customElements.define("y-element", YElement)
