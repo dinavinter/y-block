@@ -1,3 +1,3 @@
-import {YProps} from "../lib";
+import {YProps} from "./props";
 
 customElements.define("y-props", YProps)

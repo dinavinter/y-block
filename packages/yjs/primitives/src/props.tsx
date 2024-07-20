@@ -1,7 +1,6 @@
 import {c, useRef, useEffect} from "atomico";
 import {useSlot} from "@atomico/hooks/use-slot";
 import type {AtomicoThis} from "atomico/types/dom";
-import {YArray} from "~/array";
 
 
 

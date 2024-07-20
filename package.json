@@ -34,6 +34,7 @@
     "endOfLine": "lf"
   },
   "dependencies": {
+    "@y-block/primitives": "workspace:*",
     "@atomico/exports": "^1.13.2",
     "@atomico/hooks": "^4.4.1",
     "@atomico/postcss-tokens": "^3.5.0",

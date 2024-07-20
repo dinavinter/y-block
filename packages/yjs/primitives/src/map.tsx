@@ -2,7 +2,6 @@ import { c, css ,useEffect, useRef, useState} from "atomico";
 import * as Y from 'yjs';
 import { useProxySlot } from "@atomico/hooks/use-slot";
 import type { AtomicoThis } from "atomico/types/dom";
-import {YArray} from "~/array";
 
 export const YMap = c(function ({ map }) {
     const [items, setItems] = useState([]);
