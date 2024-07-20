@@ -1,6 +1,6 @@
 {
     "name": "@y-block/components",
-    "version": "1.0.1-beta.3",
+    "version": "1.0.2-beta.1",
     "type": "module",
     "publishConfig": {
         "access": "public",
@@ -26,77 +26,7 @@
     },
     "main": "wrapper/index.js",
     "module": "wrapper/index.js",
-    "types": "wrapper/index.d.ts",
-    "exports": {
-        ".": {
-            "types": "./wrapper/index.d.ts",
-            "default": "./wrapper/index.js"
-        },
-        "./@y-block/array": {
-            "types": "./wrapper/@y-block/array.d.ts",
-            "default": "./wrapper/@y-block/array.js"
-        },
-        "./@y-block/fragment": {
-            "types": "./wrapper/@y-block/fragment.d.ts",
-            "default": "./wrapper/@y-block/fragment.js"
-        },
-        "./react": {
-            "types": "./wrapper/react.d.ts",
-            "default": "./wrapper/react.js"
-        },
-        "./preact": {
-            "types": "./wrapper/preact.d.ts",
-            "default": "./wrapper/preact.js"
-        },
-        "./vue": {
-            "types": "./wrapper/vue.d.ts",
-            "default": "./wrapper/vue.js"
-        },
-        "./package.json": {
-            "default": "../components/package.json"
-        },
-        "./package": {
-            "default": "../y-map/package.json"
-        },
-        "./@y-block/map": {
-            "types": "./wrapper/@y-block/map.d.ts",
-            "default": "./wrapper/@y-block/map.js"
-        },
-        "./@y-block/gallery": {
-            "types": "./wrapper/@y-block/gallery.d.ts",
-            "default": "./wrapper/@y-block/gallery.js"
-        },
-        "./@y-block/element": {
-            "types": "./wrapper/@y-block/element.d.ts",
-            "default": "./wrapper/@y-block/element.js"
-        }
-    },
-    "typesVersions": {
-        "*": {
-            "@y-block/array": [
-                "wrapper/@y-block/array.d.ts"
-            ],
-            "@y-block/fragment": [
-                "wrapper/@y-block/fragment.d.ts"
-            ],
-            "react": [
-                "wrapper/react.d.ts"
-            ],
-            "preact": [
-                "wrapper/preact.d.ts"
-            ],
-            "vue": [
-                "wrapper/vue.d.ts"
-            ],
-            "@y-block/map": [
-                "wrapper/@y-block/map.d.ts"
-            ],
-            "@y-block/gallery": [
-                "wrapper/@y-block/gallery.d.ts"
-            ],
-            "@y-block/element": [
-                "wrapper/@y-block/element.d.ts"
-            ]
-        }
-    }
+    "types": "wrapper/index.d.ts"
+     
+     
 }
