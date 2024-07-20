@@ -51,4 +51,3 @@ export const YMap = c(function ({ map }) {
     `
 });
 
-customElements && customElements.define && customElements.define("y-map", YMap)

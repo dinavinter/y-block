@@ -35,4 +35,4 @@ export const YProps = c(function ({props}) {
     }
 })
 
-customElements && customElements.define && customElements.define("y-props", YProps)
+export default YProps;

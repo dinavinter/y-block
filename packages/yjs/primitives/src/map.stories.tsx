@@ -2,10 +2,11 @@ import {define} from "@atomico/storybook";
 import * as Y from 'yjs';
 import {h} from "atomico";
 import {YMap} from "./map";
-import "@y-block/primitives/array";
+import "./map.define";
+import "./array.define";
 
 export default {
-    title: "@y-block/map",
+    title: "@y-block/primitives/map",
     ...define(YMap)
 };
 

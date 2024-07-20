@@ -1,8 +1,7 @@
-import { YElement } from "@y-block/dom/element";
+import { YElement } from "./element";
 import { define } from "@atomico/storybook";
 import * as Y from 'yjs';
-import { h } from "atomico";
-import "@y-block/fragment";
+import "./fragment";
 export default {
     title: "@y-block/dom/element",
     ...define(YElement)
@@ -57,7 +56,9 @@ export const LazyElement = (props) => {
 
 function element(yelement:Y.XmlElement, attributes,  ...children){
     Object.entries(attributes).forEach(([key, value]) => {
-        yelement.setAttribute(key, value);
+        if (typeof value === "string") {
+            yelement.setAttribute(key, value);
+        }
     });
     children?.length > 0 &&   yelement.insert(0, children)
 

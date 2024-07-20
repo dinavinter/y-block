@@ -6,7 +6,6 @@
                 "outDir": "types",
                 "resolveJsonModule": true,
                 "allowSyntheticDefaultImports": true,
-                "skipLibCheck": true,
                 "skipDefaultLibCheck": true
         }
 }

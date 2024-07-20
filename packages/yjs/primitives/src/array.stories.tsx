@@ -2,9 +2,9 @@ import { YArray } from "./array";
 import { define } from "@atomico/storybook";
 import * as Y from 'yjs';
 import {c, css, html} from "atomico";
-import './props'
+import './props.define'
 export default {
-    title: "@y-block/array",
+    title: "@y-block/primitives/array",
     ...define( YArray)
 };
 

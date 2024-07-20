@@ -1,5 +1,3 @@
-export * from "@y-block/array/react";
-export * from "@y-block/element/react";
+export * from "@y-block/primitives/react";
+export * from "@y-block/dom/react";
 export * from "@y-block/gallery/react";
-export * from "@y-block/fragment/react";
-export * from "@y-block/map/react";

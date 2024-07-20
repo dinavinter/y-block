@@ -62,4 +62,3 @@ export const YArray = c(function ({array}) {
 } )
 
 
-customElements && customElements.define && customElements.define("y-array", YArray)

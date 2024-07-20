@@ -1,9 +1,10 @@
-import {Gallery} from "@y-block/gallery";
+import {Gallery} from "../index";
 import { define } from "@atomico/storybook";
 import * as Y from "yjs";
-import './product-card'
+import '../../demo/product-card'
+
 export default {
-    title: "@y-block/gallery",
+    title: "@y-block/components/gallery",
     ...define( Gallery)
 };
 

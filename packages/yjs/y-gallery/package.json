@@ -2,9 +2,9 @@
   "name": "@y-block/gallery",
   "version": "1.0.1-beta.3",
   "type": "module",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "types": "types/index.d.ts",
+  "main": "src/index.tsx",
+  "module": "src/index.tsx",
+  "types": "types/src/index.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
@@ -13,19 +13,18 @@
   "peerDependencies": {
     "atomico": "*",
     "@atomico/react": "*",
-    "@atomico/vue": "*"
+    "@atomico/vue": "*",
+    "@y-block/primitives": "workspace:*"
   },
   "dependencies": {
-    "@y-block/primitives": "workspace:*",
     "yjs": "^13.6.18"
   },
   "scripts": {
     "dev": "vite dev  --open",
     "start": "vite",
-
     "build:types": "tsc",
-    "build:compile": "library \"src/**/*\"",
-    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "build:compile": "library \"src/**/*\" ",
+    "build:exports": "exports lib/**/* types/**/*  --wrappers",
     "dev:exports": "exports src/**/* --watch"
   },
   "devDependencies": {
@@ -34,9 +33,7 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.27",
     "@storybook/types": "8.1.11",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@y-block/primitives": "workspace:*"
-
+    "@tailwindcss/aspect-ratio": "^0.4.2"
   },
   "postcss": {
     "plugins": {
@@ -50,11 +47,11 @@
       "default": "./src/stories/tsconfig.json"
     },
     "./element": {
-      "types": "./types/element.d.ts",
+      "types": "./types/src/element.d.ts",
       "default": "./lib/element.js"
     },
     ".": {
-      "types": "./types/index.d.ts",
+      "types": "./types/src/index.d.ts",
       "default": "./lib/index.js"
     },
     "./react": {
@@ -91,7 +88,7 @@
   "typesVersions": {
     "*": {
       "element": [
-        "types/element.d.ts"
+        "types/src/element.d.ts"
       ],
       "react": [
         "wrapper/react.d.ts"
@@ -110,6 +107,9 @@
       ],
       "stories/product-card/vue": [
         "wrapper/stories/product-card/vue.d.ts"
+      ],
+      "product-card": [
+        "types/demo/product-card.d.ts"
       ]
     }
   },

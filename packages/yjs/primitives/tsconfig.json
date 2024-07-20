@@ -2,6 +2,7 @@
         "extends": "@atomico/tsconfig/base.json",
         "include": ["src/**/*"],
         "exclude": ["src/stories"],
+        
         "compilerOptions": {
                 "outDir": "types",
                 "skipLibCheck": true,

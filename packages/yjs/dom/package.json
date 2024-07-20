@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build:types": "tsc",
-    "build:compile": "library src/**/* ",
+    "build:compile": "library \"src/**/*\" ",
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
     "dev:exports": "exports src/**/* --watch",
     "dev": "vite dev",
@@ -36,8 +36,8 @@
   },
   "exports": {
     "./element": {
-      "types": "./types/element.d.ts",
-      "default": "./lib/element.js"
+      "types": "./src/element.tsx",
+      "default": "./src/element.tsx"
     },
     ".": {
       "types": "./src/index.tsx",
@@ -78,12 +78,46 @@
     },
     "./props.readme.md": {
       "default": "./src/props.readme.md"
+    },
+    "./fragment": {
+      "types": "./src/fragment.tsx",
+      "default": "./src/fragment.tsx"
+    },
+    "./element/react": {
+      "types": "./wrapper/element/react.d.ts",
+      "default": "./wrapper/element/react.js"
+    },
+    "./element/preact": {
+      "types": "./wrapper/element/preact.d.ts",
+      "default": "./wrapper/element/preact.js"
+    },
+    "./element/vue": {
+      "types": "./wrapper/element/vue.d.ts",
+      "default": "./wrapper/element/vue.js"
+    },
+    "./fragment/react": {
+      "types": "./wrapper/fragment/react.d.ts",
+      "default": "./wrapper/fragment/react.js"
+    },
+    "./fragment/preact": {
+      "types": "./wrapper/fragment/preact.d.ts",
+      "default": "./wrapper/fragment/preact.js"
+    },
+    "./fragment/vue": {
+      "types": "./wrapper/fragment/vue.d.ts",
+      "default": "./wrapper/fragment/vue.js"
+    },
+    "./element.readme.md": {
+      "default": "./src/element.readme.md"
+    },
+    "./fragment.readme.md": {
+      "default": "./src/fragment.readme.md"
     }
   },
   "typesVersions": {
     "*": {
       "element": [
-        "types/element.d.ts"
+        "src/element.tsx"
       ],
       "react": [
         "wrapper/react.d.ts"
@@ -129,6 +163,33 @@
       ],
       "props": [
         "src/props.tsx"
+      ],
+      "fragment": [
+        "src/fragment.tsx"
+      ],
+      "element/react": [
+        "wrapper/element/react.d.ts"
+      ],
+      "element/preact": [
+        "wrapper/element/preact.d.ts"
+      ],
+      "element/vue": [
+        "wrapper/element/vue.d.ts"
+      ],
+      "fragment/react": [
+        "wrapper/fragment/react.d.ts"
+      ],
+      "fragment/preact": [
+        "wrapper/fragment/preact.d.ts"
+      ],
+      "fragment/vue": [
+        "wrapper/fragment/vue.d.ts"
+      ],
+      "element.stories": [
+        "types/element.stories.d.ts"
+      ],
+      "fragment.stories": [
+        "types/fragment.stories.d.ts"
       ]
     }
   }

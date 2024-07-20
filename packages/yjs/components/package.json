@@ -56,7 +56,7 @@
             "default": "../components/package.json"
         },
         "./package": {
-            "default": "../y-map/package.json"
+            "default": "../y-gallery/package.json"
         },
         "./@y-block/map": {
             "types": "./wrapper/@y-block/map.d.ts",
@@ -69,6 +69,14 @@
         "./@y-block/element": {
             "types": "./wrapper/@y-block/element.d.ts",
             "default": "./wrapper/@y-block/element.js"
+        },
+        "./@y-block/dom": {
+            "types": "./wrapper/@y-block/dom.d.ts",
+            "default": "./wrapper/@y-block/dom.js"
+        },
+        "./@y-block/primitives": {
+            "types": "./wrapper/@y-block/primitives.d.ts",
+            "default": "./wrapper/@y-block/primitives.js"
         }
     },
     "typesVersions": {
@@ -96,7 +104,18 @@
             ],
             "@y-block/element": [
                 "wrapper/@y-block/element.d.ts"
+            ],
+            "@y-block/dom": [
+                "wrapper/@y-block/dom.d.ts"
+            ],
+            "@y-block/primitives": [
+                "wrapper/@y-block/primitives.d.ts"
             ]
         }
+    },
+    "dependencies": {
+        "@y-block/dom": "^1.0.1-beta.3",
+        "@y-block/gallery": "^1.0.1-beta.3",
+        "@y-block/primitives": "^1.0.1-beta.3"
     }
 }

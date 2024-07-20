@@ -1,7 +1,11 @@
-import { c, css, useEffect,useRef } from "atomico";
-import  * as Y from "yjs";
+import {c, css, useEffect, useRef} from "atomico";
+import * as Y from "yjs";
 
-export const YFragment =c(function ({fragment})  {
+interface YFragmentProps {
+    fragment?: Y.XmlFragment
+}
+
+export const YFragment = c(function ({fragment}:YFragmentProps) {
     const refDom = useRef();
 
     function initDom() {
@@ -27,22 +31,19 @@ export const YFragment =c(function ({fragment})  {
             </div>
         </host>
     );
-},{
-    props:{
-        fragment:{
+}, {
+    props: {
+        fragment: {
             type: Y.XmlFragment,
-            reflect:false
+            reflect: false
         }
     },
-    styles:css`
+    styles: css`
 		:host{
 			display:block;
 		}
     `
 })
-
-
-
 
 
 customElements && customElements.define && customElements.define("y-fragment", YFragment);

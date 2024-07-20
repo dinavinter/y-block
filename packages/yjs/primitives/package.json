@@ -78,6 +78,58 @@
     },
     "./props.readme.md": {
       "default": "./src/props.readme.md"
+    },
+    "./chunks/5957b7fe8354973ccd32ed7508ce9cc9": {
+      "types": "./lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js",
+      "default": "./lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js"
+    },
+    "./array/react": {
+      "types": "./wrapper/array/react.d.ts",
+      "default": "./wrapper/array/react.js"
+    },
+    "./array/preact": {
+      "types": "./wrapper/array/preact.d.ts",
+      "default": "./wrapper/array/preact.js"
+    },
+    "./array/vue": {
+      "types": "./wrapper/array/vue.d.ts",
+      "default": "./wrapper/array/vue.js"
+    },
+    "./map/react": {
+      "types": "./wrapper/map/react.d.ts",
+      "default": "./wrapper/map/react.js"
+    },
+    "./map/preact": {
+      "types": "./wrapper/map/preact.d.ts",
+      "default": "./wrapper/map/preact.js"
+    },
+    "./map/vue": {
+      "types": "./wrapper/map/vue.d.ts",
+      "default": "./wrapper/map/vue.js"
+    },
+    "./props/react": {
+      "types": "./wrapper/props/react.d.ts",
+      "default": "./wrapper/props/react.js"
+    },
+    "./props/preact": {
+      "types": "./wrapper/props/preact.d.ts",
+      "default": "./wrapper/props/preact.js"
+    },
+    "./props/vue": {
+      "types": "./wrapper/props/vue.d.ts",
+      "default": "./wrapper/props/vue.js"
+    },
+    "./array.define": {
+      "types": "./src/array.define.ts",
+      "default": "./src/array.define.ts"
+    },
+    "./map.define": {
+      "types": "./src/map.define.ts",
+      "default": "./src/map.define.ts"
+    },
+    "./props.define": {
+      "types": "./src/props.define.ts",
+      "default": "./src/props.define.ts"
     }
   },
   "typesVersions": {
@@ -129,6 +181,54 @@
       ],
       "props": [
         "src/props.tsx"
+      ],
+      "array.stories": [
+        "types/array.stories.d.ts"
+      ],
+      "map.stories": [
+        "types/map.stories.d.ts"
+      ],
+      "props.stories": [
+        "types/props.stories.d.ts"
+      ],
+      "array/react": [
+        "wrapper/array/react.d.ts"
+      ],
+      "array/preact": [
+        "wrapper/array/preact.d.ts"
+      ],
+      "array/vue": [
+        "wrapper/array/vue.d.ts"
+      ],
+      "map/react": [
+        "wrapper/map/react.d.ts"
+      ],
+      "map/preact": [
+        "wrapper/map/preact.d.ts"
+      ],
+      "map/vue": [
+        "wrapper/map/vue.d.ts"
+      ],
+      "props/react": [
+        "wrapper/props/react.d.ts"
+      ],
+      "props/preact": [
+        "wrapper/props/preact.d.ts"
+      ],
+      "props/vue": [
+        "wrapper/props/vue.d.ts"
+      ],
+      "chunks/5957b7fe8354973ccd32ed7508ce9cc9": [
+        "lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js"
+      ],
+      "array.define": [
+        "src/array.define.ts"
+      ],
+      "map.define": [
+        "src/map.define.ts"
+      ],
+      "props.define": [
+        "src/props.define.ts"
       ]
     }
   }

@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "packageManager": "pnpm@9.5.0",
-
   "workspaces": [
     "packages/storybook",
     "packages/components/*",
@@ -16,17 +15,15 @@
     "publish:y-block": "pnpm run build && pnpm run centralize && pnpm run publish --no-git-checks",
     "build": "pnpm --filter @y-block/* --parallel --stream --if-present run /^build:.*/ ",
     "build:formas": "pnpm --filter @formas/* --parallel --stream --if-present run /^build:.*/ ",
-
     "centralize": "pnpm --filter @y-block/* --if-present centralize",
     "publish": "pnpm --filter @y-block/*  publish --access public --tag beta",
     "dev:build": "pnpm build:local --watch",
     "build:local": "pnpm  --filter @y-block/*  --if-present run /^build:.*/ && pnpm centralize ",
-
     "dev:storybook": "pnpm --filter st dev",
     "build:storybook": "pnpm --filter st build ",
     "create:component": "scaff component-monorepo packages/components && pnpm i",
-    "create:yjs:component": "scaff component-monorepo packages/yjs && pnpm i"
-
+    "create:yjs:component": "scaff component-monorepo packages/yjs && pnpm i",
+    "create:ystore:component": "scaff component-monorepo packages/ystore && pnpm i"
   },
   "keywords": [],
   "author": "",
@@ -46,10 +43,9 @@
     "@atomico/tsconfig": "^1.1.2",
     "@atomico/use-disabled": "^2.0.0",
     "@atomico/vite": "^2.21.1",
+    "@storybook/types": "^8.1.11",
     "atomico": "^1.77.1",
     "typescript": "^5.2.2",
-    "vite": "^5.1.6",
-    "@storybook/types":"^8.1.11"
-  
+    "vite": "^5.1.6"
   }
 }

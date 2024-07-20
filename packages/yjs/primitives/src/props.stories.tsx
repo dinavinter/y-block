@@ -5,7 +5,7 @@ import "./array";
 import * as Y from 'yjs';
 
 export default {
-    title: "@y-block/props",
+    title: "@y-block/primitives/props",
     ...define(YProps),
     args: {
         title: "This is a title",

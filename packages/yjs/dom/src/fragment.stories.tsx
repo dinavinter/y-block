@@ -4,7 +4,7 @@ import * as Y from "yjs";
 import {h} from "atomico";
 
 export default {
-    title: "@y-block/fragment",
+    title: "@y-block/dom/fragment",
     ...define(YFragment),
     args: {
         fragment: yfragment(["h1", {style: "color: red;"}, "Hello YFragment"])
@@ -87,7 +87,7 @@ function yxml(element, attrs, children) {
 
 }
 
-function yfragment([tag, attrs, children]) {
+function yfragment([tag, attrs, children]: [string, any, any ?]) {
     const fragment = inFragment([new Y.XmlElement(tag)])
     yxml(fragment.get(0), attrs, children)
     return fragment;

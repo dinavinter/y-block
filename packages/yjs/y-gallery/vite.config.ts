@@ -4,13 +4,22 @@ import { defineConfig } from "vite";
 export default defineConfig({
         
         build: {
+                
+                
+                ssrManifest: true,
+                commonjsOptions: {
+                        esmExternals: true,
+                },
                 cssCodeSplit: true,
+                cssMinify: true,
+                manifest: true,
                 reportCompressedSize: true,
                 emptyOutDir: true,
                 
-        },
-        publicDir: "demo",
+        },  
+     
+
+        
        
-       
-        plugins: atomico({ cssLiterals: { minify: true, postcss: true } }),
+        plugins: atomico({ cssLiterals: { minify: true, postcss: true }  }),
 });
