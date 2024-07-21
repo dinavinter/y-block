@@ -25,7 +25,10 @@
     "build:types": "tsc",
     "build:compile": "library \"src/**/*\" ",
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
-    "dev:exports": "exports src/**/* --watch"
+    "dev:exports": "exports src/**/* --watch",
+    "clean:lib": "rm -rf lib",
+    "clean:types": "rm -rf types",
+    "clean:install": "rm -rf node_modules"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.4",
@@ -47,11 +50,11 @@
       "default": "./src/stories/tsconfig.json"
     },
     "./element": {
-      "types": "./types/src/element.d.ts",
+      "types": "./types/element.d.ts",
       "default": "./lib/element.js"
     },
     ".": {
-      "types": "./types/src/index.d.ts",
+      "types": "./types/index.d.ts",
       "default": "./lib/index.js"
     },
     "./react": {
@@ -88,7 +91,7 @@
   "typesVersions": {
     "*": {
       "element": [
-        "types/src/element.d.ts"
+        "types/element.d.ts"
       ],
       "react": [
         "wrapper/react.d.ts"

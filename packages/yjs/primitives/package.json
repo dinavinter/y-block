@@ -20,6 +20,9 @@
     "build:compile": "library src/**/* ",
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
     "dev:exports": "exports src/**/* --watch",
+    "clean:lib": "rm -rf lib",
+    "clean:types": "rm -rf types",
+    "clean:install": "rm -rf node_modules",
     "dev": "vite dev",
     "start": "vite"
   },
@@ -40,8 +43,8 @@
       "default": "./lib/element.js"
     },
     ".": {
-      "types": "./src/index.tsx",
-      "default": "./src/index.tsx"
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
     },
     "./react": {
       "types": "./wrapper/react.d.ts",
@@ -59,16 +62,16 @@
       "default": "./types/README.md"
     },
     "./array": {
-      "types": "./src/array.tsx",
-      "default": "./src/array.tsx"
+      "types": "./types/array.d.ts",
+      "default": "./lib/array.js"
     },
     "./map": {
-      "types": "./src/map.tsx",
-      "default": "./src/map.tsx"
+      "types": "./types/map.d.ts",
+      "default": "./lib/map.js"
     },
     "./props": {
-      "types": "./src/props.tsx",
-      "default": "./src/props.tsx"
+      "types": "./types/props.d.ts",
+      "default": "./lib/props.js"
     },
     "./array.readme.md": {
       "default": "./src/array.readme.md"
@@ -80,7 +83,6 @@
       "default": "./src/props.readme.md"
     },
     "./chunks/5957b7fe8354973ccd32ed7508ce9cc9": {
-      "types": "./lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js",
       "default": "./lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js"
     },
     "./array/react": {
@@ -120,16 +122,16 @@
       "default": "./wrapper/props/vue.js"
     },
     "./array.define": {
-      "types": "./src/array.define.ts",
-      "default": "./src/array.define.ts"
+      "types": "./types/array.define.d.ts",
+      "default": "./lib/array.define.js"
     },
     "./map.define": {
-      "types": "./src/map.define.ts",
-      "default": "./src/map.define.ts"
+      "types": "./types/map.define.d.ts",
+      "default": "./lib/map.define.js"
     },
     "./props.define": {
-      "types": "./src/props.define.ts",
-      "default": "./src/props.define.ts"
+      "types": "./types/props.define.d.ts",
+      "default": "./lib/props.define.js"
     }
   },
   "typesVersions": {
@@ -174,13 +176,13 @@
         "wrapper/index 4/vue.d.ts"
       ],
       "array": [
-        "src/array.tsx"
+        "types/array.d.ts"
       ],
       "map": [
-        "src/map.tsx"
+        "types/map.d.ts"
       ],
       "props": [
-        "src/props.tsx"
+        "types/props.d.ts"
       ],
       "array.stories": [
         "types/array.stories.d.ts"
@@ -222,13 +224,13 @@
         "lib/chunks/5957b7fe8354973ccd32ed7508ce9cc9.js"
       ],
       "array.define": [
-        "src/array.define.ts"
+        "types/array.define.d.ts"
       ],
       "map.define": [
-        "src/map.define.ts"
+        "types/map.define.d.ts"
       ],
       "props.define": [
-        "src/props.define.ts"
+        "types/props.define.d.ts"
       ]
     }
   }

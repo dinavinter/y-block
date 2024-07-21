@@ -17,7 +17,8 @@
         "build:types": "tsc",
         "build:compile": "library \"src/**/*\" --all-external",
         "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
-        "dev:exports": "exports \"src/**/*\" --watch"
+        "dev:exports": "exports \"src/**/*\" --watch",
+        "clean:lib": "rm -rf lib", "clean:types": "rm -rf types", "clean:install": "rm -rf node_modules"
     },
     "types": "types/index.d.ts",
     "exports": {

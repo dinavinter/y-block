@@ -11,6 +11,7 @@
     "packages/yjs/*"
   ],
   "scripts": {
+    "clean": "pnpm  --parallel --stream --if-present run /^clean:.*/ && rm -rf node_modules",
     "dev": "pnpm --filter @y-block/* --parallel --stream --if-present run /^dev:.*/  ",
     "publish:y-block": "pnpm run build && pnpm run centralize && pnpm run publish --no-git-checks",
     "build": "pnpm compile && pnpm types && pnpm exports",
