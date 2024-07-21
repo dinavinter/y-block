@@ -22,7 +22,11 @@
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
     "dev:exports": "exports src/**/* --watch",
     "dev": "vite dev",
-    "start": "vite"
+    "start": "vite",
+    "clean:lib": "rm -rf lib",
+    "clean:types": "rm -rf types wrapper",
+    "clean:install": "rm -rf node_modules"
+
   },
   "dependencies": {
     "yjs": "^13.6.18"

@@ -33,7 +33,10 @@
                 "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
                 "dev:exports": "exports src/**/* --watch",
                 "build": "npm run build:types && npm run build:compile && npm run build:exports",
-                "prepublishOnly": "npm run build"
+                "prepublishOnly": "npm run build",
+                "clean:lib": "rm -rf lib",
+                "clean:types": "rm -rf types wrapper",
+                "clean:install": "rm -rf node_modules"
         },
         "types": "types/index.d.ts",
         "exports": {

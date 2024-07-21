@@ -9,7 +9,7 @@ const awareness = new awarenessProtocol.Awareness(doc);
 const awareness2 = new awarenessProtocol.Awareness(doc);
 
 export default {
-    title: "@y-block/components/cm",
+    title: "@y-block/editors/cm",
     ...define(
         YCm,
         { // Optional

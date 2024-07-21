@@ -23,7 +23,7 @@
     "dev": "vite dev",
     "start": "vite",
     "clean:lib": "rm -rf lib",
-    "clean:types": "rm -rf types",
+    "clean:types": "rm -rf types wrapper",
     "clean:install": "rm -rf node_modules"
   },
   "dependencies": {
