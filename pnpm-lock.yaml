@@ -195,73 +195,6 @@ importers:
         specifier: '*'
         version: 1.79.2
 
-  packages/components/y-cm:
-    dependencies:
-      '@atomico/store':
-        specifier: '*'
-        version: 2.0.1
-      '@codemirror/commands':
-        specifier: ^6.5.0
-        version: 6.6.0
-      '@codemirror/lang-css':
-        specifier: ^6.2.1
-        version: 6.2.1(@codemirror/view@6.28.6)
-      '@codemirror/lang-html':
-        specifier: ^6.4.9
-        version: 6.4.9
-      '@codemirror/lang-javascript':
-        specifier: ^6.2.2
-        version: 6.2.2
-      '@codemirror/language':
-        specifier: ^6.10.1
-        version: 6.10.2
-      '@codemirror/state':
-        specifier: ^6.4.1
-        version: 6.4.1
-      '@codemirror/view':
-        specifier: ^6.28.2
-        version: 6.28.6
-      '@uiw/codemirror-extensions-basic-setup':
-        specifier: ^4.23.0
-        version: 4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/commands@6.6.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
-      '@uiw/codemirror-extensions-color':
-        specifier: ^4.23.0
-        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
-      '@uiw/codemirror-extensions-langs':
-        specifier: ^4.23.0
-        version: 4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language-data@6.5.1(@codemirror/view@6.28.6))(@codemirror/language@6.10.2)(@codemirror/legacy-modes@6.4.0)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
-      '@uiw/codemirror-theme-quietlight':
-        specifier: ^4.23.0
-        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
-      atomico:
-        specifier: '*'
-        version: 1.79.2
-      y-codemirror.next:
-        specifier: ^0.3.5
-        version: 0.3.5(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(yjs@13.6.18)
-      y-protocols:
-        specifier: ^1.0.6
-        version: 1.0.6(yjs@13.6.18)
-    devDependencies:
-      '@atomico/postcss-tokens':
-        specifier: ^3.5.0
-        version: 3.5.0(postcss@8.4.39)
-      '@tailwindcss/aspect-ratio':
-        specifier: ^0.4.2
-        version: 0.4.2(tailwindcss@3.4.6)
-      '@uiw/codemirror-theme-material':
-        specifier: ^4.23.0
-        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
-      autoprefixer:
-        specifier: ^10.4.17
-        version: 10.4.19(postcss@8.4.39)
-      postcss:
-        specifier: ^8.4.27
-        version: 8.4.39
-      tailwindcss:
-        specifier: ^3.4.4
-        version: 3.4.6
-
   packages/storybook:
     dependencies:
       atomico:
@@ -410,6 +343,49 @@ importers:
       '@atomico/vue':
         specifier: '*'
         version: 0.3.1(atomico@1.79.2)(vue@3.4.33(typescript@5.5.3))
+      atomico:
+        specifier: '*'
+        version: 1.79.2
+      yjs:
+        specifier: ^13.6.18
+        version: 13.6.18
+    devDependencies:
+      y-websocket:
+        specifier: ^2.0.4
+        version: 2.0.4(yjs@13.6.18)
+
+  packages/yjs/y-cm:
+    dependencies:
+      '@atomico/react':
+        specifier: '*'
+        version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
+      '@atomico/store':
+        specifier: '*'
+        version: 2.0.1
+      '@atomico/vue':
+        specifier: '*'
+        version: 0.3.1(atomico@1.79.2)(vue@3.4.33(typescript@5.5.3))
+      '@codemirror/commands':
+        specifier: ^6.5.0
+        version: 6.6.0
+      '@codemirror/lang-css':
+        specifier: ^6.2.1
+        version: 6.2.1(@codemirror/view@6.28.6)
+      '@codemirror/lang-html':
+        specifier: ^6.4.9
+        version: 6.4.9
+      '@codemirror/lang-javascript':
+        specifier: ^6.2.2
+        version: 6.2.2
+      '@codemirror/language':
+        specifier: ^6.10.1
+        version: 6.10.2
+      '@codemirror/state':
+        specifier: ^6.4.1
+        version: 6.4.1
+      '@codemirror/view':
+        specifier: ^6.28.2
+        version: 6.28.6
       '@uiw/codemirror-extensions-basic-setup':
         specifier: ^4.23.0
         version: 4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/commands@6.6.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
@@ -425,13 +401,31 @@ importers:
       atomico:
         specifier: '*'
         version: 1.79.2
-      yjs:
-        specifier: ^13.6.18
-        version: 13.6.18
+      y-codemirror.next:
+        specifier: ^0.3.5
+        version: 0.3.5(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(yjs@13.6.18)
+      y-protocols:
+        specifier: ^1.0.6
+        version: 1.0.6(yjs@13.6.18)
     devDependencies:
-      y-websocket:
-        specifier: ^2.0.4
-        version: 2.0.4(yjs@13.6.18)
+      '@atomico/postcss-tokens':
+        specifier: ^3.5.0
+        version: 3.5.0(postcss@8.4.39)
+      '@tailwindcss/aspect-ratio':
+        specifier: ^0.4.2
+        version: 0.4.2(tailwindcss@3.4.6)
+      '@uiw/codemirror-theme-material':
+        specifier: ^4.23.0
+        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.19(postcss@8.4.39)
+      postcss:
+        specifier: ^8.4.27
+        version: 8.4.39
+      tailwindcss:
+        specifier: ^3.4.4
+        version: 3.4.6
 
 packages:
 
