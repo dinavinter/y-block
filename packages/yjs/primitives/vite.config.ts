@@ -15,7 +15,7 @@ export default defineConfig({
         emptyOutDir: true,
         lib: {
             entry: {
-                index: "src/index.ts",
+                index: "src/index.tsx",
                 "define/props": "src/props.define.ts",
                 "define/map": "src/map.define.ts",
                 "define/array": "src/array.define.ts",
