@@ -49,7 +49,7 @@ let extensions = [
     quietlight,
     keymap.of([indentWithTab]),
     EditorView.lineWrapping,
-    // theme,
+    theme,
     drawSelection(),
     indentOnInput(),
     indentUnit.of(" "),

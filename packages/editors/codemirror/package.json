@@ -29,6 +29,7 @@
                 "atomico": "*"
         },
         "scripts": {
+                "dev": "vite dev --open",
                 "build:types": "tsc",
                 "build:compile": "library \"src/**/*\" ",
                 "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",

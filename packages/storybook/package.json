@@ -5,6 +5,8 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
+        "clean:lib": "rm -rf storybook-static", 
+        "clean:install": "rm -rf node_modules",
         "dev": "storybook dev -p 6006",
         "build": "storybook build",
         "create:component": "scaff component-storybook src"

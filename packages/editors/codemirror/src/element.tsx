@@ -6,12 +6,14 @@ import {yCollab, yUndoManagerKeymap} from "y-codemirror.next";
 import {  ChangeSet, EditorState} from "@codemirror/state";
 import {indentSelection} from "@codemirror/commands";
 import * as Y from "yjs";
+import { icon } from "./indent";
 type CustomDetail = {
     value: string,
     changeset?: ChangeSet,
 }
 export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: CustomEvent<CustomDetail> }> {
     const ref = useRef()
+    
 
     const dispatch = useEvent("Change", {bubbles: true});
 
@@ -51,7 +53,7 @@ export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: Custom
 
 
     const codemirror = useMemo(() => {
-        return new EditorView({
+       return new EditorView({
             extensions: [
                 ...config.extensions,
                 watcher,
@@ -95,14 +97,20 @@ export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: Custom
     //
     // }, [setAwareness])
 
-    return <host shadowDom>
-        <button type="button" title="Indent" onclick={indent} >
-            <iconify-icon icon="mdi:format-indent-increase"></iconify-icon>
-        </button>
-        <div ref={ref} class="codemirror-host cm-s-twilight">
-            {h(codemirror?.dom, {
+    return <host  class={"h-full"}>
+        <div  class={"h-full"}>
+            <nav class="bg-white/75">
+                <button type="button" title="Indent" onclick={indent} class="full-rounded shadow-md ">
+                    {icon()}
+                    {/* <iconify-icon icon="mdi:format-indent-increase"></iconify-icon> */}
+                </button>
+            </nav>
+            <div ref={ref} autofocus class="codemirror-host cm-s-twilight border-2   ">
+                {h(codemirror?.dom, {
+                    
 
-            })}
+                })}
+            </div>
         </div>
     </host>
 
@@ -130,7 +138,10 @@ export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: Custom
 
     .cm-scroller {
         overflow: auto;
-    }`
+    }
+        
+        
+    `
 })
 
  
