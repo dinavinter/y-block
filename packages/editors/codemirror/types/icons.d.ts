@@ -1,0 +1,9 @@
+export declare const edit: any;
+export declare const image: any;
+export declare const chatBubble: any;
+export declare const upload: any;
+export declare const chevronDown: any;
+export declare const xCircle: any;
+export declare const search: any;
+export declare const link: any;
+export declare const trash: any;

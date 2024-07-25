@@ -1,4 +1,4 @@
-import {c, css, h, Host, useCallback, useEffect, useEvent, useHost, useMemo, useRef, useState} from "atomico";
+import {c, css, h, Host, Props, useCallback, useEffect, useEvent, useHost, useMemo, useRef, useState} from "atomico";
 import * as awarenessProtocol from 'y-protocols/awareness';
 import {EditorView, keymap} from "@codemirror/view";
 import {DefaultConfig as config} from "./config";
@@ -10,7 +10,7 @@ type CustomDetail = {
     value: string,
     changeset?: ChangeSet,
 }
-function yCm({text, awareness}): Host<{ onChange: CustomEvent<CustomDetail> }> {
+export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: CustomEvent<CustomDetail> }> {
     const ref = useRef()
 
     const dispatch = useEvent("Change", {bubbles: true});
@@ -60,7 +60,7 @@ function yCm({text, awareness}): Host<{ onChange: CustomEvent<CustomDetail> }> {
                 yCollab(text, awareness)
             ],
             parent: hostDiv,
-            root: host.current.shadowRoot,
+            root: host.current.shadowRoot || undefined,
             state: EditorState.create({
 
                 extensions: [
@@ -96,7 +96,7 @@ function yCm({text, awareness}): Host<{ onChange: CustomEvent<CustomDetail> }> {
     // }, [setAwareness])
 
     return <host shadowDom>
-        <button  onclick={indent} >
+        <button type="button" title="Indent" onclick={indent} >
             <iconify-icon icon="mdi:format-indent-increase"></iconify-icon>
         </button>
         <div ref={ref} class="codemirror-host cm-s-twilight">
@@ -106,9 +106,15 @@ function yCm({text, awareness}): Host<{ onChange: CustomEvent<CustomDetail> }> {
         </div>
     </host>
 
-}
-
-yCm.styles = css`
+}, {
+    props:{
+        value: {type: String, value: ''},
+        language: {type: String, value: 'html'},
+        text: {type: Y.Text, value: undefined as unknown as Y.Text},
+        awareness: {type: Object, value: undefined as unknown as awarenessProtocol.Awareness },
+        
+    },
+    styles: css`
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
@@ -124,18 +130,7 @@ yCm.styles = css`
 
     .cm-scroller {
         overflow: auto;
-    }
-
-
-`
-yCm.props = {
-    value: {type: String, value: ''},
-    language: {type: String, value: 'html'},
-    text: {type: Y.Text, value: undefined as unknown as Y.Text},
-    awareness: {type: Object, value: undefined as unknown as awarenessProtocol.Awareness },
-    
-};
+    }`
+})
 
  
-
-export const YCm = c(yCm);

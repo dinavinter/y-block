@@ -132,6 +132,9 @@
     "./props.define": {
       "types": "./types/props.define.d.ts",
       "default": "./lib/props.define.js"
+    },
+    "./chunks/99b670b1d3c4fece0c4f5cb4952c4ee0": {
+      "default": "./lib/chunks/99b670b1d3c4fece0c4f5cb4952c4ee0.js"
     }
   },
   "typesVersions": {
