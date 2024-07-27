@@ -3,6 +3,8 @@ import {createStore, useProviderStore, useStore} from "@atomico/store";
 import * as Y from "yjs";
 
 export const YDocStore = createStore({doc: undefined as Y.Doc }) 
+
+export const useDocStore = () => useStore(YDocStore)
 export const YSyncedDoc = c(function ySyncedDoc( ) {
     const doc=useSyncedDoc()
 

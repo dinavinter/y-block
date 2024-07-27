@@ -3,3 +3,5 @@ storybook-static
 .npmrc
 lib
 dist
+sb.patch
+.idea

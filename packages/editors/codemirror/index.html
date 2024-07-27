@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>YJS Catalog</title>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <!--    <link rel="stylesheet" href="./src/page.css" />-->
+    <script async src="/src/index.tsx" type="module"></script>
+
+
+</head>
+
+<body>
+     <div class="container mx-auto ">
+        <main   role="main" class="w-full  h-screen bg-gray-100">
+        <y-cm > 
+        </y-cm>
+        <template id="input" >
+            <form>
+                <fieldset class="block *:my-2 *:w-full">
+                    <input type="text" name="firstName" placeholder="First Name"
+                           autocomplete="given-name"/>
+                    <input type="text" name="lastName" placeholder="Last Name"
+                           autocomplete="family-name"/>
+                    <input type="email" name="email" placeholder="Email"
+                           autocomplete="email"/>
+                    <input type="password" name="password" placeholder="Password"
+                           autocomplete="new-password"/>
+                </fieldset>
+                <button type="submit"
+                        class="w-full py-[0.4375rem] *:text-[#626890] text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-md border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    <span class="sr-only lg:not-sr-only lg:ml-2">Register</span>
+                    <iconify-icon class="ms-1 me-2" data-icon="account-add"
+                                  icon="line-md:account-add"
+                                  height="1.5rem"></iconify-icon>
+                </button>
+            </form>
+            <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+            <script
+                src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+        </template>
+    </main>
+    </div> 
+
+<script type="module">
+    import * as Y from 'yjs';
+    import * as awarenessProtocol from 'y-protocols/awareness';
+
+    import  './src/index.tsx';
+    const doc = new Y.Doc();
+    const awareness = new awarenessProtocol.Awareness(doc);
+     
+    document.querySelector('y-cm').text =  doc.getText();
+    document.querySelector('y-cm').awareness =  awareness;
+
+    setTimeout(()=>{
+       doc.getText().insert(0, document.querySelector("#input").innerHTML);
+    },
+   20)
+
+
+</script>
+
+
+</body>
+</html>
+ 

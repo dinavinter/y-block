@@ -8,7 +8,11 @@
     },
     "scripts": {
         "dev:exports": "pnpm run centralize",
-        "centralize": "exports \"../**\" --centralize-packages --wrappers"
+        "centralize": "exports \"../**\" --centralize-packages --wrappers",
+        "clean:lib": "rm -rf lib", 
+        "clean:types": "rm -rf types wrapper", 
+        "clean:install": "rm -rf node_modules"
+
     },
     "peerDependencies": {
         "@atomico/hooks": "^4.1.1",

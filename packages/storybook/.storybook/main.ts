@@ -6,7 +6,10 @@ import atomico from "@atomico/vite";
         // "../components/**/*.mdx",
         // "../../components/**/*.stories.@(js|jsx|ts|tsx)",
         "../../yjs/**/*.stories.@(js|jsx|ts|tsx)",
-        "../yjs/**/*.mdx"
+        "../yjs/**/*.mdx",
+        "../../layout/**/*.stories.@(js|jsx|ts|tsx)",
+        "../../layout/**/*.mdx",
+        "../../editors/**/*.stories.@(js|jsx|ts|tsx)",
     ],
     addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
     staticDirs: ["../public"],

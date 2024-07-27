@@ -1,0 +1,47 @@
+{
+    "name": "@formas/tokens",
+    "version": "1.0.8",
+    "type": "module",
+    "publishConfig": {
+        "access": "public"
+    },
+    "peerDependencies": {
+        "atomico": "*"
+    },
+    "scripts": {
+        "build:types": "tsc",
+        "build:compile": "library \"src/**/*\" --all-external",
+        "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+        "dev:exports": "exports \"src/**/*\" --watch",
+        "clean:lib": "rm -rf lib", 
+        "clean:types": "rm -rf types", 
+        "clean:install": "rm -rf node_modules"
+        
+    },
+    "postcss": {
+        "plugins": {
+            "@atomico/postcss-tokens": {
+                "prefix": "formas"
+            }
+        }
+    },
+    "types": "types/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./types/index.d.ts",
+            "default": "./lib/index.js"
+        },
+        "./tokens.yaml": {
+            "default": "./src/tokens.yaml"
+        },
+        "./stories/tsconfig.json": {
+            "default": "./src/stories/tsconfig.json"
+        },
+        "./README.md": {
+            "default": "./types/README.md"
+        }
+    },
+    "typesVersions": {
+        "*": {}
+    }
+}
