@@ -28,6 +28,7 @@
     "clean:install": "rm -rf node_modules"
   },
   "dependencies": {
+    "@atomico/hooks": "^4.4.1",
     "yjs": "^13.6.18"
   },
   "peerDependenciesMeta": {
