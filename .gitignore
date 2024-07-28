@@ -5,3 +5,5 @@ lib
 dist
 sb.patch
 .idea
+wrapper
+types
