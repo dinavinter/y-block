@@ -8,10 +8,9 @@
     "scripts": {
         "dev:exports": "pnpm run centralize",
         "centralize": "exports \"../**\" --centralize-packages --wrappers",
-        "clean:lib": "rm -rf lib", 
-        "clean:lib": "rm -rf lib", 
+        "clean:type": "rm -rf types wrapper",
+        "clean:lib": "rm -rf lib",
         "clean:install": "rm -rf node_modules"
-
     },
     "peerDependencies": {
         "@atomico/hooks": "^4.1.1",
@@ -29,89 +28,5 @@
     },
     "main": "wrapper/index.js",
     "module": "wrapper/index.js",
-    "types": "wrapper/index.d.ts",
-    "exports": {
-        ".": {
-            "types": "./wrapper/index.d.ts",
-            "default": "./wrapper/index.js"
-        },
-        "./icon": {
-            "types": "./wrapper/@formas/icon.d.ts",
-            "default": "./wrapper/@formas/icon.js"
-        },
-        "./card": {
-            "types": "./wrapper/@formas/card.d.ts",
-            "default": "./wrapper/@formas/card.js"
-        },
-        "./tokens": {
-            "types": "./wrapper/@formas/tokens.d.ts",
-            "default": "./wrapper/@formas/tokens.js"
-        },
-        "./container": {
-            "types": "./wrapper/@formas/container.d.ts",
-            "default": "./wrapper/@formas/container.js"
-        },
-        "./react": {
-            "types": "./wrapper/react.d.ts",
-            "default": "./wrapper/react.js"
-        },
-        "./preact": {
-            "types": "./wrapper/preact.d.ts",
-            "default": "./wrapper/preact.js"
-        },
-        "./vue": {
-            "types": "./wrapper/vue.d.ts",
-            "default": "./wrapper/vue.js"
-        },
-        "./package.json": {
-            "default": "../components/package.json"
-        },
-        "./package": {
-            "default": "../container/package.json"
-        }
-    },
-    "typesVersions": {
-        "*": {
-            "icon": [
-                "wrapper/@formas/icon.d.ts"
-            ],
-            "card": [
-                "wrapper/@formas/card.d.ts"
-            ],
-            "tokens": [
-                "wrapper/@formas/tokens.d.ts"
-            ],
-            "container": [
-                "wrapper/@formas/container.d.ts"
-            ],
-            "react": [
-                "wrapper/react.d.ts"
-            ],
-            "preact": [
-                "wrapper/preact.d.ts"
-            ],
-            "vue": [
-                "wrapper/vue.d.ts"
-            ]
-        }
-    },
-    "dependencies": {
-        "@formas/avatar": "^1.0.8",
-        "@formas/badge": "^1.0.8",
-        "@formas/card": "^1.0.8",
-        "@formas/button": "^1.0.8",
-        "@formas/checkbox": "^1.0.8",
-        "@formas/container": "^1.0.8",
-        "@formas/dropdown": "^1.0.8",
-        "@formas/icon": "^1.0.8",
-        "@formas/input": "^1.0.8",
-        "@formas/input-list": "^1.0.8",
-        "@formas/label": "^1.0.8",
-        "@formas/loading": "^1.0.8",
-        "@formas/props": "^1.0.8",
-        "@formas/radio": "^1.0.8",
-        "@formas/select": "^1.0.8",
-        "@formas/switch": "^1.0.8",
-        "@formas/tokens": "^1.0.8"
-    }
+    "types": "wrapper/index.d.ts"
 }

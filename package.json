@@ -19,7 +19,7 @@
     "types": "pnpm   --parallel --stream --if-present run /^build:types/ ",
     "exports": "pnpm  --parallel --stream --if-present run /^build:exports/ ",
     "build:formas": "pnpm --filter @formas/* --parallel --stream --if-present run /^build:.*/ ",
-    "centralize": "pnpm - --if-present centralize",
+    "centralize": "pnpm  --parallel --stream --if-present centralize",
     "publish": "pnpm   publish --access public --tag beta",
     "dev:build": "pnpm build:local --watch",
     "build:local": "pnpm  -  --if-present run /^build:.*/ && pnpm centralize ",
