@@ -1,6 +1,6 @@
 {
     "name": "@y-block/components",
-    "version": "1.0.2-beta.3",
+    "version": "1.0.2-beta.4",
     "type": "module",
     "publishConfig": {
         "access": "public",
