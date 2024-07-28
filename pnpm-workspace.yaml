@@ -1,6 +1,5 @@
 packages:
   - "apps/*"
-  - "packages/yjs/*"
-  - "packages/layout/*"
-  - "packages/editors/*"
+  - "packages/components/*"
+  - "packages/components/**/*"
   - "packages/storybook"
