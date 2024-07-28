@@ -1,0 +1,136 @@
+{
+        "name": "@y-block/cm",
+        "version": "1.0.2-beta.4",
+        "type": "module",
+        "publishConfig": {
+                "access": "public",
+                "tag": "beta"
+        },
+        "dependencies": {
+                "@atomico/store": "*",
+                "@codemirror/commands": "^6.5.0",
+                "@codemirror/lang-css": "^6.2.1",
+                "@codemirror/lang-html": "^6.4.9",
+                "@codemirror/lang-javascript": "^6.2.2",
+                "@codemirror/language": "^6.10.1",
+                "@codemirror/state": "^6.4.1",
+                "@codemirror/view": "^6.28.2",
+                "@uiw/codemirror-extensions-basic-setup": "^4.23.0",
+                "@uiw/codemirror-extensions-color": "^4.23.0",
+                "@uiw/codemirror-extensions-langs": "^4.23.0",
+                "@uiw/codemirror-theme-quietlight": "^4.23.0",
+                "y-codemirror.next": "^0.3.5",
+                "y-protocols": "^1.0.6",
+                "yjs": "^13.6.18"
+        },
+        "peerDependencies": {
+                "@atomico/react": "*",
+                "@atomico/vue": "*",
+                "atomico": "*"
+        },
+        "scripts": {
+                "dev": "vite dev --open",
+                "build:types": "tsc",
+                "build:compile": "library \"src/**/*\" ",
+                "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+                "dev:exports": "exports src/**/* --watch",
+                "build": "npm run build:types && npm run build:compile && npm run build:exports",
+                "prepublishOnly": "npm run build",
+                "clean:lib": "rm -rf lib",
+                "clean:types": "rm -rf types wrapper",
+                "clean:install": "rm -rf node_modules"
+        },
+        "types": "types/index.d.ts",
+        "exports": {
+                "./README.md": {
+                        "default": "./types/README.md"
+                },
+                "./config": {
+                        "types": "./types/config.d.ts",
+                        "default": "./lib/config.js"
+                },
+                "./element": {
+                        "types": "./types/element.d.ts",
+                        "default": "./lib/element.js"
+                },
+                "./icons": {
+                        "types": "./types/icons.d.ts",
+                        "default": "./lib/icons.js"
+                },
+                ".": {
+                        "types": "./types/index.d.ts",
+                        "default": "./lib/index.js"
+                },
+                "./theme": {
+                        "types": "./types/theme.d.ts",
+                        "default": "./lib/theme.js"
+                },
+                "./react": {
+                        "types": "./wrapper/react.d.ts",
+                        "default": "./wrapper/react.js"
+                },
+                "./preact": {
+                        "types": "./wrapper/preact.d.ts",
+                        "default": "./wrapper/preact.js"
+                },
+                "./vue": {
+                        "types": "./wrapper/vue.d.ts",
+                        "default": "./wrapper/vue.js"
+                },
+                "./indent": {
+                        "types": "./types/indent.d.ts",
+                        "default": "./lib/indent.js"
+                }
+        },
+        "typesVersions": {
+                "*": {
+                        "element": [
+                                "types/element.d.ts"
+                        ],
+                        "config": [
+                                "types/config.d.ts"
+                        ],
+                        "icons": [
+                                "types/icons.d.ts"
+                        ],
+                        "theme": [
+                                "types/theme.d.ts"
+                        ],
+                        "react": [
+                                "wrapper/react.d.ts"
+                        ],
+                        "preact": [
+                                "wrapper/preact.d.ts"
+                        ],
+                        "vue": [
+                                "wrapper/vue.d.ts"
+                        ],
+                        "indent": [
+                                "types/indent.d.ts"
+                        ]
+                }
+        },
+        "devDependencies": {
+                "@atomico/postcss-tokens": "^3.5.0",
+                "@tailwindcss/aspect-ratio": "^0.4.2",
+                "@uiw/codemirror-theme-material": "^4.23.0",
+                "autoprefixer": "^10.4.17",
+                "postcss": "^8.4.27",
+                "tailwindcss": "^3.4.4"
+        },
+        "postcss": {
+                "plugins": {
+                        "@atomico/postcss-tokens": {},
+                        "tailwindcss": {},
+                        "autoprefixer": {}
+                }
+        },
+        "peerDependenciesMeta": {
+                "@atomico/react": {
+                        "optional": true
+                },
+                "@atomico/vue": {
+                        "optional": true
+                }
+        }
+}

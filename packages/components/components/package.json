@@ -1,0 +1,36 @@
+{
+    "name": "@y-block/components",
+    "version": "1.0.2-beta.4",
+    "type": "module",
+    "publishConfig": {
+        "access": "public",
+        "tag": "beta"
+    },
+    "scripts": {
+        "dev:exports": "pnpm run centralize",
+        "centralize": "exports \"../**\" --centralize-packages --wrappers",
+        "clean:lib": "rm -rf lib", 
+        "clean:types": "rm -rf types wrapper", 
+        "clean:install": "rm -rf node_modules"
+
+    },
+    "peerDependencies": {
+        "@atomico/hooks": "^4.1.1",
+        "atomico": "^1.77.1",
+        "@atomico/react": "*",
+        "@atomico/vue": "*"
+    },
+    "peerDependenciesMeta": {
+        "@atomico/react": {
+            "optional": true
+        },
+        "@atomico/vue": {
+            "optional": true
+        }
+    },
+    "main": "wrapper/index.js",
+    "module": "wrapper/index.js",
+    "types": "wrapper/index.d.ts"
+     
+     
+}
