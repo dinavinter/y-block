@@ -13,7 +13,7 @@ importers:
         version: 1.13.2(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))
       '@atomico/hooks':
         specifier: ^4.4.1
-        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
+        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
       '@atomico/postcss-tokens':
         specifier: ^3.5.0
         version: 3.5.0(postcss@8.4.40)
@@ -62,7 +62,7 @@ importers:
     dependencies:
       '@atomico/hooks':
         specifier: ^4.1.1
-        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
+        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
       '@atomico/react':
         specifier: '*'
         version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
@@ -133,7 +133,7 @@ importers:
         specifier: ^4.23.0
         version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
       atomico:
-        specifier: '*'
+        specifier: latest
         version: 1.79.2
       y-codemirror.next:
         specifier: ^0.3.5
@@ -168,64 +168,13 @@ importers:
     dependencies:
       '@atomico/hooks':
         specifier: ^4.1.1
-        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
+        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
       '@atomico/react':
         specifier: '*'
         version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
       '@atomico/vue':
         specifier: '*'
         version: 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-      '@formas/avatar':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/badge':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/button':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/card':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/checkbox':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/container':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/dropdown':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/icon':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input-list':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/label':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/loading':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/props':
-        specifier: ^1.0.8
-        version: 1.0.9(atomico@1.79.2)
-      '@formas/radio':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/select':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/switch':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens':
-        specifier: ^1.0.8
-        version: 1.0.9(atomico@1.79.2)
       atomico:
         specifier: ^1.77.1
         version: 1.79.2
@@ -234,64 +183,13 @@ importers:
     dependencies:
       '@atomico/hooks':
         specifier: ^4.1.1
-        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
+        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
       '@atomico/react':
         specifier: '*'
         version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
       '@atomico/vue':
         specifier: '*'
         version: 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-      '@formas/avatar':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/badge':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/button':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/card':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/checkbox':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/container':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/dropdown':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/icon':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input-list':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/label':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/loading':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/props':
-        specifier: ^1.0.8
-        version: 1.0.9(atomico@1.79.2)
-      '@formas/radio':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/select':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/switch':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens':
-        specifier: ^1.0.8
-        version: 1.0.9(atomico@1.79.2)
       atomico:
         specifier: ^1.77.1
         version: 1.79.2
@@ -369,6 +267,67 @@ importers:
       y-websocket:
         specifier: ^2.0.4
         version: 2.0.4(yjs@13.6.18)
+
+  packages/components/y-state:
+    dependencies:
+      '@statelyai/inspect':
+        specifier: ^0.4.0
+        version: 0.4.0(ws@8.18.0)(xstate@5.16.0)
+      xstate:
+        specifier: ^5.16.0
+        version: 5.16.0
+      yjs:
+        specifier: ^13.6.18
+        version: 13.6.18
+    devDependencies:
+      '@atomico/hooks':
+        specifier: '*'
+        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
+      '@atomico/postcss-tokens':
+        specifier: ^3.5.0
+        version: 3.5.0(postcss@8.4.40)
+      '@atomico/scaffold':
+        specifier: ^2.9.5
+        version: 2.9.5
+      '@atomico/store':
+        specifier: '*'
+        version: 2.0.1
+      '@atomico/tsconfig':
+        specifier: ^1.1.2
+        version: 1.1.2
+      '@atomico/vite':
+        specifier: ^2.21.1
+        version: 2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)
+      '@storybook/types':
+        specifier: 8.1.11
+        version: 8.1.11
+      '@tailwindcss/aspect-ratio':
+        specifier: ^0.4.2
+        version: 0.4.2(tailwindcss@3.4.6)
+      '@y-block/cm':
+        specifier: workspace:*
+        version: link:../editors/codemirror
+      '@y-block/dom':
+        specifier: workspace:*
+        version: link:../dom
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.19(postcss@8.4.40)
+      postcss:
+        specifier: ^8.4.27
+        version: 8.4.40
+      postcss-import:
+        specifier: ^16.1.0
+        version: 16.1.0(postcss@8.4.40)
+      postcss-nesting:
+        specifier: ^12.1.5
+        version: 12.1.5(postcss@8.4.40)
+      tailwindcss:
+        specifier: ^3.4.4
+        version: 3.4.6
+      vite:
+        specifier: ^5.2.7
+        version: 5.3.5(@types/node@20.14.12)
 
   packages/storybook:
     dependencies:
@@ -1399,6 +1358,18 @@ packages:
   '@codemirror/view@6.28.6':
     resolution: {integrity: sha512-bhwB1AZ6zU4M3dNKm8Aa2BXwj5mWDqE9IWpqxYKJoLCnx+AcwcMuLO01tLWgc1mx4vT1IVYVqx86YoqUsATrqQ==}
 
+  '@csstools/selector-resolve-nested@1.1.0':
+    resolution: {integrity: sha512-uWvSaeRcHyeNenKg8tp17EVDRkpflmdyvbE0DHo6D/GdBb6PDnCYYU6gRpXhtICMGMcahQmj2zGxwFM/WC8hCg==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss-selector-parser: ^6.0.13
+
+  '@csstools/selector-specificity@3.1.1':
+    resolution: {integrity: sha512-a7cxGcJ2wIlMFLlh8z2ONm+715QkPHiyJcxwQlKOz/03GPw1COpfhcmC9wm4xlZfp//jWHNNMwzjtqHXVWU9KA==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss-selector-parser: ^6.0.13
+
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
     engines: {node: '>=12'}
@@ -1681,205 +1652,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@floating-ui/core@1.6.5':
-    resolution: {integrity: sha512-8GrTWmoFhm5BsMZOTHeGD2/0FLKLQQHvO/ZmQga4tKempYRLz8aqJGqXVuQgisnMObq2YZ2SgkwctN1LOOxcqA==}
-
-  '@floating-ui/dom@1.6.8':
-    resolution: {integrity: sha512-kx62rP19VZ767Q653wsP1XZCGIirkE09E0QUGNYTM/ttbbQHqcGPdSfWFxUyyNLc/W6aoJRBajOSXhP6GXjC0Q==}
-
-  '@floating-ui/utils@0.2.5':
-    resolution: {integrity: sha512-sTcG+QZ6fdEUObICavU+aB3Mp8HY4n14wYHdxK4fXjPmv3PXZZeY5RaguJmGyeH/CJQhX3fqKUtS4qc1LoHwhQ==}
-
-  '@formas/avatar@1.0.9':
-    resolution: {integrity: sha512-G58JmLOt7Sd8CVrpwvyrwF0IZMJVg/sYhEUs7wiPZKy1IrarVfcI5abmnuSJYiXmxawHzZFqo3XqsjWCBpUyYw==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/badge@1.0.9':
-    resolution: {integrity: sha512-pcxwyxGNcRTsmVeVMRhm0MfuVgohJBQKAW7kxE/MHo88R8wiFLP1Ca7FYSiPynBzE558jJ+iRFHMejFvDzLVOA==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/button@1.0.9':
-    resolution: {integrity: sha512-c/rnBJnx2fyP9EC13pjUtl0XqJtIh4J0AyCAv8pU2sz8jOJpG4o+x0DrEhFFO5/+Xn6SMUATCptJOV2LZTrqAg==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/card@1.0.9':
-    resolution: {integrity: sha512-WKiuHN34044B4A5lU8KLNbtN18u5TcELZ9kKsAM6YnA2iKFk/+2nM79d3NDMYns3bw7gMKL216cAIssBZidzaQ==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/checkbox@1.0.9':
-    resolution: {integrity: sha512-qMnc8u6u7dit8iPZUtgEMFDCVon3Dn5tJagKrbF2sN8P5NUY0T7sZjTmaqSkKxpd8luMPavceFztozWZ60t/9Q==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/container@1.0.9':
-    resolution: {integrity: sha512-58ovMwUDBOUjaNQRypPUPlm/Y9xe7C8oabU/n9DVuhxpZ91VFG7GmIYVtVOfNFh+l0JZtVMutV4h3AjLi90crg==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/dropdown@1.0.9':
-    resolution: {integrity: sha512-t6lvABvsMBcMcFfzNxOI5g5bzM1hQZ8pl0iTjVnWtpOj7i3eikCc9IY8LI9Er3RQ5fF98j9VAMLr8IMBrU4r5w==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/icon@1.0.9':
-    resolution: {integrity: sha512-l+VS2ZMklyzd0ULUTP3ofoQEx7tY0OVhyj0iEVhndJGZ0S2RhEqxe71E/BdaejjauFBnDur2cQdqOLJxcG1iUg==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/input-list@1.0.9':
-    resolution: {integrity: sha512-d3yPn5Z2AKauqTrh2yCyR4BmI362VVZYOIOslGNwokyS8JIL0wRanMQfmJRULCJZX4tVYTz8FS5wd0vBnVEZBw==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/input@1.0.9':
-    resolution: {integrity: sha512-0e1pbsW24PznOWhOpcqJdeDvhF47OJnsd2ufJsttYRG3TmYGXWIfGMD5Wm23xPC8M8cR5ewg3ZnpwdgVyAmQgA==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/label@1.0.9':
-    resolution: {integrity: sha512-Rm1blz4P1Dy13sSTKsfyOnht3ubeuXRoOqX+cdbVzPatkyjreoiad6Z85iCYvF5H1Ydt7k/XWpyszzmy6jiysQ==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/loading@1.0.9':
-    resolution: {integrity: sha512-lr3GC7++0ol4IESMLdjeA0CwkX62Gi3fOfoNWyVXKo8J2eUd88DfNUMuQeY00JuObcdRe8kEIAdiNn1dBFHpAQ==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/props@1.0.9':
-    resolution: {integrity: sha512-f71DU+oWZxYdE9AZipbc05ylMO1dxCnzjvGONBfxgIUGcljPd84EOKIZrfQvA7T/Vf3uE0/y72ojshR2TMNBzA==}
-    peerDependencies:
-      atomico: '*'
-
-  '@formas/radio@1.0.9':
-    resolution: {integrity: sha512-ByIEU0bjOg+lDiMm6xOdj7I46p8lFHSatLPsAlPQdu4VkyWmYsSsj5b9lsXpwCCSeRdAHpQi6jxNbcXtvHB60A==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/select@1.0.9':
-    resolution: {integrity: sha512-x++vvcMe76VSdPn1fTmAhh9mlXOoqw3Fxrjrm5hm+237PBI7MZ4Qqx/7OyOXr14ia0YQpEr2CBBew0xBh9QLYg==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/switch@1.0.9':
-    resolution: {integrity: sha512-+B3kcg8iI8DoWKB9mWZsWbFcJNjt3wkMO1xxAIvMjNUfEzaQkM56r4gyaW8a9mPMdUtaMZPP4FS2WC2wM7NduQ==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/tokens@1.0.9':
-    resolution: {integrity: sha512-Anj3sy6TwC1fR8bdqaiu6La8dWyIk0nJ00510IhRwJGf0O8e49laPzCK7vVNJzc3aiiusDLDUaAGQNFXA5IklQ==}
-    peerDependencies:
-      atomico: '*'
-
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
@@ -2122,6 +1894,11 @@ packages:
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
+
+  '@statelyai/inspect@0.4.0':
+    resolution: {integrity: sha512-VxQldRlKYcu6rzLY83RSXVwMYexkH6hNx85B89YWYyXYWtNGaWHFCwV7a/Kz8FFPeUz8EKVAnyMOg2kNpn07wQ==}
+    peerDependencies:
+      xstate: ^5.5.1
 
   '@storybook/addon-actions@8.2.6':
     resolution: {integrity: sha512-iCsf3V28/jJ95w2zd8aSvR4denoA2UYV3fpNCTGOURqICyKOG3cyVxvqKp8Hhcwn7trNOsK+HlL6q5gpv56ViA==}
@@ -2808,6 +2585,10 @@ packages:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
 
+  copy-anything@3.0.5:
+    resolution: {integrity: sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==}
+    engines: {node: '>=12.13'}
+
   core-js-compat@3.37.1:
     resolution: {integrity: sha512-9TNiImhKvQqSUkOvk/mMRZzOANTiEVC7WaBNhHcKM7x+/5E1l5NvsysR19zuDQScE8k+kfQXWRN3AtS/eOSHpg==}
 
@@ -2995,6 +2776,10 @@ packages:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
 
+  event-target-shim@6.0.2:
+    resolution: {integrity: sha512-8q3LsZjRezbFZ2PN+uP+Q7pnHUMmAOziU2vA2OwoFaKIXxlxl38IylhSSgUorWu/rf4er67w0ikBqjBFk/pomA==}
+    engines: {node: '>=10.13.0'}
+
   execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
@@ -3010,6 +2795,9 @@ packages:
   fast-glob@3.3.2:
     resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
     engines: {node: '>=8.6.0'}
+
+  fast-safe-stringify@2.1.1:
+    resolution: {integrity: sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==}
 
   fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
@@ -3305,12 +3093,21 @@ packages:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
     engines: {node: '>=10'}
 
+  is-what@4.1.16:
+    resolution: {integrity: sha512-ZhMwEosbFJkA0YhFnNDgTM4ZxDRsS6HqTo7qsZM08fehyRYIYa0yHu5R6mgo1n/8MgaPBXiPimPD77baVFYg+A==}
+    engines: {node: '>=12.13'}
+
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
   isobject@3.0.1:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
+
+  isomorphic-ws@5.0.0:
+    resolution: {integrity: sha512-muId7Zzn9ywDsyXgTIafTry2sV3nySZeUDe6YedVd1Hvuuep5AsIlqK+XefWpYTyJG5e503F2xIuT2lcU6rCSw==}
+    peerDependencies:
+      ws: '*'
 
   isomorphic.js@0.2.5:
     resolution: {integrity: sha512-PIeMbHqMt4DnUP3MA/Flc0HElYjMXArsw1qwJZcm9sqR8mq3l8NYizFMty0pWwE/tzIGH3EKK5+jes5mAr85yw==}
@@ -3719,6 +3516,9 @@ packages:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
     engines: {node: '>= 0.8'}
 
+  partysocket@0.0.25:
+    resolution: {integrity: sha512-1oCGA65fydX/FgdnsiBh68buOvfxuteoZVSb3Paci2kRp/7lhF0HyA8EDb5X/O6FxId1e+usPTQNRuzFEvkJbQ==}
+
   path-exists@3.0.0:
     resolution: {integrity: sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==}
     engines: {node: '>=4'}
@@ -3803,6 +3603,12 @@ packages:
     peerDependencies:
       postcss: ^8.0.0
 
+  postcss-import@16.1.0:
+    resolution: {integrity: sha512-7hsAZ4xGXl4MW+OKEWCnF6T5jqBw80/EE9aXg1r2yyn1RsVEU8EtKXbijEODa+rg7iih4bKf7vlvTGYR4CnPNg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      postcss: ^8.0.0
+
   postcss-js@4.0.1:
     resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
     engines: {node: ^12 || ^14 || >= 16}
@@ -3826,6 +3632,12 @@ packages:
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
+
+  postcss-nesting@12.1.5:
+    resolution: {integrity: sha512-N1NgI1PDCiAGWPTYrwqm8wpjv0bgDmkYHH72pNsqTCv9CObxjxftdYu6AKtGN+pnJa7FQjMm3v4sp8QJbFsYdQ==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
 
   postcss-selector-parser@6.1.1:
     resolution: {integrity: sha512-b4dlw/9V8A71rLIDsSwVmak9z2DuBUB7CA1/wSdelNEzqsjoSPeADTWNO09lpH49Diy3/JIZ2bSPB1dI3LJCHg==}
@@ -3985,6 +3797,10 @@ packages:
   safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
 
+  safe-stable-stringify@2.4.3:
+    resolution: {integrity: sha512-e2bDA2WJT0wxseVd4lsDP4+3ONX6HpMXQa1ZhFQ7SU+GjvORCmShbCMltrtIDfkYhVHrOcPtj+KhmDBdPdZD1g==}
+    engines: {node: '>=10'}
+
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
@@ -4117,6 +3933,10 @@ packages:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
+
+  superjson@1.13.3:
+    resolution: {integrity: sha512-mJiVjfd2vokfDxsQPOwJ/PtanO87LhpYY88ubI5dUB1Ab58Txbyje3+jpm+/83R/fevaq/107NNhtYBLuoTrFg==}
+    engines: {node: '>=10'}
 
   supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
@@ -4408,6 +4228,9 @@ packages:
       utf-8-validate:
         optional: true
 
+  xstate@5.16.0:
+    resolution: {integrity: sha512-qws7r2nsCsQ/Qgpn75+FYM84M88/nopGsxij/qYNSOyKJKO4n7x8B5isQKv6DMruyF4gGg7y4gsFDTzJUlKcWw==}
+
   xtend@4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
     engines: {node: '>=0.4'}
@@ -4479,7 +4302,7 @@ snapshots:
       '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
       '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
 
-  '@atomico/hooks@4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)':
+  '@atomico/hooks@4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)(element-internals-polyfill@0.1.55)':
     dependencies:
       '@atomico/use-attributes': 2.0.1(atomico@1.79.2)
       '@atomico/use-child-nodes': 1.0.1(atomico@1.79.2)
@@ -5834,6 +5657,14 @@ snapshots:
       style-mod: 4.1.2
       w3c-keyname: 2.2.8
 
+  '@csstools/selector-resolve-nested@1.1.0(postcss-selector-parser@6.1.1)':
+    dependencies:
+      postcss-selector-parser: 6.1.1
+
+  '@csstools/selector-specificity@3.1.1(postcss-selector-parser@6.1.1)':
+    dependencies:
+      postcss-selector-parser: 6.1.1
+
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
 
@@ -5974,162 +5805,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.23.0':
     optional: true
-
-  '@floating-ui/core@1.6.5':
-    dependencies:
-      '@floating-ui/utils': 0.2.5
-
-  '@floating-ui/dom@1.6.8':
-    dependencies:
-      '@floating-ui/core': 1.6.5
-      '@floating-ui/utils': 0.2.5
-
-  '@floating-ui/utils@0.2.5': {}
-
-  '@formas/avatar@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/badge@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/button@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/card@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/container': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/checkbox@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/props': 1.0.9(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/container@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/dropdown@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@floating-ui/dom': 1.6.8
-      '@formas/container': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/icon@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/input-list@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/badge': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/checkbox': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/icon': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/label': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/input@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/button': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/dropdown': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/props': 1.0.9(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/label@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/loading@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/props@1.0.9(atomico@1.79.2)':
-    dependencies:
-      atomico: 1.79.2
-
-  '@formas/radio@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/checkbox': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/select@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/icon': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/props': 1.0.9(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/switch@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/input': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/tokens@1.0.9(atomico@1.79.2)':
-    dependencies:
-      atomico: 1.79.2
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -6385,6 +6060,18 @@ snapshots:
   '@sinclair/typebox@0.27.8': {}
 
   '@sindresorhus/merge-streams@2.3.0': {}
+
+  '@statelyai/inspect@0.4.0(ws@8.18.0)(xstate@5.16.0)':
+    dependencies:
+      fast-safe-stringify: 2.1.1
+      isomorphic-ws: 5.0.0(ws@8.18.0)
+      partysocket: 0.0.25
+      safe-stable-stringify: 2.4.3
+      superjson: 1.13.3
+      uuid: 9.0.1
+      xstate: 5.16.0
+    transitivePeerDependencies:
+      - ws
 
   '@storybook/addon-actions@8.2.6(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))':
     dependencies:
@@ -7263,6 +6950,10 @@ snapshots:
 
   cookie@0.6.0: {}
 
+  copy-anything@3.0.5:
+    dependencies:
+      is-what: 4.1.16
+
   core-js-compat@3.37.1:
     dependencies:
       browserslist: 4.23.2
@@ -7450,6 +7141,8 @@ snapshots:
 
   etag@1.8.1: {}
 
+  event-target-shim@6.0.2: {}
+
   execa@5.1.1:
     dependencies:
       cross-spawn: 7.0.3
@@ -7517,6 +7210,8 @@ snapshots:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.7
+
+  fast-safe-stringify@2.1.1: {}
 
   fastq@1.17.1:
     dependencies:
@@ -7806,9 +7501,15 @@ snapshots:
 
   is-unicode-supported@0.1.0: {}
 
+  is-what@4.1.16: {}
+
   isexe@2.0.0: {}
 
   isobject@3.0.1: {}
+
+  isomorphic-ws@5.0.0(ws@8.18.0):
+    dependencies:
+      ws: 8.18.0
 
   isomorphic.js@0.2.5: {}
 
@@ -8209,6 +7910,10 @@ snapshots:
 
   parseurl@1.3.3: {}
 
+  partysocket@0.0.25:
+    dependencies:
+      event-target-shim: 6.0.2
+
   path-exists@3.0.0: {}
 
   path-exists@4.0.0: {}
@@ -8271,6 +7976,13 @@ snapshots:
       read-cache: 1.0.0
       resolve: 1.22.8
 
+  postcss-import@16.1.0(postcss@8.4.40):
+    dependencies:
+      postcss: 8.4.40
+      postcss-value-parser: 4.2.0
+      read-cache: 1.0.0
+      resolve: 1.22.8
+
   postcss-js@4.0.1(postcss@8.4.40):
     dependencies:
       camelcase-css: 2.0.1
@@ -8285,6 +7997,13 @@ snapshots:
 
   postcss-nested@6.2.0(postcss@8.4.40):
     dependencies:
+      postcss: 8.4.40
+      postcss-selector-parser: 6.1.1
+
+  postcss-nesting@12.1.5(postcss@8.4.40):
+    dependencies:
+      '@csstools/selector-resolve-nested': 1.1.0(postcss-selector-parser@6.1.1)
+      '@csstools/selector-specificity': 3.1.1(postcss-selector-parser@6.1.1)
       postcss: 8.4.40
       postcss-selector-parser: 6.1.1
 
@@ -8485,6 +8204,8 @@ snapshots:
 
   safe-buffer@5.2.1: {}
 
+  safe-stable-stringify@2.4.3: {}
+
   safer-buffer@2.1.2: {}
 
   scheduler@0.23.2:
@@ -8656,6 +8377,10 @@ snapshots:
       mz: 2.7.0
       pirates: 4.0.6
       ts-interface-checker: 0.1.13
+
+  superjson@1.13.3:
+    dependencies:
+      copy-anything: 3.0.5
 
   supports-color@5.5.0:
     dependencies:
@@ -8916,6 +8641,8 @@ snapshots:
     optional: true
 
   ws@8.18.0: {}
+
+  xstate@5.16.0: {}
 
   xtend@4.0.2:
     optional: true

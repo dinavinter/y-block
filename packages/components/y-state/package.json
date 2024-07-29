@@ -1,0 +1,70 @@
+{
+  "name": "@y-block/state",
+  "version": "1.0.2-beta.4",
+  "packageManager": "pnpm@9.6.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "beta"
+  },
+  "workspaces": [
+    "src/*"
+  ],
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev  --open",
+    "start": "vite",
+    "build:types": "tsc",
+    "build:compile": "library \"src/**/*\" ",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "dev:exports": "exports src/**/* --watch",
+    "clean:lib": "rm -rf lib",
+    "clean:types": "rm -rf types",
+    "clean:install": "rm -rf node_modules",
+    "create:component": "scaff component-tsx src"
+  },
+  "dependencies": {
+    "@statelyai/inspect": "^0.4.0",
+     "xstate": "^5.16.0",
+    "yjs": "^13.6.18"
+  },
+  "devDependencies": {
+    "@atomico/hooks": "*",
+    "@atomico/store": "*",
+
+    "@atomico/postcss-tokens": "^3.5.0",
+    "@atomico/scaffold": "^2.9.5",
+    "@atomico/tsconfig": "^1.1.2",
+    "@atomico/vite": "^2.21.1",
+    "@storybook/types": "8.1.11",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@y-block/cm": "workspace:*",
+    "@y-block/dom": "workspace:*",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.27",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^12.1.5",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.2.7"
+  },
+  "peerDependenciesMeta": {
+    "@atomico/hooks": "*",
+    "atomico": "*",
+    "@atomico/store": "*",
+
+    "@atomico/react": {
+      "optional": true
+    },
+    "@atomico/vue": {
+      "optional": true
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "@atomico/postcss-tokens": {},
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
+}

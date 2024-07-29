@@ -107,7 +107,11 @@ export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: Custom
             </nav>
             <div ref={ref} autofocus class="codemirror-host cm-s-twilight border-2   ">
                 {h(codemirror?.dom, {
-                    
+                    style: {
+                        width: "100%",
+                        height: "100%",
+                        fontSize: "1rem",
+                        lineHeight: "1.5",}
 
                 })}
             </div>

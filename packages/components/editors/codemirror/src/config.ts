@@ -54,12 +54,15 @@ let extensions = [
     indentOnInput(),
     indentUnit.of(" "),
     EditorState.tabSize.of(1),
+    EditorState.lineSeparator.of('\n'),
+  
 
 
     langs.html({
         matchClosingTags: true,
         autoCloseTags: true,
         selfClosingTags: true,
+        
 
 
         nestedLanguages: [{
@@ -79,7 +82,8 @@ let extensions = [
         crosshairCursor:true,
         indentOnInput:true,
         tabSize:1,
-        highlightSelectionMatches:true,
+        
+        highlightSelectionMatches:true
     }),];
 export const DefaultConfig: CodeBlockConfig = {
     extensions: extensions,

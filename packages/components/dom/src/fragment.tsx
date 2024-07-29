@@ -1,17 +1,24 @@
-import {c, css, useEffect, useRef} from "atomico";
+import {c, css, type Ref, useEffect, useHost, useRef} from "atomico";
 import * as Y from "yjs";
 
 interface YFragmentProps {
-    fragment?: Y.XmlFragment
+    fragment?: Y.XmlFragment,
+    hooks? : Record<string, {
+        createDom: (e: Y.XmlHook) => Element
+    }>
 }
 
-export const YFragment = c(function ({fragment}:YFragmentProps) {
-    const refDom = useRef();
-
+export type Hooks= Record<string, {
+    createDom: (e: Y.XmlHook) => Element
+}>
+export const useFragment = (refDom: Ref, fragment?: Y.XmlFragment,
+                     hooks? : Hooks ) => {
     function initDom() {
         if (refDom.current) {
             refDom.current.innerHTML = '';
-            refDom.current.appendChild(fragment.toDOM());
+            const todom = fragment.toDOM(document, hooks);
+            console.log("YTemplateDomViewer:initDom", {todom})
+            refDom.current.appendChild(fragment.toDOM(document,hooks));
         }
     }
 
@@ -24,17 +31,25 @@ export const YFragment = c(function ({fragment}:YFragmentProps) {
             })
         }
     }, [fragment])
+}
+
+export const YFragment = c(function ({fragment, hooks}:YFragmentProps) {
+    const refDom = useHost();
+    useFragment(refDom, fragment, hooks)
+  
 
     return (
-        <host shadowDom>
-            <div ref={refDom}>
-            </div>
+        <host  >
         </host>
     );
 }, {
     props: {
         fragment: {
             type: Y.XmlFragment,
+            reflect: false
+        },
+        hooks: {
+            type: Object,
             reflect: false
         }
     },
