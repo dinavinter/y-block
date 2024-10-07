@@ -1,8 +1,10 @@
 import {Props, c, css, useMemo, useEffect} from "atomico";
 import {createStore, useProviderStore, useStore} from "@atomico/store";
 import * as Y from "yjs";
+import {usePropProxy} from "@atomico/hooks";
+import * as awarenessProtocol from "y-protocols/awareness";
 
-export const YDocStore = createStore({doc: undefined as Y.Doc }) 
+export const YDocStore = createStore({doc:  new Y.Doc(), awareness:undefined as unknown as awarenessProtocol.Awareness}) 
 
 export const useDocStore = () => useStore(YDocStore)
 export const YSyncedDoc = c(function ySyncedDoc( ) {
@@ -10,8 +12,10 @@ export const YSyncedDoc = c(function ySyncedDoc( ) {
 
      useProviderStore(YDocStore, (state)=>({
         ...state,
-        doc}), [doc])
-
+        doc, 
+        awareness: new awarenessProtocol.Awareness(doc)
+        }), [doc])
+    
     return <host shadowDom >
         <slot></slot>
     </host>
@@ -22,19 +26,41 @@ type YDocCreationOptions = ConstructorParameters<typeof Y.Doc>[0]
 
 
 export const YStore = c(  ( ) =>{
- 
-    return (<host shadowDom >
-             <y-doc-synced>
-                 <slot></slot>
-            </y-doc-synced>
+
+    const doc=useSyncedDoc()
+
+    useProviderStore(YDocStore, (state)=>({
+        ...state,
+        doc,
+        awareness: new awarenessProtocol.Awareness(doc)
+    }), [doc])
+
+    
+    // useEffect(() => {
+    //    
+    // }, []);
+    
+    usePropProxy('doc', {
+        get: () => doc,
+        set: (doc) => doc && useProviderStore(YDocStore, (state) => ({...state, doc}), [doc])
+    })
+    
+    usePropProxy('awareness', {
+        get: () => useStore(YDocStore)?.awareness,
+        set: (awareness) => awareness && useProviderStore(YDocStore, (state) => ({...state, awareness}), [awareness])
+    })
+     return (<host shadowDom > 
+             <slot></slot> 
          </host>
     );
 },{
-    props:{}
+    props:{
+        doc: {type: Y.Doc, value: undefined as unknown as Y.Doc}
+    }
 })
 
 
-export const useSyncedDoc = (options?:ConstructorParameters<typeof Y.Doc>[0]) => createSyncedDoc(useStore(YDocStore).doc, options)
+export const useSyncedDoc = (options?:ConstructorParameters<typeof Y.Doc>[0]) => createSyncedDoc(useStore(YDocStore)?.doc, options)
 
 export const createSyncedDoc = (doc: Y.Doc, options?:YDocCreationOptions | string ) => {
     const opt:YDocCreationOptions  =

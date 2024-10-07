@@ -7,14 +7,21 @@ import {  ChangeSet, EditorState} from "@codemirror/state";
 import {indentSelection} from "@codemirror/commands";
 import * as Y from "yjs";
 import { icon } from "./indent";
+import {Doc} from "yjs";
+import {useStore} from "@atomico/store";
+import {useSyncedDoc, YDocStore} from "@y-block/store";
 type CustomDetail = {
     value: string,
     changeset?: ChangeSet,
 }
-export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: CustomEvent<CustomDetail> }> {
+export const YCm = c (function yClm ({store, text, awareness}): Host<{ onChange: CustomEvent<CustomDetail> }> {
     const ref = useRef()
-    
 
+    // const doc= useSyncedDoc();
+    const {doc, awareness:store_awareness} = useStore(YDocStore);
+     
+    text = text ?? useMemo(() => doc?.getText(store), [doc, store]);
+    awareness = awareness ?? store_awareness;
     const dispatch = useEvent("Change", {bubbles: true});
 
     const hostDiv = document.createElement('div');
@@ -99,16 +106,20 @@ export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: Custom
 
     return <host  class={"h-full"}>
         <div  class={"h-full"}>
-            <nav class="bg-white/75">
+            <nav class=" sticky top-0 bg-white/75">
                 <button type="button" title="Indent" onclick={indent} class="full-rounded shadow-md ">
                     {icon()}
                     {/* <iconify-icon icon="mdi:format-indent-increase"></iconify-icon> */}
                 </button>
             </nav>
-            <div ref={ref} autofocus class="codemirror-host cm-s-twilight border-2   ">
-                {h(codemirror?.dom, {
-                    
-
+            <div ref={ref} autofocus class="codemirror-host cm-s-twilight border-2  h-full w-full min-h-96 ">
+                {h(codemirror?.dom, { 
+                    style: {
+                        minHeight:'30rem',
+                        height: '100%',
+                        width: '100%',
+                        minWidth: '30rem'
+                    }
                 })}
             </div>
         </div>
@@ -120,12 +131,21 @@ export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: Custom
         language: {type: String, value: 'html'},
         text: {type: Y.Text, value: undefined as unknown as Y.Text},
         awareness: {type: Object, value: undefined as unknown as awarenessProtocol.Awareness },
-        
+        store: {type: String, value: 'codemirror'}
     },
     styles: css`
     @tailwind base;
     @tailwind components;
+        
+        
     @tailwind utilities;
+    @tailwind screens;
+    @tailwind forms;
+    @tailwind typography;
+        
+    ::selection {
+        @apply bg-pink-500;
+    }
     :host {
         display: block;
         width: 100%;
@@ -138,6 +158,12 @@ export const YCm = c (function yClm ({text, awareness}): Host<{ onChange: Custom
 
     .cm-scroller {
         overflow: auto;
+    }
+
+    .codemirror-host {
+        height: 100%;
+        width: 100%;
+        min-height: 300px;
     }
         
         

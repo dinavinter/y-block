@@ -28,6 +28,8 @@
     "clean:install": "rm -rf node_modules"
   },
   "dependencies": {
+    "@hocuspocus/provider": "^2.13.6",
+    "y-protocols": "^1.0.6",
     "yjs": "^13.6.18"
   },
   "peerDependenciesMeta": {
@@ -39,6 +41,14 @@
     }
   },
   "exports": {
+    "./hs": {
+      "types": "./types/hocuspocus.d.ts",
+      "default": "./lib/hocuspocus.js"
+    },
+    "./ws": {
+      "types": "./types/ws.d.ts",
+      "default": "./lib/ws.js"
+    },
     "./element": {
       "types": "./src/element.tsx",
       "default": "./src/element.tsx"
@@ -211,6 +221,9 @@
       ],
       "doc.stories": [
         "types/doc.stories.d.ts"
+      ],
+      "ws": [
+        "types/ws.d.ts"
       ]
     }
   },

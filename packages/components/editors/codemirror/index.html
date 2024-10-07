@@ -10,19 +10,35 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
             rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+<!--    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>-->
     <!--    <link rel="stylesheet" href="./src/page.css" />-->
+    <script src="https://unpkg.com/tailwindcss-jit-cdn?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    
+    
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@vaadin/split-layout@24.4.10/vaadin-split-layout.min.js"></script>
     <script async src="/src/index.tsx" type="module"></script>
+    <script async src="/src/split.tsx" type="module"></script>
+
+    <link rel="stylesheet" href="./page.css" />
+
+
 
 
 </head>
 
 <body>
-     <div class="container mx-auto ">
-        <main   role="main" class="w-full  h-screen bg-gray-100">
-        <y-cm > 
-        </y-cm>
-        <template id="input" >
+     <div class="container mx-auto antialiased">
+        <main   role="main" class="w-full  h-screen bg-gray-100"> 
+                <y-store >
+                    <y-dom-render source="cm" target="dom" ></y-dom-render> 
+                        <y-split>  
+                            <y-cm store="cm" slot="col-1"  ></y-cm> 
+                            <y-fragment store="dom" slot="col-2" class="m-20 p-10  resize-x container" ></y-fragment>
+                        </y-split> 
+                </y-store>
+
+
+            <template id="input" >
             <form>
                 <fieldset class="block *:my-2 *:w-full">
                     <input type="text" name="firstName" placeholder="First Name"
@@ -54,20 +70,56 @@
     import * as awarenessProtocol from 'y-protocols/awareness';
 
     import  './src/index.tsx';
-    const doc = new Y.Doc();
-    const awareness = new awarenessProtocol.Awareness(doc);
-     
-    document.querySelector('y-cm').text =  doc.getText();
-    document.querySelector('y-cm').awareness =  awareness;
+    import  './src/split.tsx';
+    import {useStore} from "@atomico/store";
+    import {useSyncedDoc, YDocStore} from "@y-block/store";
+    import "@y-block/store/ws";
+    import "@y-block/store/hs";
+    import "@y-block/dom";
+    import "@y-block/store/doc.define";
+    import 'twind/shim'
 
+    var el =document.querySelector(("y-store"))   
+    console.log(el, el.doc)
+    
+    // useStore(YDocStore,)
     setTimeout(()=>{
-       doc.getText().insert(0, document.querySelector("#input").innerHTML);
+       // doc?.getText().insert(0, document.querySelector("#input").innerHTML);
+       
     },
    20)
 
 
 </script>
 
+     <!-- Include CDN JavaScript -->
+<!--     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>-->
+<!--     <script src="https://cdn.twind.style" crossorigin></script>-->
+
+<!--     <script src="https://unpkg.com/tailwindcss-jit-cdn?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>-->
+<!--     <script>-->
+<!--         twind.install({-->
+<!--             /* options */-->
+<!--         })-->
+<!--     </script>-->
+<!--     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>-->
+
+     <!-- Specify a custom TailwindCSS configuration -->
+<!--     <script type="module" >-->
+<!--         import tailwindcssTypography from 'https://cdn.skypack.dev/@tailwindcss/typography';-->
+<!--         -->
+
+<!--         window.tailwindConfig = {-->
+<!--             plugins: [-->
+<!--                 tailwindcssTypography,-->
+<!--             ]-->
+<!--         };-->
+
+<!--         window.tailwindCSS.refresh();-->
+<!--     </script>-->
+<!--     <script type="tailwind-config">-->
+<!--         window.tailwindConfig-->
+<!--     </script>-->
 
 </body>
 </html>
