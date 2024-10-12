@@ -14,20 +14,23 @@
     "clean": "pnpm  --parallel --stream --if-present run /^clean:.*/ && rm -rf node_modules",
     "dev": "pnpm --filter @y-block/* --parallel --stream --if-present run /^dev:.*/  ",
     "publish:y-block": "pnpm run build && pnpm run centralize && pnpm run publish --no-git-checks",
-    "build": "pnpm compile && pnpm types && pnpm exports",
+    "build": "pnpm compile && pnpm types && pnpm exports & pnpm  centralize",
     "compile": "pnpm  --parallel --stream --if-present run /^build:compile/ ",
     "types": "pnpm   --parallel --stream --if-present run /^build:types/ ",
     "exports": "pnpm  --parallel --stream --if-present run /^build:exports/ ",
+    "centralize": "pnpm  --parallel --stream --if-present /^build:centralize/",
+    "publish": "pnpm   publish  --filter @y-block/* --access public --tag beta --no-git-checks ",
     "build:formas": "pnpm --filter @formas/* --parallel --stream --if-present run /^build:.*/ ",
-    "centralize": "pnpm  --parallel --stream --if-present centralize",
-    "publish": "pnpm   publish --access public --tag beta",
     "dev:build": "pnpm build:local --watch",
     "build:local": "pnpm  -  --if-present run /^build:.*/ && pnpm centralize ",
     "dev:storybook": "pnpm --filter st dev",
     "build:storybook": "pnpm --filter st build ",
     "create:component": "scaff component-monorepo packages/components && pnpm i",
     "create:yjs:component": "scaff component-monorepo packages/yjs && pnpm i",
-    "create:ystore:component": "scaff component-monorepo packages/ystore && pnpm i"
+    "create:ystore:component": "scaff component-monorepo packages/ystore && pnpm i",
+    "generate": "pnpm create trpc-appx apps/trpc  --example vercel-edge-runtime ---use-pnpm",
+    "playground": "pnpm run --parallel --stream --if-present run /^dev:playground/"
+
   },
   "keywords": [],
   "author": "",
@@ -36,6 +39,9 @@
     "tabWidth": 4,
     "singleQuote": false,
     "endOfLine": "lf"
+  },
+  "overrides": {
+    "yjs":"13.6.19"
   },
   "dependencies": {
     "@atomico/exports": "^1.13.2",
@@ -48,15 +54,19 @@
     "@atomico/use-disabled": "^2.0.0",
     "@atomico/vite": "^2.21.1",
     "@storybook/types": "^8.1.11",
-    "@y-block/primitives": "workspace:*",
     "atomico": "^1.77.1",
     "typescript": "^5.2.2",
-    "vite": "^5.1.6"
+    "vite": "^5.1.6",
+    "yjs": "latest"
   },
   "devDependencies": {
     "@storybook/docs-tools": "^8.2.5",
     "vite-tsconfig-paths": "^4.3.2",
     "vite": "^5.1.6"
+    
+
+  },
+  "peerDependencies": {
 
   }
 }

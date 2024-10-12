@@ -1,0 +1,11 @@
+{
+        "extends": "@atomico/tsconfig/base.json",
+        "include": ["src/**/*"],
+        "exclude": ["src/stories"],
+        "compilerOptions": {
+                "outDir": "types",
+                "resolveJsonModule": true,
+                "allowSyntheticDefaultImports": true,
+                "skipDefaultLibCheck": true
+        }
+}

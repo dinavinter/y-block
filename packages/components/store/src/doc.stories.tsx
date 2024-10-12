@@ -38,6 +38,7 @@ customElements.define(
     "doc-text-editor",
     c(
         function yTextEditor({name}) {
+            import("@y-block/cm");
             const {doc} = useStore(YDocStore);
             const text = useMemo(() => doc?.getText(name), [doc, name]);
 

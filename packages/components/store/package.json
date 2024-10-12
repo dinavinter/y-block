@@ -1,6 +1,6 @@
 {
   "name": "@y-block/store",
-  "version": "1.0.2-beta.4",
+  "version": "1.0.2-beta.14",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -10,27 +10,41 @@
     "registry": "https://registry.npmjs.org/",
     "tag": "beta"
   },
-  "peerDependencies": {
-    "@atomico/react": "*",
-    "@atomico/store": "*",
-    "@atomico/vue": "*",
-    "atomico": "*"
-  },
   "scripts": {
     "build:types": "tsc",
-    "build:compile": "library \"src/**/*\" ",
-    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
-    "dev:exports": "exports src/**/* --watch",
+    "build:compile": "library src/*",
+    "build:exports": "exports lib/* types/* --wrappers",
+    "dev:exports": "exports src/* --watch",
+    "build": "pnpm  build:types && pnpm build:compile && pnpm build:exports",
+    "build:publish": "pnpm publish  --tag beta --no-git-check ",
     "dev": "vite dev",
     "start": "vite",
     "clean:lib": "rm -rf lib",
     "clean:types": "rm -rf types wrapper",
     "clean:install": "rm -rf node_modules"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@atomico/react": "*",
+    "@atomico/vue": "*",
+    "atomico": "*"
+  },
+  "devDependencies": {
+    "@atomico/tsconfig": "^1.0.0",
+    "@atomico/vite": "^2.21.1",
+    "@atomico/exports": "latest",
+    "@atomico/vue": "latest",
+    "@atomico/store": "^2.0.1",
+
     "@hocuspocus/provider": "^2.13.6",
     "y-protocols": "^1.0.6",
-    "yjs": "^13.6.18"
+    "y-websocket": "^2.0.4"
+
+  },
+  "dependencies": {
+    "yjs": "latest"
+  },
+  "overrides": {
+    "yjs": "13.6.19"
   },
   "peerDependenciesMeta": {
     "@atomico/react": {
@@ -41,99 +55,28 @@
     }
   },
   "exports": {
-    "./hs": {
-      "types": "./types/hocuspocus.d.ts",
-      "default": "./lib/hocuspocus.js"
-    },
-    "./ws": {
-      "types": "./types/ws.d.ts",
-      "default": "./lib/ws.js"
-    },
-    "./element": {
-      "types": "./src/element.tsx",
-      "default": "./src/element.tsx"
-    },
-    ".": {
-      "types": "./types/index.d.ts",
-      "default": "./lib/index.js"
-    },
-    "./react": {
-      "types": "./wrapper/react.d.ts",
-      "default": "./wrapper/react.js"
-    },
-    "./preact": {
-      "types": "./wrapper/preact.d.ts",
-      "default": "./wrapper/preact.js"
-    },
-    "./vue": {
-      "types": "./wrapper/vue.d.ts",
-      "default": "./wrapper/vue.js"
-    },
-    "./README.md": {
-      "default": "./types/README.md"
-    },
-    "./array": {
-      "types": "./src/array.tsx",
-      "default": "./src/array.tsx"
-    },
-    "./map": {
-      "types": "./src/map.tsx",
-      "default": "./src/map.tsx"
-    },
-    "./props": {
-      "types": "./src/props.tsx",
-      "default": "./src/props.tsx"
-    },
-    "./array.readme.md": {
-      "default": "./src/array.readme.md"
-    },
-    "./map.readme.md": {
-      "default": "./src/map.readme.md"
-    },
-    "./props.readme.md": {
-      "default": "./src/props.readme.md"
-    },
-    "./fragment": {
-      "types": "./src/fragment.tsx",
-      "default": "./src/fragment.tsx"
-    },
-    "./element/react": {
-      "types": "./wrapper/element/react.d.ts",
-      "default": "./wrapper/element/react.js"
-    },
-    "./element/preact": {
-      "types": "./wrapper/element/preact.d.ts",
-      "default": "./wrapper/element/preact.js"
-    },
-    "./element/vue": {
-      "types": "./wrapper/element/vue.d.ts",
-      "default": "./wrapper/element/vue.js"
-    },
-    "./fragment/react": {
-      "types": "./wrapper/fragment/react.d.ts",
-      "default": "./wrapper/fragment/react.js"
-    },
-    "./fragment/preact": {
-      "types": "./wrapper/fragment/preact.d.ts",
-      "default": "./wrapper/fragment/preact.js"
-    },
-    "./fragment/vue": {
-      "types": "./wrapper/fragment/vue.d.ts",
-      "default": "./wrapper/fragment/vue.js"
-    },
-    "./element.readme.md": {
-      "default": "./src/element.readme.md"
-    },
-    "./fragment.readme.md": {
-      "default": "./src/fragment.readme.md"
-    },
     "./doc.define": {
       "types": "./types/doc.define.d.ts",
       "default": "./lib/doc.define.js"
     },
     "./doc": {
-      "types": "./types/doc.d.ts",
-      "default": "./lib/doc.js"
+      "types": "./src/doc.tsx",
+      "default": "./src/doc.tsx"
+    },
+    "./hocuspocus": {
+      "types": "./types/hocuspocus.d.ts",
+      "default": "./lib/hocuspocus.js"
+    },
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./ws": {
+      "types": "./types/ws.d.ts",
+      "default": "./lib/ws.js"
+    },
+    "./doc.readme.md": {
+      "default": "./src/doc.readme.md"
     }
   },
   "typesVersions": {
@@ -224,10 +167,10 @@
       ],
       "ws": [
         "types/ws.d.ts"
+      ],
+      "hocuspocus": [
+        "types/hocuspocus.d.ts"
       ]
     }
-  },
-  "devDependencies": {
-    "y-websocket": "^2.0.4"
   }
 }

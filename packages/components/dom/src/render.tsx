@@ -14,7 +14,7 @@ export const YCodeToHtml = c(function  ({  source, target }) {
             doc.transact(() => {
                 refContent.current.innerHTML = htmlText.toJSON();
                 if(refContent.current.innerHTML != yXmlFragment.toJSON())
-                    console.log("apply:observeDeep:innerHTML", {
+                    console.debug("apply:observeDeep:innerHTML", {
                         sourceF: htmlText.toJSON(),
                         targetF: yXmlFragment.toJSON(),
                         source,
@@ -25,7 +25,7 @@ export const YCodeToHtml = c(function  ({  source, target }) {
                 yXmlFragment.delete(0, yXmlFragment.length);
                 yXmlFragment.insert(0,  toXmlFragment(refContent.current.content));
             }) 
-            console.log("apply:observeDeep:innerHTML:aft", {
+            console.debug("apply:observeDeep:innerHTML:aft", {
                 sourceF: htmlText.toJSON(),
                 targetF: yXmlFragment.toJSON(),
                 source,

@@ -30,7 +30,7 @@ import {injectGlobal} from "@twind/core";
      // Based on https://github.com/tailwindlabs/play.tailwindcss.com/blob/master/src/css/main.css
 
 import {c, css, useEffect, useHost, useRef, useState} from 'atomico';
-import {useDragResize} from "../lib/useDragResize";
+import {useDragResize} from "./useDragResize";
  
 export const Layout =c(function Layout() {
   const [size, setSize] = useState(50);

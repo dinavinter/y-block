@@ -6,6 +6,7 @@ export default {
  
   content:  [
     "./index.html",
+      "./play.html",
     "./src/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],

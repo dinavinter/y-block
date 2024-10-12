@@ -164,4 +164,4 @@ export const Splitter =c(function ()  {
 
 })
 
-customElements && customElements.define && customElements.define("y-split", Splitter);
+customElements && customElements.define && customElements.define("y-split2", Splitter);

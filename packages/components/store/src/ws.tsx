@@ -1,40 +1,36 @@
-import {c, useEffect, useMemo} from "atomico";
+import {c, useMemo} from "atomico";
 // import {userAwareness} from "../user-awareness/user-awareness";
-import {useProviderStore, useStore} from "@atomico/store";
-// import {YConnectorStore} from "../provider-store/provider-store";
-import * as Y from "yjs";
-import { WebsocketProvider } from 'y-websocket'
-import {useSyncedDoc, YDocStore} from "./doc";
+import { useStore} from "@atomico/store";
+import {YDocStore} from "~/doc";
+import {WebsocketProvider} from "y-websocket";
 
 customElements.define('y-provider-ws', c(({room, address}) => {
-    // const doc= useSyncedDoc() 
-      const store = useStore(YDocStore);
-      const doc = store?.doc 
+    const {awareness, doc} = useStore(YDocStore);
      const provider = useMemo(( ) => { 
          if(doc){
-             const wsProvider = new WebsocketProvider(`${address}`, room, doc)
+             const wsProvider = new WebsocketProvider(`${address}`, room, doc, {
+                    connect: true,
+                    awareness: awareness 
+             })
              wsProvider.connect()
              wsProvider.on('status', (event: { connected: boolean; }) => {
-                 console.log('Status changed:', event)
+                 event.connected? console.log('WS connected:', event) :console.log('WS disconnected:', event)
              })
              return {
                  provider: wsProvider,
                  doc: doc,
                  awareness: wsProvider.awareness,
              }
-         }
-        
-
+         } 
     }, [doc, room])
 
-    useEffect(() => {
-        store.doc = provider?.doc
-        store.awareness = provider?.awareness
-    }, [provider]);
+    // useEffect(() => {
+    //     store.doc = provider?.doc
+    //     store.awareness = provider?.awareness
+    // }, [provider]);
 
-    console.log('ws-provider: provider', provider)
+    console.debug('ws-provider: provider', provider)
 
-    // useProviderStore(YConnectorStore, provider, [room])
 
     return <host shadowDom  >
         <slot></slot>
@@ -50,7 +46,7 @@ customElements.define('y-provider-ws', c(({room, address}) => {
         address:{
             type: String,
             reflect: true,
-            value: "ws://0.0.0.0:8080"
+            value: "ws://127.0.0.1:1234"
         }
     }
 }))

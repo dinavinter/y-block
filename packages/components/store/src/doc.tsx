@@ -1,12 +1,18 @@
-import {Props, c, css, useMemo, useEffect} from "atomico";
+import {c, useEffect, useMemo} from "atomico";
 import {createStore, useProviderStore, useStore} from "@atomico/store";
 import * as Y from "yjs";
 import {usePropProxy} from "@atomico/hooks";
 import * as awarenessProtocol from "y-protocols/awareness";
 
-export const YDocStore = createStore({doc:  new Y.Doc(), awareness:undefined as unknown as awarenessProtocol.Awareness}) 
+const doc =new Y.Doc()
+const awareness = new awarenessProtocol.Awareness(doc)
+export const YDocStore = createStore({doc:  doc ,awareness:awareness}) 
 
-export const useDocStore = () => useStore(YDocStore)
+export function useDocText  (key?:string ) :Y.Text | undefined {
+    const {doc} = useStore(YDocStore);
+    return useMemo(() => doc?.getText(key), [doc, key]);
+}
+export const useDocStore = ():{doc: Y.Doc, awareness: awarenessProtocol.Awareness} => useStore(YDocStore); 
 export const YSyncedDoc = c(function ySyncedDoc( ) {
     const doc=useSyncedDoc()
 
@@ -35,11 +41,7 @@ export const YStore = c(  ( ) =>{
         awareness: new awarenessProtocol.Awareness(doc)
     }), [doc])
 
-    
-    // useEffect(() => {
-    //    
-    // }, []);
-    
+     
     usePropProxy('doc', {
         get: () => doc,
         set: (doc) => doc && useProviderStore(YDocStore, (state) => ({...state, doc}), [doc])
@@ -76,7 +78,7 @@ export const createSyncedDoc = (doc: Y.Doc, options?:YDocCreationOptions | strin
     }), [doc]);
 
     useEffect(() => {
-        console.log('createSyncedDoc:useEffect', {doc, newDoc})
+        console.debug('createSyncedDoc:useEffect', {doc, newDoc})
         doc && syncDocs(doc, newDoc)
         return () => {
             newDoc.destroy()
@@ -89,7 +91,7 @@ export const createSyncedDoc = (doc: Y.Doc, options?:YDocCreationOptions | strin
 
 export function syncDocs(doc1: Y.Doc, doc2: Y.Doc) {
     doc1.on('update', update => {
-        console.debug('doc1.on:update', update)
+        // console.debug('doc1.on:update', update)
         const stateVector2 = Y.encodeStateVector(doc2)
         const diff = Y.encodeStateAsUpdate(doc1, stateVector2)
         Y.applyUpdate(doc2, diff)
@@ -98,7 +100,7 @@ export function syncDocs(doc1: Y.Doc, doc2: Y.Doc) {
     })
 
     doc2.on('update', update => {
-        console.debug('doc2.on:update', update)
+        // console.debug('doc2.on:update', update)
         const stateVector1 = Y.encodeStateVector(doc1)
         const diff = Y.encodeStateAsUpdate(doc2, stateVector1)
         Y.applyUpdate(doc1, diff)

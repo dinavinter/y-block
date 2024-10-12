@@ -1,14 +1,9 @@
-import {c, useEffect, useMemo} from "atomico";
-// import {userAwareness} from "../user-awareness/user-awareness";
-import {useProviderStore, useStore} from "@atomico/store";
-// import {YConnectorStore} from "../provider-store/provider-store";
-import * as Y from "yjs";
-import { WebsocketProvider } from 'y-websocket'
-import {useSyncedDoc, YDocStore} from "./doc";
+import {c,  useMemo} from "atomico";
+import { useStore} from "@atomico/store";
+import { YDocStore} from "./doc";
 import { HocuspocusProvider } from "@hocuspocus/provider";
 
 customElements.define('y-provider-hs', c(({room, address}) => {
-    // const doc= useSyncedDoc() 
       const {awareness, doc} = useStore(YDocStore);
      const provider = useMemo(( ) => { 
          if(doc){
@@ -16,9 +11,10 @@ customElements.define('y-provider-hs', c(({room, address}) => {
                  url: address,
                  name: room,
                  document: doc,
+                 
                  // Listen for updates …
                  onAwarenessUpdate: ({ states }) => {
-                     console.log("Awareness" , states);
+                     console.debug("awareness" , states);
                  },
                  awareness,
                  connect: true
@@ -26,7 +22,7 @@ customElements.define('y-provider-hs', c(({room, address}) => {
 
 
               hsprovider.on('status', (event: { connected: boolean; }) => {
-                 console.log('Status changed:', event)
+                  event.connected? console.log('Hocuspocus connected:', event) :console.log('Hocuspocus disconnected:', event)
              })
              return {
                  provider: hsprovider,
@@ -38,6 +34,8 @@ customElements.define('y-provider-hs', c(({room, address}) => {
 
     }, [doc, room])
 
+    // const store = useStore(YDocStore);
+    //
     // useEffect(() => {
     //     store.doc = provider?.doc
     //     store.awareness = provider?.awareness
@@ -45,7 +43,6 @@ customElements.define('y-provider-hs', c(({room, address}) => {
 
     console.log('ws-provider: provider', provider)
 
-    // useProviderStore(YConnectorStore, provider, [room])
 
     return <host shadowDom  >
         <slot></slot>
@@ -61,7 +58,7 @@ customElements.define('y-provider-hs', c(({room, address}) => {
         address:{
             type: String,
             reflect: true,
-            value: "ws://0.0.0.0:8080"
+            value: "ws://127.0.0.1:1234"
         }
     }
 }))

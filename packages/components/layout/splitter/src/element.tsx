@@ -1,6 +1,6 @@
 import {c, css} from "atomico";
 
-export const split= c(function Split() {
+export const Splitter= c(function Split() {
     return (
         <host shadowDom class={"container"}>
             <div class={"block horizontal max-h-full  right-auto border-2 w-2/3"}>
@@ -52,4 +52,3 @@ export const split= c(function Split() {
     `
 });
 
-customElements && customElements.define && customElements.define("y-split1", split);

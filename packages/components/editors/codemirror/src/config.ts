@@ -80,7 +80,7 @@ let extensions = [
         indentOnInput:true,
         tabSize:1,
         highlightSelectionMatches:true,
-    }),];
+    })];
 export const DefaultConfig: CodeBlockConfig = {
     extensions: extensions,
     languages: languages,

@@ -1,5 +1,5 @@
 {
-  "name": "@y-block/gallery",
+  "name": "@y-block/splitter",
   "version": "1.0.2-beta.14",
   "type": "module",
   "main": "lib/index.js",
@@ -13,8 +13,7 @@
   "peerDependencies": {
     "atomico": "*",
     "@atomico/react": "*",
-    "@atomico/vue": "*",
-    "@y-block/primitives": "workspace:*"
+    "@atomico/vue": "*"
   },
   "dependencies": {},
   "scripts": {
@@ -23,6 +22,7 @@
     "build:types": "tsc",
     "build:compile": "library \"src/**/*\" ",
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "build:publish": "pnpm publish  --tag beta --no-git-check ",
     "dev:exports": "exports src/**/* --watch",
     "clean:lib": "rm -rf lib",
     "clean:types": "rm -rf types",
@@ -84,6 +84,18 @@
     "./stories/product-card/vue": {
       "types": "./wrapper/stories/product-card/vue.d.ts",
       "default": "./wrapper/stories/product-card/vue.js"
+    },
+    "./element/react": {
+      "types": "./wrapper/element/react.d.ts",
+      "default": "./wrapper/element/react.js"
+    },
+    "./element/preact": {
+      "types": "./wrapper/element/preact.d.ts",
+      "default": "./wrapper/element/preact.js"
+    },
+    "./element/vue": {
+      "types": "./wrapper/element/vue.d.ts",
+      "default": "./wrapper/element/vue.js"
     }
   },
   "typesVersions": {
@@ -117,6 +129,15 @@
       ],
       "fake-store": [
         "types/demo/fake-store/index.d.ts"
+      ],
+      "element/react": [
+        "wrapper/element/react.d.ts"
+      ],
+      "element/preact": [
+        "wrapper/element/preact.d.ts"
+      ],
+      "element/vue": [
+        "wrapper/element/vue.d.ts"
       ]
     }
   },

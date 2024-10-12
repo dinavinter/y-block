@@ -28,16 +28,15 @@ export default defineConfig({
     
 
     plugins: atomico({
-        cssLiterals: {minify: true, postcss: true}, customElements: {
-            prefix: "y",
-            define: ["./src/*.tsx"],
+        cssLiterals: {minify: true, postcss: true} 
             
 
 
-        }, storybook: {
+        , storybook: {
             fullReload: true,
             include: ["src/*.stories.tsx"],
-        }
+        },
+        runtimeWrappers: true
     }),
 });
 

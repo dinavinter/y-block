@@ -1,7 +1,7 @@
 import {EditorView} from "@codemirror/view";
 // import classes from './main.module.css?raw'
 // import {css} from 'atomico'
-import * as colors  from "tailwindcss/colors" ;
+import {colors}  from "./colors" ;
 import "@uiw/codemirror-extensions-langs"
 import {materialLight, materialInit, defaultSettingsMaterialLight} from '@uiw/codemirror-theme-material'
 // 

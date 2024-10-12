@@ -15,6 +15,7 @@ export default {
 
 };
 
+
 customElements.define("example-component", c(({title, content, date}) => {
     return <host shadowDom>
         <div>

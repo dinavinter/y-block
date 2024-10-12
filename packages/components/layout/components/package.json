@@ -7,7 +7,7 @@
     },
     "scripts": {
         "dev:exports": "pnpm run centralize",
-        "centralize": "exports \"../**\" --centralize-packages --wrappers",
+        "build:centralize": "exports \"../**\" --centralize-packages --wrappers",
         "clean:type": "rm -rf types wrapper",
         "clean:lib": "rm -rf lib",
         "clean:install": "rm -rf node_modules"
@@ -28,5 +28,60 @@
     },
     "main": "wrapper/index.js",
     "module": "wrapper/index.js",
-    "types": "wrapper/index.d.ts"
+    "types": "wrapper/index.d.ts",
+    "dependencies": {
+        "@y-block/gallery": "^1.0.2-beta.14",
+        "@y-block/splitter": "^1.0.2-beta.14"
+    },
+    "exports": {
+        ".": {
+            "types": "./wrapper/index.d.ts",
+            "default": "./wrapper/index.js"
+        },
+        "./@y-block/gallery": {
+            "types": "./wrapper/@y-block/gallery.d.ts",
+            "default": "./wrapper/@y-block/gallery.js"
+        },
+        "./@y-block/splitter": {
+            "types": "./wrapper/@y-block/splitter.d.ts",
+            "default": "./wrapper/@y-block/splitter.js"
+        },
+        "./react": {
+            "types": "./wrapper/react.d.ts",
+            "default": "./wrapper/react.js"
+        },
+        "./preact": {
+            "types": "./wrapper/preact.d.ts",
+            "default": "./wrapper/preact.js"
+        },
+        "./vue": {
+            "types": "./wrapper/vue.d.ts",
+            "default": "./wrapper/vue.js"
+        },
+        "./package.json": {
+            "default": "../gallery/package.json"
+        },
+        "./package": {
+            "default": "../components/package.json"
+        }
+    },
+    "typesVersions": {
+        "*": {
+            "@y-block/gallery": [
+                "wrapper/@y-block/gallery.d.ts"
+            ],
+            "@y-block/splitter": [
+                "wrapper/@y-block/splitter.d.ts"
+            ],
+            "react": [
+                "wrapper/react.d.ts"
+            ],
+            "preact": [
+                "wrapper/preact.d.ts"
+            ],
+            "vue": [
+                "wrapper/vue.d.ts"
+            ]
+        }
+    }
 }

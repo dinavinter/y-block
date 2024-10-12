@@ -1,19 +1,29 @@
 {
-        "extends": "@atomico/tsconfig/base.json",
-        "include": ["src/**/*"],
-        "exclude": ["src/stories"],
-        "compilerOptions": {
-                "strict": true,
-                "forceConsistentCasingInFileNames" : true,
-                "outDir": "types",
-                "skipLibCheck": true,
-
-                "paths": {
-                        "~/*": ["./src/*"]
-                },
-                "types": ["vite/client"]
-
-        }
-
-
+  "extends": "@atomico/tsconfig/base.json",
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "src/stories"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "types",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    },
+    "types": [
+      "vite/client",
+      "yjs"
+    ],
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  }
 }

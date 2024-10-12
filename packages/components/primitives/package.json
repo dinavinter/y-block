@@ -1,10 +1,22 @@
 {
   "name": "@y-block/primitives",
-  "version": "1.0.2-beta.4",
+  "version": "1.0.2-beta.14",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "types": "types/index.d.ts",
+  "scripts": {
+    "build": "npm run build:types && npm run build:compile && npm run build:exports",
+    "build:types": "tsc",
+    "build:compile": "library src/*",
+    "build:exports": "exports lib/* types/* --wrappers",
+    "dev:exports": "exports src/* --watch",
+    "clean:lib": "rm -rf lib",
+    "clean:types": "rm -rf types wrapper",
+    "clean:install": "rm -rf node_modules",
+    "dev": "vite dev",
+    "start": "vite"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
@@ -15,19 +27,14 @@
     "@atomico/vue": "*",
     "atomico": "*"
   },
-  "scripts": {
-    "build:types": "tsc",
-    "build:compile": "library src/**/* ",
-    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
-    "dev:exports": "exports src/**/* --watch",
-    "clean:lib": "rm -rf lib",
-    "clean:types": "rm -rf types wrapper",
-    "clean:install": "rm -rf node_modules",
-    "dev": "vite dev",
-    "start": "vite"
+  "devDependencies": {
+    "@atomico/tsconfig": "^1.0.0",
+    "@atomico/vite": "^2.21.1",
+    "@atomico/exports": "latest",
+    "@atomico/vue": "latest"
   },
   "dependencies": {
-    "yjs": "^13.6.18"
+    "yjs": "latest"
   },
   "peerDependenciesMeta": {
     "@atomico/react": {
@@ -138,6 +145,12 @@
     },
     "./chunks/a3cff37d76a56bab68588db67e63534f": {
       "default": "./lib/chunks/a3cff37d76a56bab68588db67e63534f.js"
+    },
+    "./chunks/0cd76d885a142e50858b7d40a05259bf": {
+      "default": "./lib/chunks/0cd76d885a142e50858b7d40a05259bf.js"
+    },
+    "./chunks/3085b6b6aa72b77ec0a3f85310e777c4": {
+      "default": "./lib/chunks/3085b6b6aa72b77ec0a3f85310e777c4.js"
     }
   },
   "typesVersions": {

@@ -7,7 +7,7 @@
     },
     "scripts": {
         "dev:exports": "pnpm run centralize",
-        "centralize": "exports \"../**\" --centralize-packages --wrappers",
+        "build:centralize": "exports \"../**\" --centralize-packages --wrappers",
         "clean:lib": "rm -rf lib",
         "clean:type": "rm -rf types wrapper",
         "clean:install": "rm -rf node_modules"
@@ -28,5 +28,6 @@
     },
     "main": "wrapper/index.js",
     "module": "wrapper/index.js",
-    "types": "wrapper/index.d.ts"
- }
+    "types": "wrapper/index.d.ts",
+    
+}

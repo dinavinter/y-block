@@ -1,10 +1,9 @@
 import {c, css, useCallback, useEffect, useHost, useMemo, useRef} from "atomico";
-import * as Y from "yjs";
-import {YDocStore} from "@y-block/store";
-import * as awarenessProtocol from "y-protocols/awareness";
-import {useStore} from "@atomico/store";
+import  { type XmlFragment as YXmlFragment,  XmlElement as YXmlElement}  from "yjs";
+import {useDocStore} from "@y-block/store";
+import {type Awareness}  from "y-protocols/awareness";
 import {create, cssomSheet} from "twind";
-import {useCssLightDom, useParent} from "@atomico/hooks";
+import {useCssLightDom} from "@atomico/hooks/use-css-light-dom";
 import {forms} from '@twind/forms'
 import { aspectRatio } from '@twind/aspect-ratio';
 import { content } from '@twind/content'
@@ -15,12 +14,12 @@ import typography from "@twind/typography";
 // const withTwind = install(config)
 
 interface YFragmentProps {
-    fragment?: Y.XmlFragment,
-    awareness?: awarenessProtocol.Awareness,
+    fragment?: YXmlFragment,
+    awareness?: Awareness,
     store?:string
 }
 
-function tryParse(fragment: Y.XmlFragment) {
+function tryParse(fragment: YXmlFragment) {
     try {
         return  fragment.toDOM();
     } catch (e) {
@@ -29,7 +28,7 @@ function tryParse(fragment: Y.XmlFragment) {
 }
 
 
-export const useTwin = (source: Y.XmlFragment) => {
+export const useTwin = (source: YXmlFragment) => {
     const sheet = useMemo(()=> cssomSheet({ target: new CSSStyleSheet() }) )
     const { tw, setup } =  useMemo(()=>create({ sheet,  
         preflight: true,
@@ -43,20 +42,20 @@ export const useTwin = (source: Y.XmlFragment) => {
     useEffect(() => {
         source?.observeDeep((events) => {
             const classes = new Set<string>();
-            const walker =source.createTreeWalker(dom =>  dom instanceof Y.XmlElement && dom.getAttribute("class"));
+            const walker =source.createTreeWalker(dom =>  dom instanceof YXmlElement && dom.getAttribute("class"));
             for (let node of walker ) {
-                ( node as Y.XmlElement).getAttribute("class")?.split(" ").forEach(c=>{
+                ( node as YXmlElement).getAttribute("class")?.split(" ").forEach(c=>{
                     classes.add(c)
                 });
               } 
-            console.log("twin:classes", {classes, sourceFragment: source.toJSON()}) 
+            console.debug("twin:classes", {classes, sourceFragment: source.toJSON()}) 
             tw(Array.from(classes).join( " ")) 
           
         })
     }, [source])
     
     useEffect(() => {
-        console.log("twin:useEffect", {sheet,host:host.current, shadowRoot: host.current?.shadowRoot})
+        console.debug("twin:useEffect", {sheet,host:host.current, shadowRoot: host.current?.shadowRoot})
        if(host.current?.shadowRoot && sheet.target) {
            host.current.shadowRoot.adoptedStyleSheets = [sheet.target]
        }
@@ -77,7 +76,7 @@ export const twin = c(function ({source}) {
     useCssLightDom(sheet.target)
  
     useEffect(() => {
-        console.log("twin:useEffect", {sheet})
+        console.debug("twin:useEffect", {sheet})
        
        
     }, [sheet.target])
@@ -90,9 +89,9 @@ export const twin = c(function ({source}) {
 }, {
     props: {
         source: {
-            type: Y.XmlFragment,
+            type: Object,
             reflect: true,
-            value:  undefined as unknown as Y.XmlFragment
+            value:  undefined as unknown as YXmlFragment
         }
     }
 })
@@ -101,7 +100,7 @@ customElements && customElements.define && customElements.define("y-twin", twin)
 
 export const YFragment = c(function ({fragment, awareness, store}:YFragmentProps) {
     const refDom = useRef();
-    const {doc, awareness:store_awareness} = useStore(YDocStore);
+    const {doc, awareness:store_awareness} = useDocStore();
 
     fragment = fragment ?? useMemo(() => doc?.getXmlFragment(store), [doc, store]);
     awareness = awareness ?? store_awareness;
@@ -118,17 +117,17 @@ export const YFragment = c(function ({fragment, awareness, store}:YFragmentProps
     }
 
     const callback = useCallback((events, trx) => {
-        console.log("YTemplateDomViewer:observeDeep", {events, fragment: fragment.toJSON()})
+        console.debug("YTemplateDomViewer:observeDeep", {events, fragment: fragment.toJSON()})
         initDom();
     })
     useEffect(() => {
         if (fragment) {
             initDom(); 
-            fragment.observeDeep( callback);
+            fragment.observeDeep(callback);
         }
         return () => {
             try {
-                fragment?.unobserveDeep(initDom);
+                fragment?.unobserveDeep(callback);
             }
             catch (e) {
                 console.warn("YTemplateDomViewer:unobserveDeep", e)
@@ -144,11 +143,12 @@ export const YFragment = c(function ({fragment, awareness, store}:YFragmentProps
 }, {
     props: {
         fragment: {
-            type: Y.XmlFragment,
+            type: Object,
+            value: undefined as unknown as YXmlFragment,
             reflect: false
         },
         store: String,
-        awareness: {type: Object, value: undefined as unknown as awarenessProtocol.Awareness},
+        awareness: {type: Object, value: undefined as unknown as Awareness},
 
     },
     styles: css`
