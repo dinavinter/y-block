@@ -1,0 +1,18 @@
+{
+  "extends": "@atomico/tsconfig/base.json",
+
+  "compilerOptions": {
+    
+    "target": "ESNext",
+    "jsx": "preserve",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["xstate"],
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "checkJs": true
+  },
+  "vueCompilerOptions": {
+    "target": 3.3
+  }
+}
