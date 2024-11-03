@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nitro build",
+    "dev": "nitro dev",
+    "prepare": "nitro prepare",
+    "preview": "node .output/src/index.mjs"
+  },
+  "devDependencies": {
+    "@atomico/store": "^2.0.1",
+    "@y-block/cm": "workspace:*",
+    "@y-block/dom": "workspace:*",
+    "@y-block/splitter": "workspace:*",
+    "@y-block/store": "workspace:*",
+    "atomico": "^1.79.2",
+    "h3": "^1.13.0",
+    "nano-jsx": "^0.1.0",
+    "nitropack": "latest"
+  },
+  "dependencies": {
+    "@atomico/store": "*",
+    "@trpc/server": "^10.45.2",
+    "superjson": "^2.2.1",
+    "trpc-nitro-adapter": "^0.7.3",
+    "trpc-playground": "^1.0.4",
+    "zod": "^3.23.8"
+  }
+}
