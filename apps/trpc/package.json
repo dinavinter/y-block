@@ -1,0 +1,30 @@
+{
+  "name": "@examples/vercel-edge-runtime",
+  "version": "10.45.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outdir=dist --sourcemap",
+    "dev": "pnpm build && edge-runtime --listen ./dist/index.js --port 3000",
+    "playground": "tsx ./src/playground.ts",
+    "deno:playground": "deno run --allow-net --allow-read --allow-env ./src/playground.ts",
+    "test-dev": "start-server-and-test 'pnpm dev' http://127.0.0.1:3000 'tsx src/client.ts'"
+  },
+  "dependencies": {
+    "@trpc/client": "^10.45.2",
+    "@trpc/server": "^10.45.2",
+    "trpc-playground": "^1.0.4",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@edge-runtime/types": "^2.0.2",
+    "edge-runtime": "^2.0.2",
+    "esbuild": "^0.17.10",
+    "start-server-and-test": "^1.12.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
