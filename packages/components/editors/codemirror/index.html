@@ -12,14 +12,33 @@
     />
 <!--    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>-->
     <!--    <link rel="stylesheet" href="./src/page.css" />-->
+    <script type="importmap">
+        { 
+         "imports":  {
+             "vue": "https://cdn.jsdelivr.net/npm/@vue/runtime-dom@3.5.12/dist/runtime-dom.esm-browser.js",
+             "vue/server-renderer": "https://cdn.jsdelivr.net/npm/@vue/server-renderer@3.5.12/dist/server-renderer.esm-browser.js",
+             "atomico": "https://esm.sh/atomico",
+             "atomico/": "https://esm.sh/atomico/",
+             "@atomico/": "https://esm.sh/@atomico/",
+             "allow-deduple": "https://esm.sh/@atomico/wrapper/allow-deduple",
+             "@y-block/splitter": "https://esm.sh/@y-block/splitter@1.0.2-beta.15",
+             "@y-block/store/" : "https://esm.sh/@y-block/store@1.0.2-beta.15/", 
+             "@y-block/dom" : "https://esm.sh/@y-block/dom@1.0.2-beta.15" ,
+             "@y-block/cm/vue": "./wrapper/vue.js",
+             "@y-block/cm/define": "./lib/element.define.js",
+             "@y-block/cm/config": "./lib/config.js"
+
+          
+ 
+            }
+         }
+    </script>
     <script src="https://unpkg.com/tailwindcss-jit-cdn?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     
     
-    <script async src="/src/index.ts" type="module"></script>
-    <script async src="/src/split.tsx" type="module"></script> 
-    <link rel="stylesheet" href="./page.css" />
+     <link rel="stylesheet" href="./page.css" />
 
-
+   
 
 
 </head>
@@ -65,10 +84,8 @@
     </div> 
 
 <script type="module">
-    import * as Y from 'yjs';
-    import * as awarenessProtocol from 'y-protocols/awareness';
 
-    import  './src/element.define.ts';
+    import '@y-block/cm/element.define'
     import  '@y-block/splitter';
     import "@y-block/store/ws";
     import "@y-block/store/hocuspocus";

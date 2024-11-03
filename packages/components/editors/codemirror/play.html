@@ -11,21 +11,22 @@
             rel="stylesheet"
     />
     <script type="importmap">
-       { "imports":  {
-            "vue": "https://cdn.jsdelivr.net/npm/@vue/runtime-dom@3.5.12/dist/runtime-dom.esm-browser.js",
-            "vue/server-renderer": "https://cdn.jsdelivr.net/npm/@vue/server-renderer@3.5.12/dist/server-renderer.esm-browser.js",
-            "atomico": "https://esm.sh/atomico",
-            "atomico/": "https://esm.sh/atomico/",
-            "@atomico/": "https://esm.sh/@atomico/",
-            "allow-deduple": "https://esm.sh/@atomico/wrapper/allow-deduple",
-            "@y-block/cm/vue": "https://esm.sh/@y-block/cm@1.0.2-beta.14/vue",
-            "@y-block/cm/define": "https://esm.sh/@y-block/cm@1.0.2-beta.14/element.define?target=esnext",
-            "@y-block/splitter": "https://esm.sh/@y-block/splitter@1.0.2-beta.14",
-            "@y-block/store/" : "https://esm.sh/@y-block/store@1.0.2-beta.14/", 
-            "@y-block/dom" : "https://esm.sh/@y-block/dom@1.0.2-beta.14" 
+        { 
+         "imports":  {
+             "vue": "https://cdn.jsdelivr.net/npm/@vue/runtime-dom@3.5.12/dist/runtime-dom.esm-browser.js",
+             "vue/server-renderer": "https://cdn.jsdelivr.net/npm/@vue/server-renderer@3.5.12/dist/server-renderer.esm-browser.js",
+             "atomico": "https://esm.sh/atomico",
+             "atomico/": "https://esm.sh/atomico/",
+             "@atomico/": "https://esm.sh/@atomico/",
+             "allow-deduple": "https://esm.sh/@atomico/wrapper/allow-deduple",
+             "@y-block/splitter": "https://esm.sh/@y-block/splitter@1.0.2-beta.15",
+             "@y-block/store/" : "https://esm.sh/@y-block/store@1.0.2-beta.15/", 
+             "@y-block/dom" : "https://esm.sh/@y-block/dom@1.0.2-beta.15" ,
+             "@y-block/cm/define": "https://esm.sh/@y-block/cm@1.0.2-beta.23/element.define",
+             "yjs": "https://esm.sh/yjs"
 
-        }
-        }
+            }
+         }
     </script>
 <!--    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>-->
     <!--    <link rel="stylesheet" href="./src/page.css" />-->
@@ -44,7 +45,7 @@
      <div class="container mx-auto antialiased">
         <main   role="main" class="w-full  h-screen bg-gray-100"> 
                 <y-store >
-                    <y-provider-hs  />
+                    <y-provider-hs  ></y-provider-hs>
                     <y-dom-render source="cm" target="dom" ></y-dom-render> 
                         <y-split>  
                             <y-cm store="cm" slot="col-1"  ></y-cm> 
@@ -88,16 +89,19 @@
 <script type="module">
     import 'allow-deduple';
 
-    import '@y-block/cm/define'
-    import  '@y-block/splitter';
+    
+    // import './lib/element.define';
+    import '@y-block/cm/define';
+    import '@y-block/splitter';
     import "@y-block/store/ws";
     import "@y-block/store/hocuspocus";
-    import "@y-block/dom";
     import "@y-block/store/doc.define";
-  
+    import "@y-block/dom";
+    // import {DefaultConfig } from "@y-block/cm/config";   
+    // document.querySelector(("y-cm")).config = DefaultConfig.extensions
+
     var el =document.querySelector(("y-store"))   
     console.log(el, el.doc)
-    
     // useStore(YDocStore,)
     setTimeout(()=>{
        // doc?.getText().insert(0, document.querySelector("#input").innerHTML);

@@ -1,10 +1,11 @@
-import {c, css, h, Host, useCallback, useEffect, useEvent, useHost, useMemo, useRef} from "atomico";
+import {c, css, h, Host, useAsync, useCallback, useEffect, useEvent, useHost, useMemo, useRef} from "atomico";
 import {EditorView, keymap} from "@codemirror/view";
 import {yCollab, yUndoManagerKeymap} from "y-codemirror.next";
 import {ChangeSet, EditorState, Extension} from "@codemirror/state";
 import {indentSelection} from "@codemirror/commands";
 import {icon} from "./indent";
 import {useDocStore, useDocText} from "@y-block/store";
+import {languages} from "~/languages";
 
 type CustomDetail = {
     value: string,
@@ -13,7 +14,7 @@ type CustomDetail = {
 
 type YText = ReturnType<typeof useDocText>
 
-export const YCm = c(function yClm({store, text, extensions}: { store: string, text: YText , extensions:Array<Extension>}): Host<{
+export const YCm = c(function yClm({store, text}: { store: string, text: YText }): Host<{
     onChange: CustomEvent<CustomDetail>
 }> {
     const ref = useRef()
@@ -56,25 +57,26 @@ export const YCm = c(function yClm({store, text, extensions}: { store: string, t
         dispatch({value: `${view.state.doc}`.trim()})
         console.debug('cmCode:watcher', {transactions: view.transactions, view})
     }))
+    
+    const {extensions} = useAsync(() => import('./extensions'),[])
+    // const languages = useAsync(async () => {
+    //     const {languages}  = await import('./languages')
+    //     return Promise.all(languages.map( lang =>  lang.load()))
+    // },[])
 
 
-    const codemirror = useMemo((): EditorView => {
-        if (awareness && text && host.current) {
+    const codemirror = useMemo( (): EditorView=> {
+        if (awareness && text && host.current && extensions) {
+ 
             return new EditorView({
-                extensions: [
-                    ...extensions,
-                    watcher,
-                    keymap.of([...yUndoManagerKeymap]),
-                    yCollab(text, awareness)
-                ],
+          
                 parent: hostDiv,
                 root: host.current.shadowRoot || undefined,
                 state: EditorState.create({
-
+                     
                     extensions: [
                         ...extensions,
-                        watcher,
-
+                        watcher, 
                         keymap.of([...yUndoManagerKeymap]),
                         yCollab(text, awareness),
 
@@ -87,7 +89,7 @@ export const YCm = c(function yClm({store, text, extensions}: { store: string, t
         return codemirror
 
 
-    }, [host.current, text, awareness]);
+    }, [host.current, text, awareness,extensions]);
 
 
     // useEffect(() => {
@@ -133,10 +135,9 @@ export const YCm = c(function yClm({store, text, extensions}: { store: string, t
 
 }, {
     props: {
-        extensions: {type: Array, value: []},
         value: {type: String, value: ''},
         language: {type: String, value: 'html'},
-        text: {type: Object, value: undefined as unknown as YText},
+        text: {type: Object, value: undefined as unknown as YText, reflect: false},
         store: {type: String, value: 'codemirror'}
     },
     styles: css`
