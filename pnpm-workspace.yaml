@@ -1,6 +1,6 @@
 packages:
-  - "apps/**/*" 
   - "apps/*"
+  - "apps/nuxt"
   - "packages/components/*"
   - "packages/components/**/*"
   - "packages/storybook"

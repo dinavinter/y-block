@@ -95,7 +95,7 @@ export const genImportMap = (
     },
     "sap-ai-token": {
       pkg: "sap-ai-token",
-      version: "0.0.68",
+      version: "1.0.0",
       href: "/_nuxt/template/sap-ai-token"
     },
     "@langchain/openai": {
@@ -105,10 +105,14 @@ export const genImportMap = (
        },
     "@langchain/core": {
         pkg: "@langchain/core",
-        version: "0.3.11",
+        version: "0.3.13",
         href: "https://esm.sh/@langchain/core@0.3.13"
     },
-    
+    "@atomico/vue": {
+        pkg: "@atomico/vue",
+        version: "0.3.1",
+        href: "https://esm.sh/@atomico/vue@0.3.1"
+    }
   }
 
   return {

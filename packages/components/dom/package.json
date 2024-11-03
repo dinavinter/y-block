@@ -1,6 +1,6 @@
 {
   "name": "@y-block/dom",
-  "version": "1.0.2-beta.14",
+  "version": "1.0.2-beta.15",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -23,7 +23,6 @@
     "deploy": "pnpm build && pnpm publish --tag beta --no-git-check",
     "build": "pnpm  build:types && pnpm build:compile && pnpm build:exports",
     "build:publish": "pnpm publish  --tag beta --no-git-check ",
-    "prepublishOnly": "pnpm  build",
     "start": "vite",
     "clean:lib": "rm -rf lib",
     "clean:types": "rm -rf types wrapper",

@@ -1,4 +1,5 @@
 import {c, html} from "atomico";
+import {auto} from "@atomico/vue";
 
 export const Header =c(function Header({title}) {
     return html`<header class="sticky top-0 z-10 backdrop-filter backdrop-blur bg-opacity-30 border-b border-gray-200 flex h-6 md:h-14 items-center justify-center px-4 text-xs md:text-lg font-medium sm:px-6 lg:px-8">
@@ -10,5 +11,7 @@ export const Header =c(function Header({title}) {
         title: String,
     }
 })
+
+// export const HeaderVue= auto(Header)
 
 customElements.define('c-header', Header);

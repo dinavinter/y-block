@@ -3,9 +3,10 @@ import {assign, createActor, setup} from "xstate";
 import {fromAIEventStream} from "@template/ai";
 import {openaiGP4o} from "@template/ai";
 import {render,renderTo} from "@template/agent-render";
-import {Header} from "@template/components/header";
-import {ChatBubble} from "@template/components/chatBubble";
-import {useTemplateRef,onMounted} from "vue";
+import { Header} from "@template/components/header";
+import { ChatBubble} from "@template/components/chatBubble";
+
+import {useTemplateRef,onMounted, ref,h} from "vue";
 const machine = setup({
   actors: {
     aiStream: fromAIEventStream({
@@ -72,14 +73,16 @@ const machine = setup({
 });
 
 const content = useTemplateRef('content')
-
+const event = ref('div')
+const events =ref([
+    
+])
 
 onMounted(()=>{
   const service = createActor(machine);
-  service.on("*", ({type,data}) => {
+  service.on("*", ({type,data, node}) => {
     console.log("data",type, `${data}`)
-    const fragment = document.createRange().createContextualFragment(data)
-    content.value.append(fragment)
+    events.value = [...events.value, h(node)]
   })
   service.start();
 })
@@ -87,9 +90,10 @@ onMounted(()=>{
 </script>
 
 <template>
-  <div ref="content" class="leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700 flex-grow " >
-      
+  <div>
+    <component v-for="event in events" :is="event" class="leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700 flex-grow " ></component>
   </div>
+      
   <div class="w-full h-full bg-amber-500">
     <pre>
       <code>

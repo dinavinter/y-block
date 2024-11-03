@@ -1,11 +1,11 @@
 {
-  "name": "@hocuspocus/server-demos",
+  "name": "playground",
   "version": "2.13.6",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node --conditions=source --no-warnings --loader ts-node/esm --experimental-specifier-resolution=node",
-    "dev": "nodemon --inspect -e ts --watch ./ --watch ../../packages --exec npm start"
+    "dev:playground": "tsx   ./src/default.ts --inspect --watch ./ --watch ../../packages"
   },
   "dependencies": {
     "@hocuspocus/extension-logger": "^2.13.6",
@@ -32,6 +32,7 @@
     "@types/jsonwebtoken": "^9.0.1",
     "@types/koa": "^2.13.5",
     "nodemon": "^2.0.15",
-    "ts-node": "^10.7.0"
+    "ts-node": "^10.7.0",
+    "tsx": "^4.19.1"
   }
 }

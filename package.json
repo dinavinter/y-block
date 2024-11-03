@@ -19,7 +19,7 @@
     "types": "pnpm   --parallel --stream --if-present run /^build:types/ ",
     "exports": "pnpm  --parallel --stream --if-present run /^build:exports/ ",
     "centralize": "pnpm  --parallel --stream --if-present /^build:centralize/",
-    "publish": "pnpm   publish  --filter @y-block/* --access public --tag beta --no-git-checks ",
+    "publish": "pnpm   publish  --filter @y-block/* --access public --tag beta --no-git-checks  ",
     "build:formas": "pnpm --filter @formas/* --parallel --stream --if-present run /^build:.*/ ",
     "dev:build": "pnpm build:local --watch",
     "build:local": "pnpm  -  --if-present run /^build:.*/ && pnpm centralize ",
@@ -55,15 +55,17 @@
     "@atomico/vite": "^2.21.1",
     "@storybook/types": "^8.1.11",
     "atomico": "^1.77.1",
-    "typescript": "^5.2.2",
     "vite": "^5.1.6",
     "yjs": "latest"
   },
   "devDependencies": {
     "@storybook/docs-tools": "^8.2.5",
     "vite-tsconfig-paths": "^4.3.2",
-    "vite": "^5.1.6"
-    
+    "vite": "^5.1.6",
+    "typescript": "^5.6.3",
+    "xstate" :"latest"
+
+
 
   },
   "peerDependencies": {

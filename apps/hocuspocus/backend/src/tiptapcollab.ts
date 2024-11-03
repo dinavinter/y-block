@@ -14,7 +14,7 @@ app.get('/', (request, response) => {
 
   const jwt = jsonwebtoken.sign({
     allowedDocumentNames: ['test1', 'test2'],
-  }, secret?.toString() ?? '')
+  }, secret?.toString() ?? 'secret')
 
   response.send(jwt)
 })

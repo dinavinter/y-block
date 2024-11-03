@@ -30,8 +30,8 @@
     "module": "wrapper/index.js",
     "types": "wrapper/index.d.ts",
     "dependencies": {
-        "@y-block/gallery": "^1.0.2-beta.14",
-        "@y-block/splitter": "^1.0.2-beta.14"
+        "@y-block/gallery": "^1.0.2-beta.15",
+        "@y-block/splitter": "^1.0.2-beta.15"
     },
     "exports": {
         ".": {
@@ -59,10 +59,10 @@
             "default": "./wrapper/vue.js"
         },
         "./package.json": {
-            "default": "../gallery/package.json"
+            "default": "../components/package.json"
         },
         "./package": {
-            "default": "../components/package.json"
+            "default": "../splitter/package.json"
         }
     },
     "typesVersions": {

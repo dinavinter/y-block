@@ -1,4 +1,5 @@
 import {c, css, html} from "atomico";
+import {auto} from "@atomico/vue";
 
 export const ChatBubble = c(({content, name, img, swap }) => {
     return html`<div  class="flex items-start gap-2.5  p-2 m-2 w-full">
@@ -46,5 +47,6 @@ export const ChatBubble = c(({content, name, img, swap }) => {
     `
 });
 
+// export const ChatBubbleVue= auto(ChatBubble)
 
 customElements.define('chat-bubble', ChatBubble);

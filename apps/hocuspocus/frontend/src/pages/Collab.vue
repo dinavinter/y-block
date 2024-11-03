@@ -69,12 +69,13 @@
 import { Editor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 import Collaboration from '@tiptap/extension-collaboration'
-import { TiptapCollabProvider } from '@hocuspocus/provider'
+import {HocuspocusProvider, TiptapCollabProvider} from '@hocuspocus/provider'
 import axios from 'axios'
 import {
   nextTick, onMounted, ref, shallowRef, watch,
 } from 'vue'
 import StatusBar from '../components/StatusBar.vue'
+import * as Y from "yjs";
 
 const appId = ref('')
 const secret = ref('')
@@ -94,12 +95,15 @@ watch([jwt, appId, secret], () => {
     appId: appId.value,
     name: 'test1',
     token: jwt.value,
+    websocketProvider: this.provider
   })
 
   provider2.value = new TiptapCollabProvider({
     appId: appId.value,
     name: 'test2',
     token: jwt.value,
+    websocketProvider: this.provider
+
   })
 
   nextTick(() => {
@@ -129,10 +133,24 @@ watch([jwt, appId, secret], () => {
   })
 })
 
+ 
+  
+
 onMounted(() => {
   // do NOT transfer the secret like this in production, this is just for demoing purposes. The secret should be stored on and never leave the server.
-  axios.get(`http://127.0.0.1:1234?secret=${secret.value}`).then(data => {
+  axios.get(`http://127.0.0.1:1234?secret=secret`).then(data => {
     jwt.value = data.data
+  })
+  
+  this.ydoc = new Y.Doc()
+
+  this.provider = new HocuspocusProvider({
+    url: 'ws://127.0.0.1:1234',
+    name: 'hocuspocus-demo',
+    document: this.ydoc,
+    onAwarenessUpdate: ({ states }) => {
+      this.states = states
+    },
   })
 })
 

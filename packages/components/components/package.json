@@ -8,7 +8,7 @@
     },
     "scripts": {
         "dev:exports": "pnpm run centralize",
-        "centralize": "exports \"../**\" --centralize-packages --wrappers",
+        "build:centralize": "exports \"../**\" --centralize-packages --wrappers",
         "clean:lib": "rm -rf lib",
         "clean:types": "rm -rf types wrapper",
         "clean:install": "rm -rf node_modules"
@@ -29,5 +29,100 @@
     },
     "main": "wrapper/index.js",
     "module": "wrapper/index.js",
-    "types": "wrapper/index.d.ts"  
- }
+    "types": "wrapper/index.d.ts",
+    "dependencies": {
+        "@y-block/dom": "^1.0.2-beta.15",
+        "@y-block/primitives": "^1.0.2-beta.15",
+        "@y-block/store": "^1.0.2-beta.15",
+        "@y-block/cm": "^1.0.2-beta.15",
+        "@formas/components": "^1.0.8",
+        "@y-block/gallery": "^1.0.2-beta.15",
+        "@y-block/splitter": "^1.0.2-beta.15"
+    },
+    "exports": {
+        ".": {
+            "types": "./wrapper/index.d.ts",
+            "default": "./wrapper/index.js"
+        },
+        "./@y-block/dom": {
+            "types": "./wrapper/@y-block/dom.d.ts",
+            "default": "./wrapper/@y-block/dom.js"
+        },
+        "./@y-block/primitives": {
+            "types": "./wrapper/@y-block/primitives.d.ts",
+            "default": "./wrapper/@y-block/primitives.js"
+        },
+        "./@y-block/store": {
+            "types": "./wrapper/@y-block/store.d.ts",
+            "default": "./wrapper/@y-block/store.js"
+        },
+        "./@y-block/cm": {
+            "types": "./wrapper/@y-block/cm.d.ts",
+            "default": "./wrapper/@y-block/cm.js"
+        },
+        "./components": {
+            "types": "./wrapper/@formas/components.d.ts",
+            "default": "./wrapper/@formas/components.js"
+        },
+        "./@y-block/gallery": {
+            "types": "./wrapper/@y-block/gallery.d.ts",
+            "default": "./wrapper/@y-block/gallery.js"
+        },
+        "./@y-block/splitter": {
+            "types": "./wrapper/@y-block/splitter.d.ts",
+            "default": "./wrapper/@y-block/splitter.js"
+        },
+        "./react": {
+            "types": "./wrapper/react.d.ts",
+            "default": "./wrapper/react.js"
+        },
+        "./preact": {
+            "types": "./wrapper/preact.d.ts",
+            "default": "./wrapper/preact.js"
+        },
+        "./vue": {
+            "types": "./wrapper/vue.d.ts",
+            "default": "./wrapper/vue.js"
+        },
+        "./package.json": {
+            "default": "../components/package.json"
+        },
+        "./package": {
+            "default": "../layout/splitter/package.json"
+        }
+    },
+    "typesVersions": {
+        "*": {
+            "@y-block/dom": [
+                "wrapper/@y-block/dom.d.ts"
+            ],
+            "@y-block/primitives": [
+                "wrapper/@y-block/primitives.d.ts"
+            ],
+            "@y-block/store": [
+                "wrapper/@y-block/store.d.ts"
+            ],
+            "@y-block/cm": [
+                "wrapper/@y-block/cm.d.ts"
+            ],
+            "components": [
+                "wrapper/@formas/components.d.ts"
+            ],
+            "@y-block/gallery": [
+                "wrapper/@y-block/gallery.d.ts"
+            ],
+            "@y-block/splitter": [
+                "wrapper/@y-block/splitter.d.ts"
+            ],
+            "react": [
+                "wrapper/react.d.ts"
+            ],
+            "preact": [
+                "wrapper/preact.d.ts"
+            ],
+            "vue": [
+                "wrapper/vue.d.ts"
+            ]
+        }
+    }
+}

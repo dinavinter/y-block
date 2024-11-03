@@ -1,10 +1,10 @@
 {
-  "name": "@hocuspocus/provider-demos",
+  "name": "frontend",
   "private": true,
   "version": "2.13.6",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev:playground": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@y-block/gallery",
-  "version": "1.0.2-beta.14",
+  "version": "1.0.2-beta.15",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
