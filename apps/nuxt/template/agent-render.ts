@@ -1,10 +1,10 @@
 import 'atomico/ssr/load'
-import { html} from "atomico";
+import {c, html, render} from "atomico";
 import {ComponentPublicInstance, defineComponent, VNode} from "vue";
 import {renderToString,renderToWebStream} from "vue/server-renderer";
 import {ActionArgs, emit, EventObject, MachineContext, type ParameterizedObject, sendTo} from "xstate";
 import {auto} from "@atomico/vue";
- 
+import {VNodeAny} from "atomico/types/vnode";
 //
 // export type StreamOptions ={ html: Atomico<any,any, any> ; text:Atomico<any,any, any> ; json:Atomico<any,any, any> ; href:string
 //    connect: (options?:{event?:string, swap?:string}) => Record<string,any>
@@ -72,30 +72,49 @@ export function render<TContext extends MachineContext & {stream?: RenderStream 
 
 
 let typeI = 0
-export function renderTo<TContext extends MachineContext, TExpressionEvent extends EventObject, TParams extends ParameterizedObject['params'] | undefined, TEvent extends EventObject >(type:string, nodeOrExpr:NodeExpression<TContext, TExpressionEvent, TParams, TEvent>  | VNode, ) {
+export function renderTo<TContext extends MachineContext, TExpressionEvent extends EventObject, TParams extends ParameterizedObject['params'] | undefined, TEvent extends EventObject >(type:string, nodeOrExpr:NodeExpression<TContext, TExpressionEvent, TParams, TEvent>  | VNodeAny, ) {
     const expr = typeof nodeOrExpr === 'function' ? nodeOrExpr : () => nodeOrExpr;
-   
-    const Comp    = defineComponent (({params, ...args}:ActionArgs<TContext, TExpressionEvent, TEvent> & {  params:TParams}) => {
-          // const Node = expr( {
-          //     ...args,
-          //     html: html,
-          // }, params);
-          //
-          return  ()=> expr( {
-              ...args,
-              html: html,
-          }, params)
-    },{
-        // render(this: ComponentPublicInstance){
-        //     return Node
-        // },
-        name: `e-${type}${typeI++ === 0 ? '-' : typeI}  `,
-        props: {
+    const comp= c(({params, ...args}:ActionArgs<TContext, TExpressionEvent, TEvent> & {  params:TParams}) => {
+        const node = expr( {
+            ...args,
+            html: html,
+        }, params);
+         
+        console.error('rendering', node);
+        if(!node.render){
+            console.error('No render method',type, node);
+            debugger;
+            return  html`<div> ${node.toString()} </div>`
+        } 
+        return html`<${node.render()} />`
+    },{ props: {
             params: {type: Object, default: () => ({})},
-            self: {type: Object, default: () => ({id: 'self'}), reflect:false},
-            context: {type: Object, default: () => ({})},
+            self: {type: Object, default: () => ({id: 'self'}), reflect: false},
+            context: {type: Object, default: () => ({})}
         }
     })
+    const compv = auto(comp);
+    // const Comp    = defineComponent (({params, ...args}:ActionArgs<TContext, TExpressionEvent, TEvent> & {  params:TParams}) => {
+    //        const Node = expr( {
+    //            ...args,
+    //            html: html,
+    //         }, params);
+    //       //
+    //       // return  ()=> expr( {
+    //       //     ...args,
+    //       //     html: html,
+    //      // }, params)
+    // },{
+    //     render(this: ComponentPublicInstance){
+    //         return  html`<${Node} />`
+    //     },
+    //     name: `e-${type}${typeI++ === 0 ? '-' : typeI}  `,
+    //     props: {
+    //         params: {type: Object, default: () => ({})},
+    //         self: {type: Object, default: () => ({id: 'self'}), reflect:false},
+    //         context: {type: Object, default: () => ({})},
+    //     }
+    // })
 
     // const node = {
     //     props: ['postTitle'],
@@ -103,15 +122,42 @@ export function renderTo<TContext extends MachineContext, TExpressionEvent exten
     //     template: `<h3>{{ postTitle }}</h3> `
     // }
     return emit(({context, self, ...args}: ActionArgs<TContext, TExpressionEvent, TEvent>, params: TParams) => {
-        //     expr({
-        //     self,
-        //     html, ...args,
-        //     context: context
-        // }, params);
+         const node=   expr({
+            self,
+            html, ...args,
+            context: context
+        }, params);
+        if(!node.render){
+            console.error('No render method',type, node);
+            debugger;
+            return {
+                type,
+                    event:type,
+                self,
+                params,
+                context,
+                event: type,
+            ...args,
+                comp:compv,
+                data:   html`<div> no render </div>`.render()  //JSON.stringify(html`<${comp} ...${args} params=${params} self=${self} context=${context} />`.render())
+            };
+         }
+
+        return {
+            type,
+            event:type,
+            self,
+            params,
+            context,
+            event: type,
+            ...args,
+            comp:compv,
+            data:  node.render()  //JSON.stringify(html`<${comp} ...${args} params=${params} self=${self} context=${context} />`.render())
+        };
         return renderEvent(
             type,
             self,
-            h(Comp, {
+            h(comp, {
                 ...args,
                 params,
                 self,
