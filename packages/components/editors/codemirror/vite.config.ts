@@ -6,6 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
 
         build: {
+            ssr: true,
 
             ssrManifest: true,
             commonjsOptions: {
@@ -16,15 +17,13 @@ export default defineConfig({
             manifest: true,
             emptyOutDir: true,
             lib: {
+                formats: ["es", "cjs"],
                 entry: {
                     index: "src/index.ts",
                     cm: "src/element.tsx",
                     define: "src/element.define.ts",
                     colors: "src/colors.ts",
-                    config: "src/config.ts",
-                    vue: "wrappers/vue.ts",
-                    react: "wrappers/vue.ts",
-                    preact: "wrappers/vue.ts"
+                    config: "src/config.ts"
 
                 },
             }

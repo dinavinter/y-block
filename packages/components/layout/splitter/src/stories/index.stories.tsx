@@ -1,11 +1,11 @@
-import {Gallery} from "../index";
+import {Splitter} from "../index";
 import { define } from "@atomico/storybook";
 import * as Y from "yjs";
 import '../../demo/product-card'
 
 export default {
-    title: "@y-block/layout/gallery",
-    ...define( Gallery)
+    title: "@y-block/layout/splitter",
+    ...define( Splitter)
 };
 
 export const Story = (props) => {
@@ -83,9 +83,9 @@ export const Story = (props) => {
         }
         
     ])
-    return    <y-gallery items={array} {...props} >
+    return    <y-split items={array} {...props} >
         <product-card   ></product-card>
-    </y-gallery>
+    </y-split>
 }
  
 

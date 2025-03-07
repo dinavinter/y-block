@@ -1,6 +1,7 @@
-import { mergeConfig } from "vite";
+import {mergeConfig} from "vite";
 import atomico from "@atomico/vite";
- const config = {
+
+const config = {
     stories: [
         "../src/**/*.mdx",
         // "../components/**/*.mdx",
@@ -8,7 +9,7 @@ import atomico from "@atomico/vite";
         "../../components/**/*.stories.@(js|jsx|ts|tsx)",
         "../components/**/*.mdx",
     ],
-    addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+    addons: ["@storybook/addon-links", "@storybook/addon-essentials", '@storybook/addon-interactions'],
     staticDirs: ["../public"],
     framework: {
         name: "@storybook/web-components-vite",
@@ -17,6 +18,15 @@ import atomico from "@atomico/vite";
     docs: {
         autodocs: true,
     },
+    // async webpackFinal(config) {
+    //     // Add support for Vento.js templates
+    //     config.module.rules.push({
+    //         test: /\.vento$/,
+    //         use: 'raw-loader'
+    //     });
+    //
+    //     return config;
+    // },
     async viteFinal(config) {
         return mergeConfig(config, {
             build: {
@@ -26,7 +36,7 @@ import atomico from "@atomico/vite";
                 atomico({
                     cssLiterals: {
                         postcss: true,
-                        
+
                     },
                 }),
             ],
