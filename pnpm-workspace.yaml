@@ -1,6 +1,9 @@
 packages:
-  - "apps/*"
+  - "apps/edge"
   - "apps/nuxt"
+  - "apps/deno"
   - "packages/components/*"
   - "packages/components/**/*"
   - "packages/storybook"
+  - "packages/ts-worker"
+ 

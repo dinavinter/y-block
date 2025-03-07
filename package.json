@@ -70,5 +70,11 @@
   },
   "peerDependencies": {
 
+  },
+  "pnpm": {
+    "overrides": {
+      "ventojs": "https://esm.sh/ventojs@1.12.15/es2022/ventojs.mjs",
+      "yjs": "13.6.24"
+    }
   }
 }
