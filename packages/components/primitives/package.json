@@ -34,8 +34,11 @@
     "@atomico/vue": "latest"
   },
   "dependencies": {
+    "ventojs": "1.12.15",
     "yjs": "latest"
   },
+
+
   "peerDependenciesMeta": {
     "@atomico/react": {
       "optional": true

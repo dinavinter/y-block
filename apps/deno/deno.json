@@ -1,9 +1,14 @@
 {
   "tasks": {
-    "dev": "deno serve --watch -R main.ts"
+    "dev": "deno serve --watch  --allow-env --allow-sys --allow-ffi --allow-net  -R main.ts"
   },
   "imports": {
+    "@hocuspocus/extension-logger": "npm:@hocuspocus/extension-logger@^2.13.7",
+    "@hocuspocus/extension-sqlite": "npm:@hocuspocus/extension-sqlite@^2.13.7",
+    "@hocuspocus/server": "npm:@hocuspocus/server@^2.13.7",
     "@std/assert": "jsr:@std/assert@1",
-    "@std/http": "jsr:@std/http@1"
-  }
+    "@std/http": "jsr:@std/http@1",
+    "ws": "npm:ws@^8.18.0"
+  },
+  "nodeModulesDir": "auto"
 }
