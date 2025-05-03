@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@atomico/exports':
         specifier: ^1.13.2
-        version: 1.13.2(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))
+        version: 1.13.2(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))
       '@atomico/hooks':
         specifier: ^4.4.1
         version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
@@ -34,7 +34,7 @@ importers:
         version: 2.0.1(atomico@1.79.2)
       '@atomico/vite':
         specifier: ^2.21.1
-        version: 2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)
+        version: 2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
       '@storybook/types':
         specifier: ^8.1.11
         version: 8.1.11
@@ -53,7 +53,7 @@ importers:
     devDependencies:
       '@storybook/docs-tools':
         specifier: ^8.2.5
-        version: 8.2.6(storybook@8.2.6(@babel/preset-env@7.24.8))
+        version: 8.2.6(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))
       vite-tsconfig-paths:
         specifier: ^4.3.2
         version: 4.3.2(typescript@5.5.4)(vite@5.3.5(@types/node@20.14.12))
@@ -115,29 +115,29 @@ importers:
         specifier: ^6.10.1
         version: 6.10.2
       '@codemirror/state':
-        specifier: ^6.4.1
-        version: 6.4.1
+        specifier: ^6.5.2
+        version: 6.5.2
       '@codemirror/view':
         specifier: ^6.28.2
         version: 6.28.6
       '@uiw/codemirror-extensions-basic-setup':
         specifier: ^4.23.0
-        version: 4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/commands@6.6.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
+        version: 4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/commands@6.6.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)
       '@uiw/codemirror-extensions-color':
         specifier: ^4.23.0
-        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
+        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)
       '@uiw/codemirror-extensions-langs':
         specifier: ^4.23.0
-        version: 4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language-data@6.5.1(@codemirror/view@6.28.6))(@codemirror/language@6.10.2)(@codemirror/legacy-modes@6.4.0)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
+        version: 4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language-data@6.5.1(@codemirror/view@6.28.6))(@codemirror/language@6.10.2)(@codemirror/legacy-modes@6.4.0)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
       '@uiw/codemirror-theme-quietlight':
         specifier: ^4.23.0
-        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
+        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)
       atomico:
         specifier: '*'
         version: 1.79.2
       y-codemirror.next:
         specifier: ^0.3.5
-        version: 0.3.5(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(yjs@13.6.18)
+        version: 0.3.5(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(yjs@13.6.18)
       y-protocols:
         specifier: ^1.0.6
         version: 1.0.6(yjs@13.6.18)
@@ -153,7 +153,7 @@ importers:
         version: 0.4.2(tailwindcss@3.4.6)
       '@uiw/codemirror-theme-material':
         specifier: ^4.23.0
-        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
+        version: 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.19(postcss@8.4.40)
@@ -175,60 +175,82 @@ importers:
       '@atomico/vue':
         specifier: '*'
         version: 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-      '@formas/avatar':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/badge':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/button':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/card':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/checkbox':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/container':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/dropdown':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/icon':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input-list':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/label':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/loading':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/props':
-        specifier: ^1.0.8
-        version: 1.0.9(atomico@1.79.2)
-      '@formas/radio':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/select':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/switch':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens':
-        specifier: ^1.0.8
-        version: 1.0.9(atomico@1.79.2)
       atomico:
         specifier: ^1.77.1
         version: 1.79.2
+
+  packages/components/editors/tseditor:
+    dependencies:
+      typescript:
+        specifier: ^5.2.2
+        version: 5.5.4
+    devDependencies:
+      '@atomico/hooks':
+        specifier: ^4.4.1
+        version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
+      '@atomico/react':
+        specifier: '*'
+        version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
+      '@atomico/vite':
+        specifier: ^2.21.1
+        version: 2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
+      '@atomico/vue':
+        specifier: '*'
+        version: 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
+      '@codemirror/autocomplete':
+        specifier: ^6
+        version: 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/lang-javascript':
+        specifier: ^6
+        version: 6.2.2
+      '@codemirror/lint':
+        specifier: ^6
+        version: 6.8.1
+      '@codemirror/state':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@codemirror/view':
+        specifier: ^6
+        version: 6.28.6
+      '@cxai/ata':
+        specifier: ^0.0.0
+        version: 0.0.0(typescript@5.5.4)
+      '@hocuspocus/provider':
+        specifier: ^2.9.0
+        version: 2.15.2(y-protocols@1.0.6(yjs@13.6.26))(yjs@13.6.26)
+      '@types/deno':
+        specifier: ^2.2.0
+        version: 2.2.0
+      '@typescript/vfs':
+        specifier: ^1.5.0
+        version: 1.6.1(typescript@5.5.4)
+      '@valtown/codemirror-codeium':
+        specifier: ^1.1.1
+        version: 1.1.1(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)
+      '@valtown/codemirror-ts':
+        specifier: 3.0.0-9
+        version: 3.0.0-9(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/lint@6.8.1)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)
+      atomico:
+        specifier: ^1.77.1
+        version: 1.79.2
+      codemirror:
+        specifier: ^6
+        version: 6.0.1(@lezer/common@1.2.1)
+      comlink:
+        specifier: ^4.4.1
+        version: 4.4.2
+      vite:
+        specifier: ^5.0.0
+        version: 5.3.5(@types/node@20.14.12)
+      y-codemirror.next:
+        specifier: ^0.3.2
+        version: 0.3.5(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(yjs@13.6.26)
+      y-protocols:
+        specifier: ^1.0.6
+        version: 1.0.6(yjs@13.6.26)
+      yjs:
+        specifier: ^13.6.24
+        version: 13.6.26
 
   packages/components/layout/components:
     dependencies:
@@ -241,57 +263,6 @@ importers:
       '@atomico/vue':
         specifier: '*'
         version: 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-      '@formas/avatar':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/badge':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/button':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/card':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/checkbox':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/container':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/dropdown':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/icon':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input-list':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/label':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/loading':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/props':
-        specifier: ^1.0.8
-        version: 1.0.9(atomico@1.79.2)
-      '@formas/radio':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/select':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/switch':
-        specifier: ^1.0.8
-        version: 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens':
-        specifier: ^1.0.8
-        version: 1.0.9(atomico@1.79.2)
       atomico:
         specifier: ^1.77.1
         version: 1.79.2
@@ -1300,6 +1271,9 @@ packages:
     resolution: {integrity: sha512-xm8XrMKz0IlUdocVbYJe0Z9xEgidU7msskG8BbhnTPK/HZ2z/7FP7ykqPgrUH+C+r414mNfNWam1f2vqOjqjYQ==}
     engines: {node: '>=6.9.0'}
 
+  '@bufbuild/protobuf@1.10.1':
+    resolution: {integrity: sha512-wJ8ReQbHxsAfXhrf9ixl0aYbZorRuOWpBNzm8pL8ftmSxQx/wnJD5Eg861NwJU/czy2VXFIebCeZnZrI9rktIQ==}
+
   '@chromatic-com/storybook@1.6.1':
     resolution: {integrity: sha512-x1x1NB3j4xpfeSWKr96emc+7ZvfsvH+/WVb3XCjkB24PPbT8VZXb3mJSAQMrSzuQ8+eQE9kDogYHH9Fj3tb/Cw==}
     engines: {node: '>=16.0.0', yarn: '>=1.22.18'}
@@ -1393,11 +1367,27 @@ packages:
   '@codemirror/search@6.5.6':
     resolution: {integrity: sha512-rpMgcsh7o0GuCDUXKPvww+muLA1pDJaFrpq/CCHtpQJYz8xopu4D1hPcKRoDD0YlF8gZaqTNIRa4VRBWyhyy7Q==}
 
-  '@codemirror/state@6.4.1':
-    resolution: {integrity: sha512-QkEyUiLhsJoZkbumGZlswmAhA7CBU02Wrz7zvH4SrcifbsqwlXShVXg65f3v/ts57W3dqyamEriMhij1Z3Zz4A==}
+  '@codemirror/state@6.5.2':
+    resolution: {integrity: sha512-FVqsPqtPWKVVL3dPSxy8wEF/ymIEuVzF1PK3VbUgrxXpJUSHQWWZz4JMToquRxnkw+36LTamCZG2iua2Ptq0fA==}
 
   '@codemirror/view@6.28.6':
     resolution: {integrity: sha512-bhwB1AZ6zU4M3dNKm8Aa2BXwj5mWDqE9IWpqxYKJoLCnx+AcwcMuLO01tLWgc1mx4vT1IVYVqx86YoqUsATrqQ==}
+
+  '@connectrpc/connect-web@1.6.1':
+    resolution: {integrity: sha512-GVfxQOmt3TtgTaKeXLS/EA2IHa3nHxwe2BCHT7X0Q/0hohM+nP5DDnIItGEjGrGdt3LTTqWqE4s70N4h+qIMlQ==}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.10.0
+      '@connectrpc/connect': 1.6.1
+
+  '@connectrpc/connect@1.6.1':
+    resolution: {integrity: sha512-KchMDNtU4CDTdkyf0qG7ugJ6qHTOR/aI7XebYn3OTCNagaDYWiZUVKgRgwH79yeMkpNgvEUaXSK7wKjaBK9b/Q==}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.10.0
+
+  '@cxai/ata@0.0.0':
+    resolution: {integrity: sha512-2UrRTlSXeXDqsFdZZctEVyqvCRCNcfRc4GB9HfqqMWHgCHOcSOPQP2rmCyhiZR3SmyhuGMhIjfHJF2xwv6UQmQ==}
+    peerDependencies:
+      typescript: '>=4.4.4'
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -1681,204 +1671,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@floating-ui/core@1.6.5':
-    resolution: {integrity: sha512-8GrTWmoFhm5BsMZOTHeGD2/0FLKLQQHvO/ZmQga4tKempYRLz8aqJGqXVuQgisnMObq2YZ2SgkwctN1LOOxcqA==}
+  '@hocuspocus/common@2.15.2':
+    resolution: {integrity: sha512-wU1wxXNnQQMXyeL3mdSDYiQsm/r/QyJVjjQhF7sUBrLnjdsN7bA1cvfcSvJBr1ymrMSeYRmUL3UlQmEHEOaP7w==}
 
-  '@floating-ui/dom@1.6.8':
-    resolution: {integrity: sha512-kx62rP19VZ767Q653wsP1XZCGIirkE09E0QUGNYTM/ttbbQHqcGPdSfWFxUyyNLc/W6aoJRBajOSXhP6GXjC0Q==}
-
-  '@floating-ui/utils@0.2.5':
-    resolution: {integrity: sha512-sTcG+QZ6fdEUObICavU+aB3Mp8HY4n14wYHdxK4fXjPmv3PXZZeY5RaguJmGyeH/CJQhX3fqKUtS4qc1LoHwhQ==}
-
-  '@formas/avatar@1.0.9':
-    resolution: {integrity: sha512-G58JmLOt7Sd8CVrpwvyrwF0IZMJVg/sYhEUs7wiPZKy1IrarVfcI5abmnuSJYiXmxawHzZFqo3XqsjWCBpUyYw==}
+  '@hocuspocus/provider@2.15.2':
+    resolution: {integrity: sha512-mdBurviyaUd7bQx4vMIE39WqRJDTpfFelHOVXr7w/jA8G1E7K7lxQ9/DacSrbg+9o8s+1z1+SerZiUjaToaBJg==}
     peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/badge@1.0.9':
-    resolution: {integrity: sha512-pcxwyxGNcRTsmVeVMRhm0MfuVgohJBQKAW7kxE/MHo88R8wiFLP1Ca7FYSiPynBzE558jJ+iRFHMejFvDzLVOA==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/button@1.0.9':
-    resolution: {integrity: sha512-c/rnBJnx2fyP9EC13pjUtl0XqJtIh4J0AyCAv8pU2sz8jOJpG4o+x0DrEhFFO5/+Xn6SMUATCptJOV2LZTrqAg==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/card@1.0.9':
-    resolution: {integrity: sha512-WKiuHN34044B4A5lU8KLNbtN18u5TcELZ9kKsAM6YnA2iKFk/+2nM79d3NDMYns3bw7gMKL216cAIssBZidzaQ==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/checkbox@1.0.9':
-    resolution: {integrity: sha512-qMnc8u6u7dit8iPZUtgEMFDCVon3Dn5tJagKrbF2sN8P5NUY0T7sZjTmaqSkKxpd8luMPavceFztozWZ60t/9Q==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/container@1.0.9':
-    resolution: {integrity: sha512-58ovMwUDBOUjaNQRypPUPlm/Y9xe7C8oabU/n9DVuhxpZ91VFG7GmIYVtVOfNFh+l0JZtVMutV4h3AjLi90crg==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/dropdown@1.0.9':
-    resolution: {integrity: sha512-t6lvABvsMBcMcFfzNxOI5g5bzM1hQZ8pl0iTjVnWtpOj7i3eikCc9IY8LI9Er3RQ5fF98j9VAMLr8IMBrU4r5w==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/icon@1.0.9':
-    resolution: {integrity: sha512-l+VS2ZMklyzd0ULUTP3ofoQEx7tY0OVhyj0iEVhndJGZ0S2RhEqxe71E/BdaejjauFBnDur2cQdqOLJxcG1iUg==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/input-list@1.0.9':
-    resolution: {integrity: sha512-d3yPn5Z2AKauqTrh2yCyR4BmI362VVZYOIOslGNwokyS8JIL0wRanMQfmJRULCJZX4tVYTz8FS5wd0vBnVEZBw==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/input@1.0.9':
-    resolution: {integrity: sha512-0e1pbsW24PznOWhOpcqJdeDvhF47OJnsd2ufJsttYRG3TmYGXWIfGMD5Wm23xPC8M8cR5ewg3ZnpwdgVyAmQgA==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/label@1.0.9':
-    resolution: {integrity: sha512-Rm1blz4P1Dy13sSTKsfyOnht3ubeuXRoOqX+cdbVzPatkyjreoiad6Z85iCYvF5H1Ydt7k/XWpyszzmy6jiysQ==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/loading@1.0.9':
-    resolution: {integrity: sha512-lr3GC7++0ol4IESMLdjeA0CwkX62Gi3fOfoNWyVXKo8J2eUd88DfNUMuQeY00JuObcdRe8kEIAdiNn1dBFHpAQ==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/props@1.0.9':
-    resolution: {integrity: sha512-f71DU+oWZxYdE9AZipbc05ylMO1dxCnzjvGONBfxgIUGcljPd84EOKIZrfQvA7T/Vf3uE0/y72ojshR2TMNBzA==}
-    peerDependencies:
-      atomico: '*'
-
-  '@formas/radio@1.0.9':
-    resolution: {integrity: sha512-ByIEU0bjOg+lDiMm6xOdj7I46p8lFHSatLPsAlPQdu4VkyWmYsSsj5b9lsXpwCCSeRdAHpQi6jxNbcXtvHB60A==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/select@1.0.9':
-    resolution: {integrity: sha512-x++vvcMe76VSdPn1fTmAhh9mlXOoqw3Fxrjrm5hm+237PBI7MZ4Qqx/7OyOXr14ia0YQpEr2CBBew0xBh9QLYg==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/switch@1.0.9':
-    resolution: {integrity: sha512-+B3kcg8iI8DoWKB9mWZsWbFcJNjt3wkMO1xxAIvMjNUfEzaQkM56r4gyaW8a9mPMdUtaMZPP4FS2WC2wM7NduQ==}
-    peerDependencies:
-      '@atomico/react': '*'
-      '@atomico/vue': '*'
-      atomico: '*'
-    peerDependenciesMeta:
-      '@atomico/react':
-        optional: true
-      '@atomico/vue':
-        optional: true
-
-  '@formas/tokens@1.0.9':
-    resolution: {integrity: sha512-Anj3sy6TwC1fR8bdqaiu6La8dWyIk0nJ00510IhRwJGf0O8e49laPzCK7vVNJzc3aiiusDLDUaAGQNFXA5IklQ==}
-    peerDependencies:
-      atomico: '*'
+      y-protocols: ^1.0.6
+      yjs: ^13.6.8
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1960,11 +1760,17 @@ packages:
   '@lezer/yaml@1.0.3':
     resolution: {integrity: sha512-GuBLekbw9jDBDhGur82nuwkxKQ+a3W5H0GfaAthDXcAu+XdpS43VlnxA9E9hllkpSP5ellRDKjLLj7Lu9Wr6xA==}
 
+  '@lifeomic/attempt@3.1.0':
+    resolution: {integrity: sha512-QZqem4QuAnAyzfz+Gj5/+SLxqwCAw2qmt7732ZXodr6VDWGeYLG6w1i/vYLa55JQM9wRuBKLmXmiZ2P0LtE5rw==}
+
   '@lit-labs/ssr-dom-shim@1.2.0':
     resolution: {integrity: sha512-yWJKmpGE6lUURKAaIltoPIE/wrbY3TEkqQt+X0m+7fQNnAv0keydnYvbiJFP1PnMhizmIWRWOG5KLhYyc/xl+g==}
 
   '@lit/reactive-element@2.0.4':
     resolution: {integrity: sha512-GFn91inaUa2oHLak8awSIigYz0cU0Payr1rcFsrkf5OJ5eSPxElyZfKh0f2p9FsTiZWXQdWGJeXZICEfXXYSXQ==}
+
+  '@marijn/find-cluster-break@1.0.2':
+    resolution: {integrity: sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g==}
 
   '@mdx-js/react@3.0.1':
     resolution: {integrity: sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==}
@@ -2349,6 +2155,9 @@ packages:
   '@types/cross-spawn@6.0.6':
     resolution: {integrity: sha512-fXRhhUkG4H3TQk5dBhQ7m/JDdSNHKwR2BBia62lhwEIq9xGiQKLxd6LymNhn47SjXhsUEPmxi+PKw2OkW4LLjA==}
 
+  '@types/deno@2.2.0':
+    resolution: {integrity: sha512-4x6M/ZSyoQy6fJeMArP0dvvNT4IOolfySyukuqqKhsLmSXDV4wGanqXIZ+xFihw3TlReS6JTa4hRG9nAZInpmw==}
+
   '@types/emscripten@1.39.13':
     resolution: {integrity: sha512-cFq+fO/isvhvmuP/+Sl4K4jtU6E23DoivtbO4r50e3odaxAiVdbfSYRDdJ4gCdxx+3aRjhphS5ZMwIH4hFy/Cw==}
 
@@ -2415,6 +2224,11 @@ packages:
   '@types/uuid@9.0.8':
     resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==}
 
+  '@typescript/vfs@1.6.1':
+    resolution: {integrity: sha512-JwoxboBh7Oz1v38tPbkrZ62ZXNHAk9bJ7c9x0eI5zBfBnBYGhURdbnh7Z4smN/MV48Y5OCcZb58n972UtbazsA==}
+    peerDependencies:
+      typescript: '*'
+
   '@uiw/codemirror-extensions-basic-setup@4.23.0':
     resolution: {integrity: sha512-+k5nkRpUWGaHr1JWT8jcKsVewlXw5qBgSopm9LW8fZ6KnSNZBycz8kHxh0+WSvckmXEESGptkIsb7dlkmJT/hQ==}
     peerDependencies:
@@ -2472,6 +2286,21 @@ packages:
 
   '@uppercod/template-literals@1.1.3':
     resolution: {integrity: sha512-InphSGb1Oxr+M0MtcnxbXaSQfhjUwHkOg/CHvQ/3nJjxiG2Hb7r6XKqS55Y8+EXAxQFvuS/rXKqRiX2m4zL2gQ==}
+
+  '@valtown/codemirror-codeium@1.1.1':
+    resolution: {integrity: sha512-J/LcCiHAhqcqTFjxAFYtUIxSPXY1cdhANsJ8HWqb4wIRengcigBC0r8psZOaVdFHrky4p56q+sJL1Wnsd0Xsug==}
+    peerDependencies:
+      '@codemirror/autocomplete': ^6
+      '@codemirror/state': ^6
+      '@codemirror/view': ^6
+
+  '@valtown/codemirror-ts@3.0.0-9':
+    resolution: {integrity: sha512-f1KYcV1ULKgldUpeIjJcoVTn2Ko/wtEex28gce0b8IVTDwvOJ03gM2SKINh36NlHq3ibUvkzMtCcJ5yav41PqA==}
+    peerDependencies:
+      '@codemirror/autocomplete': ^6
+      '@codemirror/lint': ^6
+      '@codemirror/state': ^6
+      '@codemirror/view': ^6
 
   '@vitest/expect@1.6.0':
     resolution: {integrity: sha512-ixEvFVQjycy/oNgHjqsL6AZCDduC+tflRluaHIzKIsdbzkLn2U/iBnVeJwB6HsIjQBdfMR8Z0tRxKUsvFJEeWQ==}
@@ -2748,6 +2577,9 @@ packages:
   codemirror-lang-mermaid@0.5.0:
     resolution: {integrity: sha512-Taw/2gPCyNArQJCxIP/HSUif+3zrvD+6Ugt7KJZ2dUKou/8r3ZhcfG8krNTZfV2iu8AuGnymKuo7bLPFyqsh/A==}
 
+  codemirror@6.0.1:
+    resolution: {integrity: sha512-J8j+nZ+CdWmIeFIGXEFbFPtpiYacFMDR8GlHK3IyHQJMCaVRfGx9NT+Hxivv1ckLWPvNdZqndbr/7lVhrf/Svg==}
+
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
 
@@ -2768,6 +2600,9 @@ packages:
   colors-named@1.0.2:
     resolution: {integrity: sha512-2ANq2r393PV9njYUD66UdfBcxR1slMqRA3QRTWgCx49JoCJ+kOhyfbQYxKJbPZQIhZUcNjVOs5AlyY1WwXec3w==}
     engines: {node: '>=14.16'}
+
+  comlink@4.4.2:
+    resolution: {integrity: sha512-OxGdvBmJuNKSCMO4NTl1L47VRp6xn2wG4F/2hYzB6tiCb709otOxtEYCSvK80PtjODfXXZu8ds+Nw5kVCjqd2g==}
 
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
@@ -3406,6 +3241,11 @@ packages:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
     engines: {node: '>=6'}
 
+  lib0@0.2.105:
+    resolution: {integrity: sha512-5vtbuBi2P43ZYOfVMV+TZYkWEa0J9kijXirzEgrPA+nJDQCtMx805/rqW4G1nXbM9IRIhwW+OyNNgcQdbhKfSw==}
+    engines: {node: '>=16'}
+    hasBin: true
+
   lib0@0.2.94:
     resolution: {integrity: sha512-hZ3p54jL4Wpu7IOg26uC7dnEWiMyNlUrb9KoG7+xYs45WkQwpVvKFndVq2+pqLYKe1u8Fp3+zAfZHVvTK34PvQ==}
     engines: {node: '>=16'}
@@ -3479,6 +3319,9 @@ packages:
 
   magic-string@0.30.10:
     resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
+
+  magic-string@0.30.12:
+    resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
   make-dir@2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}
@@ -4452,6 +4295,10 @@ packages:
     resolution: {integrity: sha512-GBTjO4QCmv2HFKFkYIJl7U77hIB1o22vSCSQD1Ge8ZxWbIbn8AltI4gyXbtL+g5/GJep67HCMq3Y5AmNwDSyEg==}
     engines: {node: '>=16.0.0', npm: '>=8.0.0'}
 
+  yjs@13.6.26:
+    resolution: {integrity: sha512-wiARO3wixu7mtoRP5f7LqpUtsURP9SmNgXUt3RlnZg4qDuF7dUjthwIvwxIDmK55dPw4Wl4QdW5A3ag0atwu7g==}
+    engines: {node: '>=16.0.0', npm: '>=8.0.0'}
+
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
@@ -4467,7 +4314,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@atomico/exports@1.13.2(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))':
+  '@atomico/exports@1.13.2(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))':
     dependencies:
       '@uppercod/clean-terminal': 1.0.1
       acorn: 8.12.1
@@ -4708,9 +4555,9 @@ snapshots:
     dependencies:
       atomico: 1.79.2
 
-  '@atomico/vite@2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))(atomico@1.79.2)':
+  '@atomico/vite@2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
     dependencies:
-      '@atomico/exports': 1.13.2(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2))
+      '@atomico/exports': 1.13.2(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))
       '@atomico/postcss-imported': 1.2.1(postcss@8.4.40)
       '@uppercod/clean-terminal': 1.0.1
       '@uppercod/template-literals': 1.1.3
@@ -5564,6 +5411,8 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
+  '@bufbuild/protobuf@1.10.1': {}
+
   '@chromatic-com/storybook@1.6.1(react@18.3.1)':
     dependencies:
       chromatic: 11.5.6
@@ -5576,17 +5425,17 @@ snapshots:
       - '@chromatic-com/playwright'
       - react
 
-  '@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)':
+  '@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)':
     dependencies:
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
 
   '@codemirror/commands@6.6.0':
     dependencies:
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
 
@@ -5606,9 +5455,9 @@ snapshots:
 
   '@codemirror/lang-css@6.2.1(@codemirror/view@6.28.6)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@lezer/common': 1.2.1
       '@lezer/css': 1.1.8
     transitivePeerDependencies:
@@ -5616,9 +5465,9 @@ snapshots:
 
   '@codemirror/lang-go@6.0.1(@codemirror/view@6.28.6)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@lezer/common': 1.2.1
       '@lezer/go': 1.0.0
     transitivePeerDependencies:
@@ -5626,11 +5475,11 @@ snapshots:
 
   '@codemirror/lang-html@6.4.9':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/lang-css': 6.2.1(@codemirror/view@6.28.6)
       '@codemirror/lang-javascript': 6.2.2
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/css': 1.1.8
@@ -5643,10 +5492,10 @@ snapshots:
 
   '@codemirror/lang-javascript@6.2.2':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
       '@codemirror/lint': 6.8.1
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/javascript': 1.4.17
@@ -5669,16 +5518,16 @@ snapshots:
   '@codemirror/lang-lezer@6.0.1':
     dependencies:
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@lezer/common': 1.2.1
       '@lezer/lezer': 1.1.2
 
   '@codemirror/lang-liquid@6.2.1':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/lang-html': 6.4.9
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
@@ -5686,10 +5535,10 @@ snapshots:
 
   '@codemirror/lang-markdown@6.2.5':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/lang-html': 6.4.9
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/markdown': 1.3.0
@@ -5698,15 +5547,15 @@ snapshots:
     dependencies:
       '@codemirror/lang-html': 6.4.9
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@lezer/common': 1.2.1
       '@lezer/php': 1.0.2
 
   '@codemirror/lang-python@6.1.6(@codemirror/view@6.28.6)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@lezer/common': 1.2.1
       '@lezer/python': 1.1.14
     transitivePeerDependencies:
@@ -5721,7 +5570,7 @@ snapshots:
     dependencies:
       '@codemirror/lang-css': 6.2.1(@codemirror/view@6.28.6)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@lezer/common': 1.2.1
       '@lezer/sass': 1.0.6
     transitivePeerDependencies:
@@ -5729,9 +5578,9 @@ snapshots:
 
   '@codemirror/lang-sql@6.7.0(@codemirror/view@6.28.6)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
       '@lezer/lr': 1.4.1
@@ -5756,18 +5605,18 @@ snapshots:
 
   '@codemirror/lang-xml@6.1.0':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/xml': 1.0.5
 
   '@codemirror/lang-yaml@6.1.1(@codemirror/view@6.28.6)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
       '@lezer/yaml': 1.0.3
@@ -5803,7 +5652,7 @@ snapshots:
 
   '@codemirror/language@6.10.2':
     dependencies:
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
@@ -5816,23 +5665,38 @@ snapshots:
 
   '@codemirror/lint@6.8.1':
     dependencies:
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       crelt: 1.0.6
 
   '@codemirror/search@6.5.6':
     dependencies:
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       crelt: 1.0.6
 
-  '@codemirror/state@6.4.1': {}
+  '@codemirror/state@6.5.2':
+    dependencies:
+      '@marijn/find-cluster-break': 1.0.2
 
   '@codemirror/view@6.28.6':
     dependencies:
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       style-mod: 4.1.2
       w3c-keyname: 2.2.8
+
+  '@connectrpc/connect-web@1.6.1(@bufbuild/protobuf@1.10.1)(@connectrpc/connect@1.6.1(@bufbuild/protobuf@1.10.1))':
+    dependencies:
+      '@bufbuild/protobuf': 1.10.1
+      '@connectrpc/connect': 1.6.1(@bufbuild/protobuf@1.10.1)
+
+  '@connectrpc/connect@1.6.1(@bufbuild/protobuf@1.10.1)':
+    dependencies:
+      '@bufbuild/protobuf': 1.10.1
+
+  '@cxai/ata@0.0.0(typescript@5.5.4)':
+    dependencies:
+      typescript: 5.5.4
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
@@ -5975,161 +5839,21 @@ snapshots:
   '@esbuild/win32-x64@0.23.0':
     optional: true
 
-  '@floating-ui/core@1.6.5':
+  '@hocuspocus/common@2.15.2':
     dependencies:
-      '@floating-ui/utils': 0.2.5
+      lib0: 0.2.105
 
-  '@floating-ui/dom@1.6.8':
+  '@hocuspocus/provider@2.15.2(y-protocols@1.0.6(yjs@13.6.26))(yjs@13.6.26)':
     dependencies:
-      '@floating-ui/core': 1.6.5
-      '@floating-ui/utils': 0.2.5
-
-  '@floating-ui/utils@0.2.5': {}
-
-  '@formas/avatar@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/badge@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/button@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/card@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/container': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/checkbox@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/props': 1.0.9(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/container@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/dropdown@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@floating-ui/dom': 1.6.8
-      '@formas/container': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/icon@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/input-list@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/badge': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/checkbox': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/icon': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/label': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/input@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/button': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/dropdown': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/props': 1.0.9(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/label@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/loading@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/props@1.0.9(atomico@1.79.2)':
-    dependencies:
-      atomico: 1.79.2
-
-  '@formas/radio@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/checkbox': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/select@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/icon': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/input': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/props': 1.0.9(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/switch@1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)':
-    dependencies:
-      '@formas/input': 1.0.9(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
-      '@formas/tokens': 1.0.9(atomico@1.79.2)
-      atomico: 1.79.2
-    optionalDependencies:
-      '@atomico/react': 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vue': 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
-
-  '@formas/tokens@1.0.9(atomico@1.79.2)':
-    dependencies:
-      atomico: 1.79.2
+      '@hocuspocus/common': 2.15.2
+      '@lifeomic/attempt': 3.1.0
+      lib0: 0.2.105
+      ws: 8.18.0
+      y-protocols: 1.0.6(yjs@13.6.26)
+      yjs: 13.6.26
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -6259,11 +5983,15 @@ snapshots:
       '@lezer/highlight': 1.2.0
       '@lezer/lr': 1.4.1
 
+  '@lifeomic/attempt@3.1.0': {}
+
   '@lit-labs/ssr-dom-shim@1.2.0': {}
 
   '@lit/reactive-element@2.0.4':
     dependencies:
       '@lit-labs/ssr-dom-shim': 1.2.0
+
+  '@marijn/find-cluster-break@1.0.2': {}
 
   '@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1)':
     dependencies:
@@ -6295,21 +6023,21 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@replit/codemirror-lang-csharp@6.2.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/lr@1.4.1)':
+  '@replit/codemirror-lang-csharp@6.2.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/lr@1.4.1)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
       '@lezer/lr': 1.4.1
 
-  '@replit/codemirror-lang-nix@6.0.1(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/lr@1.4.1)':
+  '@replit/codemirror-lang-nix@6.0.1(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/lr@1.4.1)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
@@ -6320,14 +6048,14 @@ snapshots:
       '@codemirror/language': 6.10.2
       '@lezer/highlight': 1.2.0
 
-  '@replit/codemirror-lang-svelte@6.0.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/lang-css@6.2.1(@codemirror/view@6.28.6))(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)':
+  '@replit/codemirror-lang-svelte@6.0.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/lang-css@6.2.1(@codemirror/view@6.28.6))(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/lang-css': 6.2.1(@codemirror/view@6.28.6)
       '@codemirror/lang-html': 6.4.9
       '@codemirror/lang-javascript': 6.2.2
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
@@ -6540,7 +6268,7 @@ snapshots:
       '@types/cross-spawn': 6.0.6
       cross-spawn: 7.0.3
       globby: 14.0.2
-      jscodeshift: 0.15.2(@babel/preset-env@7.24.8)
+      jscodeshift: 0.15.2(@babel/preset-env@7.24.8(@babel/core@7.24.9))
       lodash: 4.17.21
       prettier: 3.3.3
       recast: 0.23.9
@@ -6586,7 +6314,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  '@storybook/docs-tools@8.2.6(storybook@8.2.6(@babel/preset-env@7.24.8))':
+  '@storybook/docs-tools@8.2.6(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))':
     dependencies:
       storybook: 8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9))
 
@@ -6717,6 +6445,8 @@ snapshots:
     dependencies:
       '@types/node': 20.14.12
 
+  '@types/deno@2.2.0': {}
+
   '@types/emscripten@1.39.13': {}
 
   '@types/estree@1.0.5': {}
@@ -6787,26 +6517,33 @@ snapshots:
 
   '@types/uuid@9.0.8': {}
 
-  '@uiw/codemirror-extensions-basic-setup@4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/commands@6.6.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)':
+  '@typescript/vfs@1.6.1(typescript@5.5.4)':
     dependencies:
-      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      debug: 4.3.5
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - supports-color
+
+  '@uiw/codemirror-extensions-basic-setup@4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/commands@6.6.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)':
+    dependencies:
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
       '@codemirror/commands': 6.6.0
       '@codemirror/language': 6.10.2
       '@codemirror/lint': 6.8.1
       '@codemirror/search': 6.5.6
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
 
-  '@uiw/codemirror-extensions-color@4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)':
+  '@uiw/codemirror-extensions-color@4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)':
     dependencies:
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       colors-named: 1.0.2
       colors-named-hex: 1.0.2
       hsl-matcher: 1.2.4
 
-  '@uiw/codemirror-extensions-langs@4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language-data@6.5.1(@codemirror/view@6.28.6))(@codemirror/language@6.10.2)(@codemirror/legacy-modes@6.4.0)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)':
+  '@uiw/codemirror-extensions-langs@4.23.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language-data@6.5.1(@codemirror/view@6.28.6))(@codemirror/language@6.10.2)(@codemirror/legacy-modes@6.4.0)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)':
     dependencies:
       '@codemirror/lang-angular': 0.1.3
       '@codemirror/lang-cpp': 6.0.2
@@ -6830,10 +6567,10 @@ snapshots:
       '@codemirror/language-data': 6.5.1(@codemirror/view@6.28.6)
       '@codemirror/legacy-modes': 6.4.0
       '@nextjournal/lang-clojure': 1.0.0
-      '@replit/codemirror-lang-csharp': 6.2.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/lr@1.4.1)
-      '@replit/codemirror-lang-nix': 6.0.1(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/lr@1.4.1)
+      '@replit/codemirror-lang-csharp': 6.2.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/lr@1.4.1)
+      '@replit/codemirror-lang-nix': 6.0.1(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/lr@1.4.1)
       '@replit/codemirror-lang-solidity': 6.0.2(@codemirror/language@6.10.2)
-      '@replit/codemirror-lang-svelte': 6.0.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/lang-css@6.2.1(@codemirror/view@6.28.6))(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
+      '@replit/codemirror-lang-svelte': 6.0.0(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/lang-css@6.2.1(@codemirror/view@6.28.6))(@codemirror/lang-html@6.4.9)(@codemirror/lang-javascript@6.2.2)(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)(@lezer/highlight@1.2.0)(@lezer/javascript@1.4.17)(@lezer/lr@1.4.1)
       codemirror-lang-mermaid: 0.5.0
     transitivePeerDependencies:
       - '@codemirror/autocomplete'
@@ -6845,26 +6582,26 @@ snapshots:
       - '@lezer/javascript'
       - '@lezer/lr'
 
-  '@uiw/codemirror-theme-material@4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)':
+  '@uiw/codemirror-theme-material@4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)':
     dependencies:
-      '@uiw/codemirror-themes': 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
+      '@uiw/codemirror-themes': 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)
     transitivePeerDependencies:
       - '@codemirror/language'
       - '@codemirror/state'
       - '@codemirror/view'
 
-  '@uiw/codemirror-theme-quietlight@4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)':
+  '@uiw/codemirror-theme-quietlight@4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)':
     dependencies:
-      '@uiw/codemirror-themes': 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)
+      '@uiw/codemirror-themes': 4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)
     transitivePeerDependencies:
       - '@codemirror/language'
       - '@codemirror/state'
       - '@codemirror/view'
 
-  '@uiw/codemirror-themes@4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)':
+  '@uiw/codemirror-themes@4.23.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)':
     dependencies:
       '@codemirror/language': 6.10.2
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
 
   '@ungap/structured-clone@1.2.0': {}
@@ -6882,6 +6619,22 @@ snapshots:
   '@uppercod/match-media@1.1.1': {}
 
   '@uppercod/template-literals@1.1.3': {}
+
+  '@valtown/codemirror-codeium@1.1.1(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)':
+    dependencies:
+      '@bufbuild/protobuf': 1.10.1
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/state': 6.5.2
+      '@codemirror/view': 6.28.6
+      '@connectrpc/connect': 1.6.1(@bufbuild/protobuf@1.10.1)
+      '@connectrpc/connect-web': 1.6.1(@bufbuild/protobuf@1.10.1)(@connectrpc/connect@1.6.1(@bufbuild/protobuf@1.10.1))
+
+  '@valtown/codemirror-ts@3.0.0-9(@codemirror/autocomplete@6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1))(@codemirror/lint@6.8.1)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)':
+    dependencies:
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/lint': 6.8.1
+      '@codemirror/state': 6.5.2
+      '@codemirror/view': 6.28.6
 
   '@vitest/expect@1.6.0':
     dependencies:
@@ -6921,7 +6674,7 @@ snapshots:
       '@vue/compiler-ssr': 3.4.34
       '@vue/shared': 3.4.34
       estree-walker: 2.0.2
-      magic-string: 0.30.10
+      magic-string: 0.30.12
       postcss: 8.4.40
       source-map-js: 1.2.0
 
@@ -7223,6 +6976,18 @@ snapshots:
       '@lezer/highlight': 1.2.0
       '@lezer/lr': 1.4.1
 
+  codemirror@6.0.1(@lezer/common@1.2.1):
+    dependencies:
+      '@codemirror/autocomplete': 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/commands': 6.6.0
+      '@codemirror/language': 6.10.2
+      '@codemirror/lint': 6.8.1
+      '@codemirror/search': 6.5.6
+      '@codemirror/state': 6.5.2
+      '@codemirror/view': 6.28.6
+    transitivePeerDependencies:
+      - '@lezer/common'
+
   color-convert@1.9.3:
     dependencies:
       color-name: 1.1.3
@@ -7238,6 +7003,8 @@ snapshots:
   colors-named-hex@1.0.2: {}
 
   colors-named@1.0.2: {}
+
+  comlink@4.4.2: {}
 
   commander@4.1.1: {}
 
@@ -7826,7 +7593,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jscodeshift@0.15.2(@babel/preset-env@7.24.8):
+  jscodeshift@0.15.2(@babel/preset-env@7.24.8(@babel/core@7.24.9)):
     dependencies:
       '@babel/core': 7.24.9
       '@babel/parser': 7.24.8
@@ -7933,6 +7700,10 @@ snapshots:
 
   leven@3.1.0: {}
 
+  lib0@0.2.105:
+    dependencies:
+      isomorphic.js: 0.2.5
+
   lib0@0.2.94:
     dependencies:
       isomorphic.js: 0.2.5
@@ -8005,6 +7776,10 @@ snapshots:
       sourcemap-codec: 1.4.8
 
   magic-string@0.30.10:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+
+  magic-string@0.30.12:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -8595,7 +8370,7 @@ snapshots:
       fs-extra: 11.2.0
       giget: 1.2.3
       globby: 14.0.2
-      jscodeshift: 0.15.2(@babel/preset-env@7.24.8)
+      jscodeshift: 0.15.2(@babel/preset-env@7.24.8(@babel/core@7.24.9))
       leven: 3.1.0
       ora: 5.4.1
       prettier: 3.3.3
@@ -8920,12 +8695,19 @@ snapshots:
   xtend@4.0.2:
     optional: true
 
-  y-codemirror.next@0.3.5(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(yjs@13.6.18):
+  y-codemirror.next@0.3.5(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(yjs@13.6.18):
     dependencies:
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.2
       '@codemirror/view': 6.28.6
       lib0: 0.2.94
       yjs: 13.6.18
+
+  y-codemirror.next@0.3.5(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(yjs@13.6.26):
+    dependencies:
+      '@codemirror/state': 6.5.2
+      '@codemirror/view': 6.28.6
+      lib0: 0.2.94
+      yjs: 13.6.26
 
   y-leveldb@0.1.2(yjs@13.6.18):
     dependencies:
@@ -8938,6 +8720,11 @@ snapshots:
     dependencies:
       lib0: 0.2.94
       yjs: 13.6.18
+
+  y-protocols@1.0.6(yjs@13.6.26):
+    dependencies:
+      lib0: 0.2.94
+      yjs: 13.6.26
 
   y-websocket@2.0.4(yjs@13.6.18):
     dependencies:
@@ -8961,5 +8748,9 @@ snapshots:
   yjs@13.6.18:
     dependencies:
       lib0: 0.2.94
+
+  yjs@13.6.26:
+    dependencies:
+      lib0: 0.2.105
 
   yocto-queue@0.1.0: {}
