@@ -1,0 +1,50 @@
+{
+    "extends": "@atomico/tsconfig/base.json",
+    "include": ["src/**/*"],
+
+    "compilerOptions": {
+        
+        "outDir": "types",
+        "skipLibCheck": true,
+
+        "paths": {
+            "~/*": ["./src/*"],
+            "@y-block/input": ["./src/input.tsx"]
+    
+        },
+        "types": ["vite/client"],
+
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+
+        /* declaration */
+        "declaration": true,
+        "declarationDir": "./types",
+        "emitDeclarationOnly": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "noImplicitReturns": true,
+        "forceConsistentCasingInFileNames": true,
+        "listEmittedFiles": true,
+
+        /* Bundler mode */
+        //    "moduleResolution": "Node",
+        "moduleResolution": "Bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        // "noEmit": true,
+
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+
+        "noEmitOnError": false
+
+        //  "exclude": ["node_modules"]
+    }
+}

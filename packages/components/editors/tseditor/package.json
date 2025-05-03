@@ -1,15 +1,16 @@
 {
   "name": "@cxai/ide",
-  "version": "1.0.21.4",
+  "version": "1.0.23.1",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "types": "types/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "types": "tsc --emitDeclarationOnly",
+    "build:vite": "vite build",
     "build:types": "tsc",
     "build:compile": "library \"src/**/*\" ",
     "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
@@ -21,9 +22,7 @@
     "clean:install": "rm -rf node_modules"
   },
   "dependencies": {
-    "typescript": "^5.2.2"
-  },
-  "devDependencies": {
+    "typescript": "^5.2.2",
     "yjs": "^13.6.24",
     "y-protocols": "^1.0.6",
     "@cxai/ata": "^0.0.0",
@@ -41,11 +40,11 @@
     "@valtown/codemirror-codeium": "^1.1.1",
     "@valtown/codemirror-ts": "3.0.0-9",
     "codemirror": "^6",
-    "comlink": "^4.4.1",
+    "comlink": "^4.4.1"
+  },
+  "devDependencies": {
     "@atomico/vite": "^2.21.1",
-    "vite": "^5.0.0",
-    "@atomico/react": "*",
-    "@atomico/vue": "*"
+    "vite": "^5.0.0"
   },
   "peerDependencies": {
     "@atomico/react": "*",
@@ -54,11 +53,15 @@
   "publishConfig": {
     "access": "public"
   },
-  "pnpm": {
-    "overrides": {
-      "@codemirror/state": "6.5.2"
-    }
-  },
+  "files": [
+    "lib",
+    "types",
+    "wrapper",
+    "package.json",
+    "README.md",
+    "node_modules",
+    "forms.html"
+  ],
   "exports": {
     ".": {
       "types": "./types/index.d.ts",
@@ -95,36 +98,6 @@
     "./vite-env": {
       "default": "./lib/vite-env.js"
     },
-    "./chunks/00434e48a241ce73c2d948a622e21f58": {
-      "default": "./lib/chunks/00434e48a241ce73c2d948a622e21f58.js"
-    },
-    "./chunks/04622a8cef7b4ff421f0d9d5670bde8b": {
-      "default": "./lib/chunks/04622a8cef7b4ff421f0d9d5670bde8b.js"
-    },
-    "./chunks/08843352025f84f4645612436eaaf8e3": {
-      "default": "./lib/chunks/08843352025f84f4645612436eaaf8e3.js"
-    },
-    "./chunks/22db949124d4a7a0c7bc0c0ab5e4819b": {
-      "default": "./lib/chunks/22db949124d4a7a0c7bc0c0ab5e4819b.js"
-    },
-    "./chunks/4bd430c936f969ed76ce58d2dfbe21b2": {
-      "default": "./lib/chunks/4bd430c936f969ed76ce58d2dfbe21b2.js"
-    },
-    "./chunks/67d884ce9080fe736d968fb348bbbbcc": {
-      "default": "./lib/chunks/67d884ce9080fe736d968fb348bbbbcc.js"
-    },
-    "./chunks/74046c6581f272dd96d5f67c10ef2f47": {
-      "default": "./lib/chunks/74046c6581f272dd96d5f67c10ef2f47.js"
-    },
-    "./chunks/7cadd46480a15fa861757b58e77c9f68": {
-      "default": "./lib/chunks/7cadd46480a15fa861757b58e77c9f68.js"
-    },
-    "./chunks/7f220481e7f415fe2498dc274e0597e0": {
-      "default": "./lib/chunks/7f220481e7f415fe2498dc274e0597e0.js"
-    },
-    "./chunks/cc5667ffd074db1f6e0abfd21b63e817": {
-      "default": "./lib/chunks/cc5667ffd074db1f6e0abfd21b63e817.js"
-    },
     "./element/react": {
       "types": "./wrapper/element/react.d.ts",
       "default": "./wrapper/element/react.js"
@@ -149,110 +122,89 @@
       "types": "./wrapper/input/vue.d.ts",
       "default": "./wrapper/input/vue.js"
     },
-    "./chunks/287e5d4651ceaa8a70641e79e7dff46e": {
-      "default": "./lib/chunks/287e5d4651ceaa8a70641e79e7dff46e.js"
-    },
-    "./chunks/3a3f9b759f95524e578a950d702d4b85": {
-      "default": "./lib/chunks/3a3f9b759f95524e578a950d702d4b85.js"
-    },
-    "./chunks/40210088bf0a0357278cb198ff24a203": {
-      "default": "./lib/chunks/40210088bf0a0357278cb198ff24a203.js"
-    },
-    "./chunks/67068f4444d1594660464adea72f397f": {
-      "default": "./lib/chunks/67068f4444d1594660464adea72f397f.js"
-    },
-    "./chunks/7abf19969b5110d889f5299a759a08d2": {
-      "default": "./lib/chunks/7abf19969b5110d889f5299a759a08d2.js"
-    },
-    "./chunks/7b546796afeb174a63ad51baa1d129a3": {
-      "default": "./lib/chunks/7b546796afeb174a63ad51baa1d129a3.js"
-    },
-    "./chunks/820135170b2395efe7177be041ea8361": {
-      "default": "./lib/chunks/820135170b2395efe7177be041ea8361.js"
-    },
-    "./chunks/abb6d940e1dee78b9a528c184ad3371d": {
-      "default": "./lib/chunks/abb6d940e1dee78b9a528c184ad3371d.js"
-    },
-    "./chunks/d55be0ae03a8e20388c0403f984560a0": {
-      "default": "./lib/chunks/d55be0ae03a8e20388c0403f984560a0.js"
-    },
-    "./chunks/ee9022dc1eb806fa35f56be57b695a33": {
-      "default": "./lib/chunks/ee9022dc1eb806fa35f56be57b695a33.js"
-    },
-    "./chunks/fc2f6eb68c024fc4d31ff59c9a0f8d5b": {
-      "default": "./lib/chunks/fc2f6eb68c024fc4d31ff59c9a0f8d5b.js"
-    },
-    "./chunks/fc929cc24aaa22ef91052a2edd5cc9bb": {
-      "default": "./lib/chunks/fc929cc24aaa22ef91052a2edd5cc9bb.js"
-    },
-    "./chunks/fce302fddeca535617f23e7227193d09": {
-      "default": "./lib/chunks/fce302fddeca535617f23e7227193d09.js"
-    },
-    "./forms": {
-      "default": "./lib/forms.js"
-    },
-    "./preview": {
-      "default": "./lib/preview.js"
-    },
-    "./chunks/4b9c8ed7cfa329720388f0ab898b1ad0": {
-      "default": "./lib/chunks/4b9c8ed7cfa329720388f0ab898b1ad0.js"
-    },
-    "./chunks/6b79eb22e62513b85708c1e2530ec31d": {
-      "default": "./lib/chunks/6b79eb22e62513b85708c1e2530ec31d.js"
-    },
-    "./chunks/70f2c80e4d129e9a1c123f89f9abc9d7": {
-      "default": "./lib/chunks/70f2c80e4d129e9a1c123f89f9abc9d7.js"
-    },
-    "./chunks/8345c1c847df41108c5815798ae98f38": {
-      "default": "./lib/chunks/8345c1c847df41108c5815798ae98f38.js"
-    },
-    "./chunks/864383f9b1063c75aeff73c636bf28b7": {
-      "default": "./lib/chunks/864383f9b1063c75aeff73c636bf28b7.js"
-    },
-    "./chunks/a50d310abade5d94219fab02a641bba1": {
-      "default": "./lib/chunks/a50d310abade5d94219fab02a641bba1.js"
-    },
-    "./chunks/ed3992ec26863860a995f8731d705da0": {
-      "default": "./lib/chunks/ed3992ec26863860a995f8731d705da0.js"
-    },
-    "./react": {
-      "types": "./wrapper/react.d.ts",
-      "default": "./wrapper/react.js"
-    },
-    "./preact": {
-      "types": "./wrapper/preact.d.ts",
-      "default": "./wrapper/preact.js"
-    },
-    "./vue": {
-      "types": "./wrapper/vue.d.ts",
-      "default": "./wrapper/vue.js"
-    },
     "./forms.html": {
       "default": "./lib/forms.html"
     },
+    "./assets/collab-CbHc9SYB": {
+      "default": "./lib/assets/collab-CbHc9SYB.js"
+    },
+    "./assets/copilot-AYzPlpIm": {
+      "default": "./lib/assets/copilot-AYzPlpIm.js"
+    },
+    "./assets/modulepreload-polyfill-B5Qt9EMX": {
+      "default": "./lib/assets/modulepreload-polyfill-B5Qt9EMX.js"
+    },
+    "./assets/styles-CJkMnqOM": {
+      "default": "./lib/assets/styles-CJkMnqOM.js"
+    },
+    "./assets/vendor-@bufbuild-BRAJ8pJ3": {
+      "default": "./lib/assets/vendor-@bufbuild-BRAJ8pJ3.js"
+    },
+    "./assets/vendor-@codemirror-E4RP7z4Q": {
+      "default": "./lib/assets/vendor-@codemirror-E4RP7z4Q.js"
+    },
+    "./assets/vendor-@connectrpc-Dbzekirn": {
+      "default": "./lib/assets/vendor-@connectrpc-Dbzekirn.js"
+    },
+    "./assets/vendor-@cxai-DC0PcF-a": {
+      "default": "./lib/assets/vendor-@cxai-DC0PcF-a.js"
+    },
+    "./assets/vendor-@hocuspocus-DLcZcS_L": {
+      "default": "./lib/assets/vendor-@hocuspocus-DLcZcS_L.js"
+    },
+    "./assets/vendor-@lezer-BMpkyyJM": {
+      "default": "./lib/assets/vendor-@lezer-BMpkyyJM.js"
+    },
+    "./assets/vendor-@lifeomic-B6julE09": {
+      "default": "./lib/assets/vendor-@lifeomic-B6julE09.js"
+    },
+    "./assets/vendor-@marijn-DXwl3gUT": {
+      "default": "./lib/assets/vendor-@marijn-DXwl3gUT.js"
+    },
+    "./assets/vendor-@typescript-Fhig_xzY": {
+      "default": "./lib/assets/vendor-@typescript-Fhig_xzY.js"
+    },
+    "./assets/vendor-@valtown-D6KAGgS5": {
+      "default": "./lib/assets/vendor-@valtown-D6KAGgS5.js"
+    },
+    "./assets/vendor-atomico-DohckHKU": {
+      "default": "./lib/assets/vendor-atomico-DohckHKU.js"
+    },
+    "./assets/vendor-codemirror-VAFzYZkj": {
+      "default": "./lib/assets/vendor-codemirror-VAFzYZkj.js"
+    },
+    "./assets/vendor-comlink-DhLXyvPH": {
+      "default": "./lib/assets/vendor-comlink-DhLXyvPH.js"
+    },
+    "./assets/vendor-crelt-C8TCjufn": {
+      "default": "./lib/assets/vendor-crelt-C8TCjufn.js"
+    },
+    "./assets/vendor-lib0-Dhrl04dS": {
+      "default": "./lib/assets/vendor-lib0-Dhrl04dS.js"
+    },
+    "./assets/vendor-style-mod-Bc2inJdb": {
+      "default": "./lib/assets/vendor-style-mod-Bc2inJdb.js"
+    },
+    "./assets/vendor-typescript-qnmuAGBH": {
+      "default": "./lib/assets/vendor-typescript-qnmuAGBH.js"
+    },
+    "./assets/vendor-w3c-keyname-Vcq4gwWv": {
+      "default": "./lib/assets/vendor-w3c-keyname-Vcq4gwWv.js"
+    },
+    "./assets/vendor-y-codemirror.next-DQnPZXz3": {
+      "default": "./lib/assets/vendor-y-codemirror.next-DQnPZXz3.js"
+    },
+    "./assets/vendor-y-protocols-BERnme2X": {
+      "default": "./lib/assets/vendor-y-protocols-BERnme2X.js"
+    },
+    "./assets/vendor-yjs-B8CvlgeN": {
+      "default": "./lib/assets/vendor-yjs-B8CvlgeN.js"
+    },
+    "./assets/worker-BRaY1rOi": {
+      "default": "./lib/assets/worker-BRaY1rOi.js"
+    },
     ".html": {
       "default": "./lib/index.html"
-    },
-    "./packages/components/editors/tseditor/forms.html": {
-      "default": "./lib/packages/components/editors/tseditor/forms.html.js"
-    },
-    "./packages/components/editors/tseditor/index.html": {
-      "default": "./lib/packages/components/editors/tseditor/index.html.js"
-    },
-    "./packages/components/editors/tseditor/src/collab": {
-      "default": "./lib/packages/components/editors/tseditor/src/collab.js"
-    },
-    "./packages/components/editors/tseditor/src/connect": {
-      "default": "./lib/packages/components/editors/tseditor/src/connect.js"
-    },
-    "./packages/components/editors/tseditor/src/copilot": {
-      "default": "./lib/packages/components/editors/tseditor/src/copilot.js"
-    },
-    "./packages/components/editors/tseditor/src/styles": {
-      "default": "./lib/packages/components/editors/tseditor/src/styles.js"
-    },
-    "./packages/components/editors/tseditor/src/worker": {
-      "default": "./lib/packages/components/editors/tseditor/src/worker.js"
     }
   },
   "typesVersions": {

@@ -1,6 +1,6 @@
 {
   "name": "@y-block/store",
-  "version": "1.0.2-beta.4",
+  "version": "1.0.2-beta.5",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -28,7 +28,7 @@
     "clean:install": "rm -rf node_modules"
   },
   "dependencies": {
-    "yjs": "^13.6.18"
+    "yjs": "^13.6.26"
   },
   "peerDependenciesMeta": {
     "@atomico/react": {

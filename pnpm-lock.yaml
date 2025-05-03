@@ -181,19 +181,12 @@ importers:
 
   packages/components/editors/tseditor:
     dependencies:
-      typescript:
-        specifier: ^5.2.2
-        version: 5.5.4
-    devDependencies:
       '@atomico/hooks':
         specifier: ^4.4.1
         version: 4.4.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)(element-internals-polyfill@0.1.55)
       '@atomico/react':
         specifier: '*'
         version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
-      '@atomico/vite':
-        specifier: ^2.21.1
-        version: 2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
       '@atomico/vue':
         specifier: '*'
         version: 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
@@ -239,9 +232,9 @@ importers:
       comlink:
         specifier: ^4.4.1
         version: 4.4.2
-      vite:
-        specifier: ^5.0.0
-        version: 5.3.5(@types/node@20.14.12)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.5.4
       y-codemirror.next:
         specifier: ^0.3.2
         version: 0.3.5(@codemirror/state@6.5.2)(@codemirror/view@6.28.6)(yjs@13.6.26)
@@ -250,6 +243,41 @@ importers:
         version: 1.0.6(yjs@13.6.26)
       yjs:
         specifier: ^13.6.24
+        version: 13.6.26
+    devDependencies:
+      '@atomico/vite':
+        specifier: ^2.21.1
+        version: 2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
+      vite:
+        specifier: ^5.0.0
+        version: 5.3.5(@types/node@20.14.12)
+
+  packages/components/input:
+    dependencies:
+      '@atomico/react':
+        specifier: '*'
+        version: 2.7.9(@types/react@18.3.3)(atomico@1.79.2)(react@18.3.1)
+      '@atomico/vue':
+        specifier: '*'
+        version: 0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4))
+    devDependencies:
+      '@atomico/vite':
+        specifier: ^2.21.1
+        version: 2.21.1(@atomico/react@2.7.9(atomico@1.79.2))(@atomico/vue@0.3.1(atomico@1.79.2)(vue@3.4.34(typescript@5.5.4)))(atomico@1.79.2)
+      '@hocuspocus/provider':
+        specifier: ^2.9.0
+        version: 2.15.2(y-protocols@1.0.6(yjs@13.6.26))(yjs@13.6.26)
+      '@y-block/store':
+        specifier: workspace:*
+        version: link:../store
+      atomico:
+        specifier: ^1.79.1
+        version: 1.79.2
+      vite:
+        specifier: ^5.1.6
+        version: 5.3.5(@types/node@20.14.12)
+      yjs:
+        specifier: ^13.6.26
         version: 13.6.26
 
   packages/components/layout/components:
@@ -334,12 +362,12 @@ importers:
         specifier: '*'
         version: 1.79.2
       yjs:
-        specifier: ^13.6.18
-        version: 13.6.18
+        specifier: ^13.6.26
+        version: 13.6.26
     devDependencies:
       y-websocket:
         specifier: ^2.0.4
-        version: 2.0.4(yjs@13.6.18)
+        version: 2.0.4(yjs@13.6.26)
 
   packages/storybook:
     dependencies:
@@ -2351,10 +2379,12 @@ packages:
   abstract-leveldown@6.2.3:
     resolution: {integrity: sha512-BsLm5vFMRUrrLeCcRc+G0t2qOaTzpoJQLOubq2XM72eNpjF5UdU5o/5NvlNhx95XHcAvcl8OMXr4mlg/fRgUXQ==}
     engines: {node: '>=6'}
+    deprecated: Superseded by abstract-level (https://github.com/Level/community#faq)
 
   abstract-leveldown@6.3.0:
     resolution: {integrity: sha512-TU5nlYgta8YrBMNpc9FwQzRbiXsj49gsALsXadbGHt9CROPzX5fB0rWDR5mtdpOOKa5XqRFpbj1QroPAoPzVjQ==}
     engines: {node: '>=6'}
+    deprecated: Superseded by abstract-level (https://github.com/Level/community#faq)
 
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
@@ -2695,6 +2725,7 @@ packages:
   deferred-leveldown@5.3.0:
     resolution: {integrity: sha512-a59VOT+oDy7vtAbLRCZwWgxu2BaCfd5Hk7wxJd48ei7I+nsg8Orlb9CLG0PMZienk9BSUKgeAqkO2+Lw+1+Ukw==}
     engines: {node: '>=6'}
+    deprecated: Superseded by abstract-level (https://github.com/Level/community#faq)
 
   define-data-property@1.1.4:
     resolution: {integrity: sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A==}
@@ -3216,6 +3247,7 @@ packages:
 
   level-js@5.0.2:
     resolution: {integrity: sha512-SnBIDo2pdO5VXh02ZmtAyPP6/+6YTJg2ibLtl9C34pWvmtMEmRTWpra+qO/hifkUtBTOtfx6S9vLDjBsBK4gRg==}
+    deprecated: Superseded by browser-level (https://github.com/Level/community#faq)
 
   level-packager@5.1.1:
     resolution: {integrity: sha512-HMwMaQPlTC1IlcwT3+swhqf/NUO+ZhXVz6TY1zZIIZlIR0YSn8GtAAWmIvKjNY16ZkEg/JcpAuQskxsXqC0yOQ==}
@@ -3232,10 +3264,12 @@ packages:
   leveldown@5.6.0:
     resolution: {integrity: sha512-iB8O/7Db9lPaITU1aA2txU/cBEXAt4vWwKQRrrWuS6XDgbP4QZGj9BL2aNbwb002atoQ/lIotJkfyzz+ygQnUQ==}
     engines: {node: '>=8.6.0'}
+    deprecated: Superseded by classic-level (https://github.com/Level/community#faq)
 
   levelup@4.4.0:
     resolution: {integrity: sha512-94++VFO3qN95cM/d6eBXvd894oJE0w3cInq9USsyQzzoJxmiYzPAocNcuGCPGGjoXqDVJcr3C1jzt1TSjyaiLQ==}
     engines: {node: '>=6'}
+    deprecated: Superseded by abstract-level (https://github.com/Level/community#faq)
 
   leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
@@ -8709,11 +8743,11 @@ snapshots:
       lib0: 0.2.94
       yjs: 13.6.26
 
-  y-leveldb@0.1.2(yjs@13.6.18):
+  y-leveldb@0.1.2(yjs@13.6.26):
     dependencies:
       level: 6.0.1
       lib0: 0.2.94
-      yjs: 13.6.18
+      yjs: 13.6.26
     optional: true
 
   y-protocols@1.0.6(yjs@13.6.18):
@@ -8726,15 +8760,15 @@ snapshots:
       lib0: 0.2.94
       yjs: 13.6.26
 
-  y-websocket@2.0.4(yjs@13.6.18):
+  y-websocket@2.0.4(yjs@13.6.26):
     dependencies:
       lib0: 0.2.94
       lodash.debounce: 4.0.8
-      y-protocols: 1.0.6(yjs@13.6.18)
-      yjs: 13.6.18
+      y-protocols: 1.0.6(yjs@13.6.26)
+      yjs: 13.6.26
     optionalDependencies:
       ws: 6.2.3
-      y-leveldb: 0.1.2(yjs@13.6.18)
+      y-leveldb: 0.1.2(yjs@13.6.26)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate

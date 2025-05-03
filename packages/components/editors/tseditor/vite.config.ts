@@ -19,6 +19,11 @@ export default defineConfig({
         "process.env.NODE_ENV": JSON.stringify(env.NODE_ENV),
         "process.env":  env
     },
+    optimizeDeps:{
+      // include: ["atomico", "@atomico/hooks"]
+      entries: ["src/*"],
+      exclude: ['typescript', '@codemirror/state'],
+    },
     // optimizeDeps: {
     //   // include: ['@codemirror/state'],
     //   exclude: ['typescript'],
@@ -26,7 +31,7 @@ export default defineConfig({
     //   // needsInterop: ['@codemirror/state'],
     //   },
     build: {
-      
+        outDir: './lib',
         ssrEmitAssets: true,
         ssrManifest: true,
 
@@ -41,7 +46,6 @@ export default defineConfig({
          
         rollupOptions: {
           //  external: ['@codemirror/state', 'typescript','yjs'],
-  
 
           // treeshake: {
           //   moduleSideEffects: ['@cxai/ide'],
@@ -54,16 +58,6 @@ export default defineConfig({
           //   unknownGlobalSideEffects: true,
           // },
           preserveSymlinks: true,
-          plugins: [
-            {
-              name: 'codemirror',
-              resolveId(id) {
-                if (id.includes('@codemirror/state')) {
-                  return id;
-                }
-              }
-            }
-          ],
           input: {
             'index': './src/index.ts',
             'element': './src/element.tsx',
@@ -77,23 +71,27 @@ export default defineConfig({
             dir: './lib',
             entryFileNames: '[name].js',
             format: 'esm',
-            preserveModules: true,
-            
-            chunkFileNames(chunkInfo) {
-              if (chunkInfo.isEntry) {
-                return  chunkInfo.name;   
-              }
-              const packageName = chunkInfo.name && chunkInfo.name.match(/.*node_modules\/(@?[^\/]*)/)?.[1];
-              return `vendor-${packageName}`;   
-
-            },
-            // manualChunks:  function (id) {
-            //   if (id.includes("node_modules")) {
-            //      //find the package name, support nesting node_modules ../../node_modules/.pnpm/comlink@4.4.2/node_modules/comlink/dist/esm/comlink.mjs
-            //      const packageName = id && id.match(/.*node_modules\/(@?[^\/]*)/)?.[1];
-            //      return `vendor-${packageName}`;   
+            // chunkFileNames(chunkInfo) {
+            //   if (chunkInfo.isEntry) {
+            //     return  chunkInfo.name;   
             //   }
-            // }
+            //   const packageName = chunkInfo.name && chunkInfo.name.match(/.*node_modules\/(@?[^\/]*)/)?.[1];
+            //   return `vendor-${packageName}`;   
+
+            // },
+            manualChunks:  function (id, meta) {
+              if (id.includes("node_modules")) {
+                 //find the package name, support nesting node_modules ../../node_modules/.pnpm/comlink@4.4.2/node_modules/comlink/dist/esm/comlink.mjs            
+                 //@connectrpc /node_modules/.pnpm/@connectrpc+connect@1.6.1_@bufbuild+protobuf@1.10.1/node_modules/@connectrpc     
+                 const packageName = id && id.match(/.*node_modules\/(@?[^\/]*)/);
+                 console.log(`vendor-${packageName[1]}`,packageName[0], packageName[1], packageName[2]);
+
+
+                 if(packageName){
+                  return `vendor-${packageName[1]}`;   
+                 }
+              }
+            }
           }
         }
        

@@ -13,20 +13,20 @@ const urls:string[]=[
 
 ]
 
-const otherDocuments =await Promise.all( urls.map(async (url) => ({
+// const otherDocuments =await Promise.all( urls.map(async (url) => ({
     
-        absolutePath: url,
-        text: await fetch(url).then((res) => res.text()),
-        language: Language.JAVASCRIPT,
-        editorLanguage: "typescript",
-    })));
+//         absolutePath: url,
+//         text: await fetch(url).then((res) => res.text()),
+//         language: Language.JAVASCRIPT,
+//         editorLanguage: "typescript",
+//     })));
         
 
 export function codeiumCopilot() {
     return [
-        codeiumOtherDocumentsConfig.of({
-            override: () =>otherDocuments,
-        }),
+        // codeiumOtherDocumentsConfig.of({
+        //     override: () =>otherDocuments,
+        // }),
         copilotPlugin({
             apiKey: "d49954eb-cfba-4992-980f-d8fb37f0e942",
             shouldComplete(context) {
