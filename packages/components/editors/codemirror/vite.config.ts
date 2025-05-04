@@ -1,12 +1,7 @@
 import atomico from "@atomico/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-const atomicoConfig =()=> atomico({ cssLiterals: { minify: true, postcss: true  }, customElements:{
-        prefix: "y",
-        define: [ "./src/*.tsx"],
-
-
-    }, storybook: {
+const atomicoConfig =()=> atomico({ cssLiterals: { minify: true, postcss: true  }, storybook: {
         fullReload: true,
         include: ["src/*.stories.tsx"],
     } })
