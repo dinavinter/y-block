@@ -1,3 +1,12 @@
 import { YCm } from "./element";
 export { YCm } from "./element";
-customElements.define("y-cm", YCm);
+export * from "./y-cm";
+export * from "./y-cm-lang-ts";
+export * from "./y-cm-lang-html";
+export * from "./y-cm-lang-css";
+export * from "./y-cm-lang-json";
+export * from "./y-cm-lang-md";
+export * from "./y-cm-collab";
+export * from "./y-cm-codieum";
+export * from "./y-cm-theme-dark";
+export * from "./y-cm-basic-setup";

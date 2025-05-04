@@ -1,74 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>YJS Catalog</title>
-    <link href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>y-cm Demo – Modular CodeMirror Web Components</title>
+        <link href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
             rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-    <!--    <link rel="stylesheet" href="./src/page.css" />-->
-    <script async src="/src/index.tsx" type="module"></script>
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script async src="/src/index.tsx" type="module"></script>
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+            }
+        </style>
+    </head>
 
-
-</head>
-
-<body>
-     <div class="container mx-auto ">
-        <main   role="main" class="w-full  h-screen bg-gray-100">
-        <y-cm > 
-        </y-cm>
-        <template id="input" >
-            <form>
-                <fieldset class="block *:my-2 *:w-full">
-                    <input type="text" name="firstName" placeholder="First Name"
-                           autocomplete="given-name"/>
-                    <input type="text" name="lastName" placeholder="Last Name"
-                           autocomplete="family-name"/>
-                    <input type="email" name="email" placeholder="Email"
-                           autocomplete="email"/>
-                    <input type="password" name="password" placeholder="Password"
-                           autocomplete="new-password"/>
-                </fieldset>
-                <button type="submit"
-                        class="w-full py-[0.4375rem] *:text-[#626890] text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-md border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                    <span class="sr-only lg:not-sr-only lg:ml-2">Register</span>
-                    <iconify-icon class="ms-1 me-2" data-icon="account-add"
-                                  icon="line-md:account-add"
-                                  height="1.5rem"></iconify-icon>
-                </button>
-            </form>
-            <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
-            <script
-                src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-        </template>
-    </main>
-    </div> 
-
-<script type="module">
-    import * as Y from 'yjs';
-    import * as awarenessProtocol from 'y-protocols/awareness';
-
-    import  './src/index.tsx';
-    const doc = new Y.Doc();
-    const awareness = new awarenessProtocol.Awareness(doc);
+    <body class="bg-gradient-to-br from-gray-100 to-blue-100 min-h-screen">
+        <div class="container mx-auto py-12">
+            <header class="mb-8 text-center">
+                <div class="flex justify-center items-center gap-2 mb-2">
+                    <!-- Lucide icon SVG (code) -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="inline-block w-8 h-8 text-blue-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M16 18l6-6-6-6M8 6l-6 6 6 6"
+                        />
+                    </svg>
+                    <h1 class="text-3xl font-bold tracking-tight text-blue-900">
+                        y-cm: Modular CodeMirror Web Components
+                    </h1>
+                </div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    A beautiful, composable, and extensible editor built with
+                    web components, Atomico, and Tailwind CSS. Add or remove
+                    features by simply nesting extension tags inside
+                    <code>&lt;y-cm&gt;</code>.
+                </p>
+            </header>
+            <main class="flex flex-col items-center gap-8">
+                <section
+                    class="w-full max-w-3xl bg-white/90 rounded-xl shadow-lg p-6 border border-blue-100"
+                >
+                    <h2
+                        class="text-xl font-semibold mb-2 flex items-center gap-2"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="inline-block w-5 h-5 text-blue-500"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M16 18l6-6-6-6M8 6l-6 6 6 6"
+                            />
+                        </svg>
+                        Live Editor Demo
+                    </h2>
+                    <div class="mb-4 text-gray-500 text-sm">
+                        Try editing the code below. Extensions are enabled via
+                        child tags.
+                    </div>
+                    <div class="w-full h-[800px]">
+                        <story-ts-editor
+                            id="demo-editor"
+                            class="h-full w-full rounded-lg border border-blue-200 shadow-inner bg-white"
+                        ></story-ts-editor>
+                        <y-cm   class="h-full w-full rounded-lg border border-blue-200 shadow-inner bg-white" >
+                            <y-cm-basic-setup></y-cm-basic-setup>
+<!--                            <y-cm-lang-md></y-cm-lang-md>-->
+<!--                            <y-cm-lang-ts typescript="true" ></y-cm-lang-ts>-->
+<!--                            <y-cm-theme-dark></y-cm-theme-dark>-->
+                            <y-cm-codieum></y-cm-codieum>
+                             <y-cm-collab ></y-cm-collab> 
+                        </y-cm>
+                    </div>
+                </section>
+                <section
+                    class="w-full max-w-3xl bg-white/80 rounded-xl shadow p-6 border border-gray-100"
+                >
+                    <h3 class="text-lg font-semibold mb-2">How it works</h3>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                        <li>
+                            <code>&lt;y-cm&gt;</code> is the main editor
+                            container.
+                        </li>
+                        <li>
+                            Each <code>&lt;y-cm-*&gt;</code> child adds a
+                            feature or language extension.
+                        </li>
+                        <li>Mix and match extensions for your use case.</li>
+                        <li>
+                            All components are styled with Tailwind and use
+                            Lucide icons for a modern look.
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
      
-    document.querySelector('y-cm').text =  doc.getText();
-    document.querySelector('y-cm').awareness =  awareness;
+        <script type="module"    lang="tsx">
+            import * as Y from "yjs";
+            import * as awarenessProtocol from "y-protocols/awareness";
+            import { c, h,html } from "atomico";
+            import "./src/index.tsx";
+            const doc = new Y.Doc();
+            const awareness = new awarenessProtocol.Awareness(doc);
+            
+            // Set up a sample document
+            const sample = `// Welcome to y-cm!\n// Try editing TypeScript, HTML, CSS, JSON, or Markdown.\n\nfunction greet(name: string) {\n  return \`Hello, ${name}!\`\n}\n\n/*\nYou can also write HTML:\n<div class='p-2 bg-blue-100 rounded'>Hello, world!</div>\n\nOr CSS:\nbody { background: #f0f4f8; }\n\nOr JSON:\n{\n  "hello": "world"\n}\n\nOr Markdown:\n# Hello Markdown\n\n- List item\n- Another item\n*/\n`;
+            doc.getText("story-ts-editor").insert(0, sample);
+            
 
-    setTimeout(()=>{
-       doc.getText().insert(0, document.querySelector("#input").innerHTML);
-    },
-   20)
+            document.querySelector("y-cm-collab").awareness = awareness;
+            document.querySelector("y-cm-collab").text = doc.getText("story-ts-editor");
 
-
-</script>
-
-
-</body>
+            // customElements.define(
+            //     "story-ts-editor-1",
+            //     c(function StoryTsEditor() {
+            //      return  html` <y-cm  >
+            //                 <y-cm-basic-setup></y-cm-basic-setup>
+            //                 <y-cm-lang-ts></y-cm-lang-ts>
+            //                 <y-cm-theme-dark></y-cm-theme-dark>
+            //                 <y-cm-codieum></y-cm-codieum>
+            //                 <y-cm-collab
+            //                     text=${doc.getText("story-ts-editor")}
+            //                     awareness=${awareness}
+            //                 ></y-cm-collab>
+            //             </y-cm>`
+                
+            // }),
+            // )
+            
+            
+        </script>
+     
+    </body>
 </html>
- 
