@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@10.10.0",
   "workspaces": [
     "packages/storybook",
     "packages/components/*",
@@ -43,20 +43,19 @@
     "@atomico/postcss-tokens": "^3.5.0",
     "@atomico/run": "^0.14.2",
     "@atomico/scaffold": "^2.9.5",
-    "@atomico/storybook": "^2.6.0",
+    "@atomico/storybook": "^2.6.3",
     "@atomico/tsconfig": "^1.1.2",
-    "@atomico/use-disabled": "^2.0.0",
+    "@atomico/use-disabled": "^2.0.1",
     "@atomico/vite": "^2.21.1",
-    "@storybook/types": "^8.1.11",
+    "@storybook/types": "^8.6.12",
     "@y-block/primitives": "workspace:*",
-    "atomico": "^1.77.1",
-    "typescript": "^5.2.2",
-    "vite": "^5.1.6"
+    "atomico": "^1.79.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.4"
   },
   "devDependencies": {
-    "@storybook/docs-tools": "^8.2.5",
-    "vite-tsconfig-paths": "^4.3.2",
-    "vite": "^5.1.6"
-
+    "@storybook/docs-tools": "^8.6.12",
+    "vite": "^5.1.6",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

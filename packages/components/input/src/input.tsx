@@ -89,64 +89,6 @@ input.props ={
 };
   
 
-export function connectHocuspocus({url="ws://localhost:1234",name="default",broadcast=true,forceSyncInterval=1000,connect=true,document}: Props<typeof connectHocuspocus>){
-  const {doc} = document ?{doc:document} : useDocStore();
- 
-  useEffect(()=>{
-    const provider = new HocuspocusProvider({
-      url: url ,
-      name: name,
-      document: doc,
-      connect: connect,
-      broadcast: broadcast,
-      forceSyncInterval: forceSyncInterval,
-      onConnect: () => {
-          console.log("connected to", url, name, doc.guid);
-      }
-  });
-  return  ()=>provider.destroy();
-},[doc])
-
-return <host></host>
-}
-connectHocuspocus.props={
-  url: {
-    type: String,
-    required: true,
-    default: "ws://localhost:1234",
-  },
-  name: {
-    type: String,
-    required: true,
-    default: "default",
-  },
-  broadcast: {
-    type: Boolean,
-    required: false,
-    reflect: true,
-    default: true,
-  },
-  connect: {
-    type: Boolean,
-    required: false,
-    reflect: true,
-    default: true,
-  },
-  document: {
-    type: Object,
-    required: false,
-    attribute: "document",
-    reflect: false
-  },
-  forceSyncInterval: {
-    type: Number,
-    required: true,
-    attribute: "force-sync-interval",
-  }
-}
-
-customElements.define("y-hocuspocus", c(connectHocuspocus));
-
 export const YInput =  c(input, {
   props: input.props,
   base:class extends HTMLElement {
